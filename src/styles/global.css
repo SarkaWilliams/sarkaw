@@ -29,22 +29,11 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-bg); /* fallback, dokud se obrázek načte */
-  background-image: url('/nove-pozadi.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
 }
 
 img {
@@ -70,6 +59,10 @@ h1, h2, h3 {
 
 section {
   padding: clamp(3rem, 6vw, 6rem) 0;
+  background-image: url('/nove-pozadi.webp');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .button {
