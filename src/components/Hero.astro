@@ -11,7 +11,7 @@ const { ctaHref } = Astro.props;
 <section
   class="hero"
   id="hero"
-  style={`background-image: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url('${home.heroImage}')`}
+  style={`--hero-image: url('${home.heroImage}')`}
 >
   <div class="container hero__inner">
     <h1>{home.heroTitle}</h1>
@@ -25,6 +25,7 @@ const { ctaHref } = Astro.props;
   .hero {
     padding-top: clamp(4rem, 10vw, 8rem);
     padding-bottom: clamp(3rem, 8vw, 6rem);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), var(--hero-image);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,6 +53,10 @@ const { ctaHref } = Astro.props;
   }
 
   @media (max-width: 768px) {
+    .hero {
+      background-image: none;
+    }
+
     .hero h1 {
       order: 1;
     }
