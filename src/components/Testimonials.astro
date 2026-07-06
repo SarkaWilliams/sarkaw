@@ -14,7 +14,11 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
     </p>
   </div>
   <div class="testimonials__viewport">
-    <div class="testimonials__track" data-duration={duration} style={`--marquee-duration: ${duration}s`}>
+    <div
+      class="testimonials__track"
+      data-duration={duration}
+      style={`animation: testimonials-marquee ${duration}s linear infinite;`}
+    >
       {testimonials.map((t) => (
         <article class="testimonial-card">
           <p class="testimonial-card__quote">&ldquo;{t.quote}&rdquo;</p>
@@ -55,7 +59,6 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
     gap: 1.5rem;
     width: max-content;
     touch-action: pan-y;
-    animation: testimonials-marquee var(--marquee-duration, 50s) linear infinite;
   }
 
   .testimonials__viewport:hover .testimonials__track {
@@ -98,7 +101,8 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
 
   @media (prefers-reduced-motion: reduce) {
     .testimonials__track {
-      animation: none;
+      /* !important nutné, aby to přebilo inline styl s délkou animace */
+      animation: none !important;
     }
   }
 </style>
