@@ -78,7 +78,9 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
     flex: 0 0 auto;
     width: clamp(16rem, 30vw, 20rem);
     padding: 1.5rem;
-    background: var(--color-bg);
+    background: color-mix(in srgb, var(--color-bg) 55%, transparent);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
   }
