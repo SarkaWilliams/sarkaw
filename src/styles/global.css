@@ -29,11 +29,22 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-bg);
+  background-color: var(--color-bg); /* fallback, dokud se obrázek načte */
+  background-image: url('/pozadi.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 img {
