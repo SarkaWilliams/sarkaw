@@ -41,6 +41,13 @@ collections:
                 name: items
                 widget: list
                 field: { label: "Položka", name: item, widget: string }
+          - label: "Reference"
+            name: testimonials
+            widget: list
+            fields:
+              - { label: "Citace", name: quote, widget: text }
+              - { label: "Jméno", name: name, widget: string }
+              - { label: "Pozice / spolupráce (nepovinné)", name: role, widget: string, required: false }
           - label: "Kontakt"
             name: contact
             widget: object

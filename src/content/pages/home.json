@@ -42,6 +42,33 @@
       ]
     }
   ],
+  "testimonials": [
+    {
+      "quote": "Sem přijde skutečná citace klientky/klienta.",
+      "name": "Jméno Příjmení",
+      "role": "Individuální koučink"
+    },
+    {
+      "quote": "Sem přijde skutečná citace klientky/klienta.",
+      "name": "Jméno Příjmení",
+      "role": "Business koučink"
+    },
+    {
+      "quote": "Sem přijde skutečná citace klientky/klienta.",
+      "name": "Jméno Příjmení",
+      "role": ""
+    },
+    {
+      "quote": "Sem přijde skutečná citace klientky/klienta.",
+      "name": "Jméno Příjmení",
+      "role": "Manažerka, Firma s.r.o."
+    },
+    {
+      "quote": "Sem přijde skutečná citace klientky/klienta.",
+      "name": "Jméno Příjmení",
+      "role": "Individuální koučink"
+    }
+  ],
   "contact": {
     "email": "sarka.williams@gmail.com",
     "phone": "603 443 727",

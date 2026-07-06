@@ -19,6 +19,12 @@ export interface Contact {
   instagramUrl: string;
 }
 
+export interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+}
+
 export interface HomeContent {
   heroTitle: string;
   heroSubtitle: string;
@@ -27,6 +33,7 @@ export interface HomeContent {
   about: string;
   services: Service[];
   offerings: Offering[];
+  testimonials: Testimonial[];
   contact: Contact;
   ctaText: string;
   ctaUrl: string;

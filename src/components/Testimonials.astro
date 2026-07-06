@@ -1,0 +1,165 @@
+---
+import { home } from "../lib/content";
+
+const testimonials = home.testimonials;
+// ~10s na kartu, oříznuto na doporučený rozsah 40–60s na jeden průchod pásem
+const duration = Math.min(60, Math.max(40, testimonials.length * 10));
+---
+
+<section class="testimonials" id="reference">
+  <div class="container">
+    <h2>Reference</h2>
+    <p class="testimonials__note">
+      Ukázkové reference — brzy je nahradíme reálnými zkušenostmi klientů.
+    </p>
+  </div>
+  <div class="testimonials__viewport">
+    <div class="testimonials__track" data-duration={duration} style={`--marquee-duration: ${duration}s`}>
+      {testimonials.map((t) => (
+        <article class="testimonial-card">
+          <p class="testimonial-card__quote">&ldquo;{t.quote}&rdquo;</p>
+          <p class="testimonial-card__name">{t.name}</p>
+          {t.role && <p class="testimonial-card__role">{t.role}</p>}
+        </article>
+      ))}
+      {testimonials.map((t) => (
+        <article class="testimonial-card" aria-hidden="true">
+          <p class="testimonial-card__quote">&ldquo;{t.quote}&rdquo;</p>
+          <p class="testimonial-card__name">{t.name}</p>
+          {t.role && <p class="testimonial-card__role">{t.role}</p>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials__note {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .testimonials__viewport {
+    overflow: hidden;
+    margin-top: 2rem;
+    cursor: grab;
+  }
+
+  .testimonials__viewport.is-dragging {
+    cursor: grabbing;
+  }
+
+  .testimonials__track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    touch-action: pan-y;
+    animation: testimonials-marquee var(--marquee-duration, 50s) linear infinite;
+  }
+
+  .testimonials__viewport:hover .testimonials__track {
+    animation-play-state: paused;
+  }
+
+  @keyframes testimonials-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .testimonial-card {
+    flex: 0 0 auto;
+    width: clamp(16rem, 30vw, 20rem);
+    padding: 1.5rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .testimonial-card__quote {
+    color: var(--color-text-muted);
+    margin: 0 0 1rem;
+  }
+
+  .testimonial-card__name {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .testimonial-card__role {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonials__track {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const viewport = document.querySelector<HTMLElement>(".testimonials__viewport");
+  const track = viewport?.querySelector<HTMLElement>(".testimonials__track");
+
+  if (viewport && track) {
+    const duration = Number(track.dataset.duration) || 50;
+    let isDragging = false;
+    let startX = 0;
+    let startTranslate = 0;
+    let currentTranslate = 0;
+    let resumeTimeout: number | undefined;
+
+    const getTranslateX = () => {
+      const transform = getComputedStyle(track).transform;
+      if (transform === "none") return 0;
+      return new DOMMatrixReadOnly(transform).m41;
+    };
+
+    const onPointerDown = (e: PointerEvent) => {
+      isDragging = true;
+      viewport.classList.add("is-dragging");
+      window.clearTimeout(resumeTimeout);
+      startX = e.clientX;
+      startTranslate = getTranslateX();
+      currentTranslate = startTranslate;
+      track.style.animation = "none";
+      track.style.transform = `translateX(${startTranslate}px)`;
+      track.setPointerCapture(e.pointerId);
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      currentTranslate = startTranslate + dx;
+      track.style.transform = `translateX(${currentTranslate}px)`;
+    };
+
+    const stopDragging = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      viewport.classList.remove("is-dragging");
+
+      // po pustění se automatický posun rozjede znovu po krátké pauze,
+      // s negativním animation-delay navazujícím přesně tam, kde skončilo tažení
+      resumeTimeout = window.setTimeout(() => {
+        const halfWidth = track.scrollWidth / 2;
+        const progress = (((-currentTranslate % halfWidth) + halfWidth) % halfWidth) / halfWidth;
+        track.style.transform = "";
+        track.style.animation = `testimonials-marquee ${duration}s linear infinite`;
+        track.style.animationDelay = `${-progress * duration}s`;
+      }, 600);
+    };
+
+    track.addEventListener("pointerdown", onPointerDown);
+    track.addEventListener("pointermove", onPointerMove);
+    track.addEventListener("pointerup", stopDragging);
+    track.addEventListener("pointercancel", stopDragging);
+    track.addEventListener("pointerleave", stopDragging);
+  }
+</script>
