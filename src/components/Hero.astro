@@ -20,9 +20,10 @@ const { ctaHref } = Astro.props;
   .hero {
     padding-top: clamp(4rem, 10vw, 8rem);
     padding-bottom: clamp(3rem, 8vw, 6rem);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: var(--color-bg);
   }
 
   .hero__inner {
