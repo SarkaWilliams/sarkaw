@@ -1,0 +1,45 @@
+---
+import { home } from "../lib/content";
+---
+
+<section class="contact" id="kontakt">
+  <div class="container contact__inner">
+    <h2>Kontakt</h2>
+    <ul class="contact__list">
+      <li>
+        LinkedIn: <a href={home.contact.linkedin} target="_blank" rel="noopener noreferrer">Šárka Williams</a>
+      </li>
+      <li>
+        E-mail: <a href={`mailto:${home.contact.email}`}>{home.contact.email}</a>
+      </li>
+      <li>
+        Telefon: <a href={`tel:${home.contact.phone.replace(/\s+/g, "")}`}>{home.contact.phone}</a>
+      </li>
+    </ul>
+    <a class="button" href={home.ctaUrl} target="_blank" rel="noopener noreferrer">
+      {home.ctaText}
+    </a>
+  </div>
+</section>
+
+<style>
+  .contact__inner {
+    max-width: 36rem;
+  }
+
+  .contact__list {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    color: var(--color-text-muted);
+  }
+
+  .contact__list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact__list a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import { home } from "../lib/content";
+---
+
+<section class="offerings" id="co-nabizim">
+  <div class="container">
+    <h2>Co nabízím</h2>
+    <div class="offerings__list">
+      {home.offerings.map((offering) => (
+        <details class="offering">
+          <summary>{offering.title}</summary>
+          <div class="offering__content">
+            <p>{offering.intro}</p>
+            <ul>
+              {offering.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .offerings__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .offering {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg);
+  }
+
+  .offering summary {
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .offering[open] summary {
+    margin-bottom: 1rem;
+  }
+
+  .offering__content p {
+    color: var(--color-text-muted);
+    margin: 0 0 1rem;
+  }
+
+  .offering__content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .offering__content li {
+    margin-bottom: 0.4rem;
+  }
+</style>

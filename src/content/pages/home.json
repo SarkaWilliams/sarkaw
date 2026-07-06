@@ -1,7 +1,8 @@
 {
-  "heroTitle": "Najdi si cestu, která je opravdu tvoje",
-  "heroSubtitle": "Individuální koučink pro lidi, kteří chtějí udělat další krok — v práci, ve vztazích i sami se sebou.",
-  "about": "Jsem koučka s praxí, která ráda pracuje s lidmi na rozcestí — v kariéře, ve vztazích, nebo jen ve chvíli, kdy je potřeba si srovnat myšlenky. Sezení vedu tak, aby z nich klienti odcházeli s jasným dalším krokem, ne jen s dobrým pocitem.\n\nPracuji online i osobně.",
+  "heroTitle": "Změna, která vydrží — v práci i v životě",
+  "heroSubtitle": "Koučink pro jednotlivce i firmy. Pomáhám lidem najít vlastní odpovědi a týmům projít změnou bez zbytečných konfliktů.",
+  "heroImage": "/hero.webp",
+  "about": "Jsem manželka, máma, kamarádka, mentální koučka, projektová manažerka a lektorka skupinových lekcí. Ani jedné role se nechci ve svém životě vzdát.\n\nVe své práci propojuji zkušenosti ze všech oblastí, protože mi to umožňuje dívat se na člověka i změnu v souvislostech a dávat věcem hlubší a dlouhodobě udržitelný smysl. Věřím, že skutečná změna začíná vědomou volbou, převzetím odpovědnosti za vlastní život a odvahou dělat věci v souladu se sebou.\n\nVedle koučovací praxe působím jako projektová manažerka s certifikacemi PRINCE2 a MoP AXELOS v oblasti řízení portfolia. Tato kombinace mi dává hlubší porozumění firemním procesům i výzvám, kterým čelí lidé v organizacích — a vím, že ani ta nejlepší metodika nefunguje bez lidí, kteří ji skutečně přijmou za svou.",
   "services": [
     {
       "title": "Úvodní konzultace",
@@ -16,6 +17,35 @@
       "description": "Pro ty, kdo to myslí vážně a chtějí na tématu pracovat soustavně."
     }
   ],
+  "offerings": [
+    {
+      "title": "Osobnostní koučink",
+      "intro": "Koučování je partnerský rozhovor, ve kterém si hledáte vlastní odpovědi. Nedávám rady ani hotová řešení, ale pomáhám vám objevit to, co už v sobě víte, jen to zatím plně nevyužíváte.",
+      "items": [
+        "Hledáte rovnováhu mezi pracovním a osobním životem",
+        "Procházíte změnou a nevíte, jak dál",
+        "Chcete posílit sebevědomí nebo se lépe rozhodovat",
+        "Uvažujete o změně kariéry nebo nové životní etapě",
+        "Potřebujete nastavit hranice a řídit svůj čas"
+      ]
+    },
+    {
+      "title": "Business koučink",
+      "intro": "Nepřicházím firmám říkat, jak dělat svůj business. Vytvářím prostor, kde lidé mohou otevřeně mluvit, pojmenují skutečný problém a převezmou odpovědnost za svůj vliv na situaci.",
+      "items": [
+        "Týmy spolu formálně komunikují, ale ve skutečnosti nespolupracují",
+        "V týmech roste přetížení, apatie a riziko vyhoření klíčových lidí",
+        "Nové procesy dávají smysl na papíře, ale v praxi narážejí na tichý odpor",
+        "Při restrukturalizaci roste fluktuace a klesá motivace",
+        "Manažeři řeší stále stejné konflikty dokola místo stabilizace týmů"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "sarka.williams@gmail.com",
+    "phone": "603 443 727",
+    "linkedin": "#"
+  },
   "ctaText": "Rezervovat termín",
   "ctaUrl": "https://reservio.com/PLACEHOLDER"
 }

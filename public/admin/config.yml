@@ -22,6 +22,7 @@ collections:
         fields:
           - { label: "Hero nadpis", name: heroTitle, widget: string }
           - { label: "Hero podnadpis", name: heroSubtitle, widget: text }
+          - { label: "Hero obrázek", name: heroImage, widget: image }
           - { label: "O mně", name: about, widget: markdown }
           - label: "Služby"
             name: services
@@ -29,5 +30,22 @@ collections:
             fields:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: description, widget: text }
+          - label: "Co nabízím"
+            name: offerings
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Úvodní text", name: intro, widget: text }
+              - label: "Body seznamu"
+                name: items
+                widget: list
+                field: { label: "Položka", name: item, widget: string }
+          - label: "Kontakt"
+            name: contact
+            widget: object
+            fields:
+              - { label: "E-mail", name: email, widget: string }
+              - { label: "Telefon", name: phone, widget: string }
+              - { label: "LinkedIn (odkaz)", name: linkedin, widget: string }
           - { label: "Text tlačítka (CTA)", name: ctaText, widget: string }
           - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string }
