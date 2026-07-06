@@ -23,6 +23,7 @@ collections:
           - { label: "Hero nadpis", name: heroTitle, widget: string }
           - { label: "Hero podnadpis", name: heroSubtitle, widget: text }
           - { label: "Hero obrázek", name: heroImage, widget: image }
+          - { label: "Fotka (O mně)", name: aboutImage, widget: image }
           - { label: "O mně", name: about, widget: markdown }
           - label: "Služby"
             name: services

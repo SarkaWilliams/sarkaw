@@ -21,6 +21,7 @@ export interface HomeContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
+  aboutImage: string;
   about: string;
   services: Service[];
   offerings: Offering[];

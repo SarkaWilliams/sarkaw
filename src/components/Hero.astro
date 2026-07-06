@@ -8,7 +8,7 @@ interface Props {
 const { ctaHref } = Astro.props;
 ---
 
-<section class="hero" id="hero">
+<section class="hero" id="hero" style={`background-image: url('${home.heroImage}')`}>
   <div class="container hero__inner">
     <h1>{home.heroTitle}</h1>
     <p class="hero__subtitle">{home.heroSubtitle}</p>
@@ -20,7 +20,6 @@ const { ctaHref } = Astro.props;
   .hero {
     padding-top: clamp(4rem, 10vw, 8rem);
     padding-bottom: clamp(3rem, 8vw, 6rem);
-    background-image: url('/hero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
