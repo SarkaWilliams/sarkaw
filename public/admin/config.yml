@@ -47,6 +47,8 @@ collections:
             fields:
               - { label: "E-mail", name: email, widget: string }
               - { label: "Telefon", name: phone, widget: string }
-              - { label: "LinkedIn (odkaz)", name: linkedin, widget: string }
+              - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }
+              - { label: "Facebook (odkaz)", name: facebookUrl, widget: string }
+              - { label: "Instagram (odkaz)", name: instagramUrl, widget: string }
           - { label: "Text tlačítka (CTA)", name: ctaText, widget: string }
           - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string }

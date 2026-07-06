@@ -14,7 +14,9 @@ export interface Offering {
 export interface Contact {
   email: string;
   phone: string;
-  linkedin: string;
+  linkedinUrl: string;
+  facebookUrl: string;
+  instagramUrl: string;
 }
 
 export interface HomeContent {

@@ -7,15 +7,51 @@ import { home } from "../lib/content";
     <h2>Kontakt</h2>
     <ul class="contact__list">
       <li>
-        LinkedIn: <a href={home.contact.linkedin} target="_blank" rel="noopener noreferrer">Šárka Williams</a>
-      </li>
-      <li>
         E-mail: <a href={`mailto:${home.contact.email}`}>{home.contact.email}</a>
       </li>
       <li>
         Telefon: <a href={`tel:${home.contact.phone.replace(/\s+/g, "")}`}>{home.contact.phone}</a>
       </li>
     </ul>
+    <div class="contact__socials">
+      <a
+        class="social-link"
+        href={home.contact.linkedinUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profil Šárky Williams"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a
+        class="social-link"
+        href={home.contact.facebookUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook profil Šárky Williams"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </a>
+      <a
+        class="social-link"
+        href={home.contact.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram profil Šárky Williams"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+    </div>
     <a class="button" href={home.ctaUrl} target="_blank" rel="noopener noreferrer">
       {home.ctaText}
     </a>
@@ -41,5 +77,37 @@ import { home } from "../lib/content";
   .contact__list a {
     color: var(--color-accent);
     text-decoration: underline;
+  }
+
+  .contact__socials {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    color: var(--color-accent);
+    transition: opacity 0.15s ease;
+  }
+
+  .social-link svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-link:hover,
+  .social-link:focus-visible {
+    opacity: 0.75;
+  }
+
+  .social-link:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
   }
 </style>
