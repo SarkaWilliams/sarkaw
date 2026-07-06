@@ -5,9 +5,9 @@
 
 backend:
   name: github
-  repo: <owner>/<repo>
+  repo: SarkaWilliams/sarkaw
   branch: main
-  base_url: https://sveltia-cms-auth.<subdomain>.workers.dev
+  base_url: https://sarkaw-cms-auth.sarka-williams.workers.dev
 
 media_folder: public/images
 public_folder: /images
