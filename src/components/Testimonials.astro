@@ -99,12 +99,6 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
     margin: 0.2rem 0 0;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .testimonials__track {
-      /* !important nutné, aby to přebilo inline styl s délkou animace */
-      animation: none !important;
-    }
-  }
 </style>
 
 <script>
