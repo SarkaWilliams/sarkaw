@@ -6,7 +6,7 @@ import { home } from "../lib/content";
 const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
 ---
 
-<section class="about section-alt" id="o-mne">
+<section class="about" id="o-mne">
   <div class="container about__inner">
     <h2>O mně</h2>
     {paragraphs.map((p) => <p>{p}</p>)}
