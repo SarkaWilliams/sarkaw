@@ -4,13 +4,16 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="/" class="site-header__brand">SW</a>
-    <nav class="site-header__nav">
-      <a href="#hero">Úvodní stránka</a>
-      <a href="#co-nabizim">Co nabízím</a>
-      <a href="#o-mne">O mně</a>
-      <a href="#reference">Reference</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+    <details class="site-header__menu">
+      <summary class="site-header__menu-toggle" aria-label="Otevřít menu">Menu</summary>
+      <nav class="site-header__nav">
+        <a href="#hero">Úvodní stránka</a>
+        <a href="#co-nabizim">Co nabízím</a>
+        <a href="#o-mne">O mně</a>
+        <a href="#reference">Reference</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -34,14 +37,44 @@
     font-weight: 600;
   }
 
+  .site-header__menu {
+    position: relative;
+  }
+
+  .site-header__menu-toggle {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.5em 1.1em;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .site-header__menu-toggle::-webkit-details-marker {
+    display: none;
+  }
+
   .site-header__nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    z-index: 20;
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 12rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     font-size: 0.95rem;
   }
 
   .site-header__nav a:not(.button) {
+    padding: 0.35rem 0;
     text-decoration: none;
     color: var(--color-text-muted);
   }
@@ -55,3 +88,13 @@
     font-size: 0.9rem;
   }
 </style>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>(".site-header__menu");
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.open = false;
+    });
+  });
+</script>
