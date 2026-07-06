@@ -30,7 +30,7 @@ html {
 body {
   margin: 0;
   background-color: var(--color-bg); /* fallback, dokud se obrázek načte */
-  background-image: url('/pozadi.webp');
+  background-image: url('/nove-pozadi.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
