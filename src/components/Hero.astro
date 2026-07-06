@@ -1,0 +1,38 @@
+---
+import { home } from "../lib/content";
+
+interface Props {
+  ctaHref: string;
+}
+
+const { ctaHref } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <h1>{home.heroTitle}</h1>
+    <p class="hero__subtitle">{home.heroSubtitle}</p>
+    <a class="button" href={ctaHref}>{home.ctaText}</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(3rem, 8vw, 6rem);
+  }
+
+  .hero__inner {
+    max-width: 40rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    margin: 0 0 2rem;
+  }
+</style>

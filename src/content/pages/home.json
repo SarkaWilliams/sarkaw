@@ -1,0 +1,21 @@
+{
+  "heroTitle": "Najdi si cestu, která je opravdu tvoje",
+  "heroSubtitle": "Individuální koučink pro lidi, kteří chtějí udělat další krok — v práci, ve vztazích i sami se sebou.",
+  "about": "Jsem koučka s praxí, která ráda pracuje s lidmi na rozcestí — v kariéře, ve vztazích, nebo jen ve chvíli, kdy je potřeba si srovnat myšlenky. Sezení vedu tak, aby z nich klienti odcházeli s jasným dalším krokem, ne jen s dobrým pocitem.\n\nPracuji online i osobně.",
+  "services": [
+    {
+      "title": "Úvodní konzultace",
+      "description": "60 minut na to, abychom si sedli a probrali, kde jsi a kam chceš směřovat. Bez závazků."
+    },
+    {
+      "title": "Individuální koučink",
+      "description": "Pravidelná sezení zaměřená na konkrétní téma — kariéru, vztahy, nebo osobní růst."
+    },
+    {
+      "title": "Balíček 5 sezení",
+      "description": "Pro ty, kdo to myslí vážně a chtějí na tématu pracovat soustavně."
+    }
+  ],
+  "ctaText": "Rezervovat termín",
+  "ctaUrl": "https://reservio.com/PLACEHOLDER"
+}

@@ -1,0 +1,24 @@
+---
+import { home } from "../lib/content";
+
+// `about` je psáno jako markdown (widget: markdown ve Sveltia).
+// Zatím render jako prostý text s odstavci; při potřebě lze napojit markdown parser.
+const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
+---
+
+<section class="about section-alt" id="o-mne">
+  <div class="container about__inner">
+    <h2>O mně</h2>
+    {paragraphs.map((p) => <p>{p}</p>)}
+  </div>
+</section>
+
+<style>
+  .about__inner {
+    max-width: 42rem;
+  }
+
+  .about p {
+    color: var(--color-text-muted);
+  }
+</style>

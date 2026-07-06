@@ -1,0 +1,33 @@
+# Sveltia CMS — konfigurace editoru na /admin
+# Vyplň před nasazením (viz PROJEKT-BRIEF.md, krok 5):
+#   - repo: <owner>/<repo>       → skutečný GitHub repozitář
+#   - base_url: OAuth proxy URL  → adresa nasazené sveltia-cms-auth služby
+
+backend:
+  name: github
+  repo: <owner>/<repo>
+  branch: main
+  base_url: https://sveltia-cms-auth.<subdomain>.workers.dev
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Stránky
+    files:
+      - name: home
+        label: Úvodní stránka
+        file: src/content/pages/home.json
+        fields:
+          - { label: "Hero nadpis", name: heroTitle, widget: string }
+          - { label: "Hero podnadpis", name: heroSubtitle, widget: text }
+          - { label: "O mně", name: about, widget: markdown }
+          - label: "Služby"
+            name: services
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+          - { label: "Text tlačítka (CTA)", name: ctaText, widget: string }
+          - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string }

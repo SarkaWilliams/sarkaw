@@ -1,0 +1,56 @@
+---
+import { home } from "../lib/content";
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="site-header__brand">Koučink</a>
+    <nav class="site-header__nav">
+      <a href="#o-mne">O mně</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#rezervace" class="button button--small">{home.ctaText}</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    padding: 1.25rem 0;
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .site-header__brand {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .site-header__nav a:not(.button) {
+    text-decoration: none;
+    color: var(--color-text-muted);
+  }
+
+  .site-header__nav a:not(.button):hover {
+    color: var(--color-text);
+  }
+
+  .button--small {
+    padding: 0.5em 1.1em;
+    font-size: 0.9rem;
+  }
+</style>

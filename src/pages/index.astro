@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Services from "../components/Services.astro";
+import ReservioBooking from "../components/ReservioBooking.astro";
+import { home } from "../lib/content";
+---
+
+<Layout title={`${home.heroTitle} | Koučink`}>
+  <Hero ctaHref="#rezervace" />
+  <About />
+  <Services />
+  <ReservioBooking />
+</Layout>

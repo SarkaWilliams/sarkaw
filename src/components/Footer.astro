@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>&copy; {year} Koučink. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .site-footer__inner p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>
