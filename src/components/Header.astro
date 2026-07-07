@@ -90,6 +90,29 @@
     padding: 0.5em 1.1em;
     font-size: 0.9rem;
   }
+
+  @media (min-width: 769px) {
+    .site-header__menu-toggle {
+      display: none;
+    }
+
+    .site-header__nav {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+      min-width: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .site-header__nav a:not(.button) {
+      padding: 0;
+    }
+  }
 </style>
 
 <script>
