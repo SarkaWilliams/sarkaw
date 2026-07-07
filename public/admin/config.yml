@@ -13,6 +13,16 @@ media_folder: public/images
 public_folder: /images
 
 collections:
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Název", name: title, widget: string }
+      - { label: "Datum", name: date, widget: datetime }
+      - { label: "Anotace", name: excerpt, widget: text }
+      - { label: "Obsah článku", name: body, widget: markdown }
   - name: pages
     label: Stránky
     files:

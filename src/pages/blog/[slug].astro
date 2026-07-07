@@ -1,0 +1,66 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("cs-CZ", { day: "numeric", month: "long", year: "numeric" });
+---
+
+<Layout title={`${post.data.title} | Blog`} description={post.data.excerpt}>
+  <section class="blog-post">
+    <div class="container">
+      <a class="blog-post__back" href="/blog">← Zpět na blog</a>
+      <p class="blog-post__date">{formatDate(post.data.date)}</p>
+      <h1>{post.data.title}</h1>
+      <div class="blog-post__content">
+        <Content />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-post__back {
+    display: inline-block;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-post__back:hover {
+    color: var(--color-text);
+  }
+
+  .blog-post__date {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .blog-post__content {
+    max-width: 42rem;
+    margin-top: 2rem;
+  }
+
+  .blog-post__content :global(h2) {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .blog-post__content :global(p) {
+    color: var(--color-text-muted);
+    margin: 0 0 1.1rem;
+  }
+</style>
