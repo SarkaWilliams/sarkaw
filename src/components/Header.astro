@@ -4,16 +4,21 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="/" class="site-header__brand">SW</a>
-    <details class="site-header__menu">
-      <summary class="site-header__menu-toggle" aria-label="Otevřít menu">Menu</summary>
-      <nav class="site-header__nav">
-        <a href="#hero">Úvodní stránka</a>
-        <a href="#co-nabizim">Co nabízím</a>
-        <a href="#o-mne">O mně</a>
-        <a href="#reference">Reference</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </details>
+    <button
+      class="site-header__menu-toggle"
+      aria-label="Otevřít menu"
+      aria-expanded="false"
+      aria-controls="site-header-nav"
+    >
+      Menu
+    </button>
+    <nav class="site-header__nav" id="site-header-nav">
+      <a href="#hero">Úvodní stránka</a>
+      <a href="#co-nabizim">Co nabízím</a>
+      <a href="#o-mne">O mně</a>
+      <a href="#reference">Reference</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </div>
 </header>
 
@@ -25,6 +30,7 @@
   }
 
   .site-header__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,13 +45,8 @@
     font-weight: 600;
   }
 
-  .site-header__menu {
-    position: relative;
-  }
-
   .site-header__menu-toggle {
     cursor: pointer;
-    list-style: none;
     padding: 0.5em 1.1em;
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
@@ -55,16 +56,12 @@
     font-weight: 600;
   }
 
-  .site-header__menu-toggle::-webkit-details-marker {
-    display: none;
-  }
-
   .site-header__nav {
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
     z-index: 20;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.25rem;
     min-width: 12rem;
@@ -74,6 +71,10 @@
     border-radius: var(--radius);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     font-size: 0.95rem;
+  }
+
+  .site-header__nav.is-open {
+    display: flex;
   }
 
   .site-header__nav a:not(.button) {
@@ -97,7 +98,7 @@
     }
 
     .site-header__nav {
-      display: flex !important;
+      display: flex;
       position: static;
       flex-direction: row;
       align-items: center;
@@ -116,11 +117,18 @@
 </style>
 
 <script>
-  const menu = document.querySelector<HTMLDetailsElement>(".site-header__menu");
+  const toggle = document.querySelector<HTMLButtonElement>(".site-header__menu-toggle");
+  const nav = document.querySelector<HTMLElement>(".site-header__nav");
 
-  menu?.querySelectorAll("a").forEach((link) => {
+  toggle?.addEventListener("click", () => {
+    const isOpen = nav?.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+
+  nav?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      menu.open = false;
+      nav.classList.remove("is-open");
+      toggle?.setAttribute("aria-expanded", "false");
     });
   });
 </script>
