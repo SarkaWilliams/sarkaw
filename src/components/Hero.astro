@@ -8,14 +8,9 @@ interface Props {
 const { ctaHref } = Astro.props;
 ---
 
-<section
-  class="hero"
-  id="hero"
-  style={`--hero-image: url('${home.heroImage}')`}
->
+<section class="hero" id="hero">
   <div class="container hero__inner">
     <h1>{home.heroTitle}</h1>
-    <img class="hero__photo" src={home.heroImage} alt="" />
     <p class="hero__subtitle">{home.heroSubtitle}</p>
     <a class="button" href={ctaHref}>{home.ctaText}</a>
   </div>
@@ -25,10 +20,6 @@ const { ctaHref } = Astro.props;
   .hero {
     padding-top: clamp(4rem, 10vw, 8rem);
     padding-bottom: clamp(3rem, 8vw, 6rem);
-    background-image: var(--hero-image), url('/nove-pozadi.webp');
-    background-size: contain, cover;
-    background-position: center, top;
-    background-repeat: no-repeat, no-repeat;
   }
 
   .hero__inner {
@@ -41,41 +32,9 @@ const { ctaHref } = Astro.props;
     font-size: clamp(2rem, 5vw, 3.25rem);
   }
 
-  .hero__photo {
-    display: none;
-  }
-
   .hero__subtitle {
     font-size: 1.15rem;
     color: var(--color-text-muted);
     margin: 0 0 2rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      background-image: none;
-    }
-
-    .hero h1 {
-      order: 1;
-    }
-
-    .hero__photo {
-      display: block;
-      order: 2;
-      width: 100%;
-      height: auto;
-      margin: 1.5rem 0;
-      border-radius: var(--radius);
-      filter: brightness(1.15);
-    }
-
-    .hero__subtitle {
-      order: 3;
-    }
-
-    .hero .button {
-      order: 4;
-    }
   }
 </style>
