@@ -41,6 +41,12 @@ collections:
                 name: items
                 widget: list
                 field: { label: "Položka", name: item, widget: string }
+              - label: "Ceník"
+                name: pricing
+                widget: list
+                fields:
+                  - { label: "Služba", name: label, widget: string }
+                  - { label: "Cena", name: price, widget: string }
           - label: "Reference"
             name: testimonials
             widget: list

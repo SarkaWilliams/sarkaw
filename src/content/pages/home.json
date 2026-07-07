@@ -28,6 +28,12 @@
         "Chcete posílit sebevědomí nebo se lépe rozhodovat",
         "Uvažujete o změně kariéry nebo nové životní etapě",
         "Potřebujete nastavit hranice a řídit svůj čas"
+      ],
+      "pricing": [
+        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
+        { "label": "Jednotlivé sezení (60 min)", "price": "0 Kč" },
+        { "label": "Balíček 5 sezení", "price": "0 Kč" },
+        { "label": "Balíček 10 sezení", "price": "0 Kč" }
       ]
     },
     {
@@ -39,6 +45,12 @@
         "Nové procesy dávají smysl na papíře, ale v praxi narážejí na tichý odpor",
         "Při restrukturalizaci roste fluktuace a klesá motivace",
         "Manažeři řeší stále stejné konflikty dokola místo stabilizace týmů"
+      ],
+      "pricing": [
+        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
+        { "label": "Koučovací sezení (60 min)", "price": "0 Kč" },
+        { "label": "Balíček 5 sezení", "price": "0 Kč" },
+        { "label": "Balíček 10 sezení", "price": "0 Kč" }
       ]
     }
   ],
