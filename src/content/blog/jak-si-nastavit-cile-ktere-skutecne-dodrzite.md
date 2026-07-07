@@ -8,7 +8,7 @@ Na začátku roku, čtvrtletí nebo po každé důležité poradě si lidé dáv
 
 ## Cíl potřebuje směr, ne jen číslo
 
-Konkrétní a měřitelný cíl je užitečný, ale sám o sobě nestačí. Pokud si člověk nevytvoří jasnou souvislost mezi cílem a tím, proč je pro něj skutečně důležitý, motivace se první potíž rozplyne. V koučování se proto vždy vracíme k otázce „k čemu vám to bude dobré", dokud odpověď není opravdu vaše — ne odvozená od toho, co se od vás očekává.
+Konkrétní a měřitelný cíl je užitečný, ale sám o sobě nestačí. Pokud si člověk nevytvoří jasnou souvislost mezi cílem a tím, proč je pro něj skutečně důležitý, motivace se při první potíži rozplyne. V koučování se proto vždy vracíme k otázce „k čemu vám to bude dobré", dokud odpověď není opravdu vaše — ne odvozená od toho, co se od vás očekává.
 
 ## Menší závazek, který přežije všední den
 

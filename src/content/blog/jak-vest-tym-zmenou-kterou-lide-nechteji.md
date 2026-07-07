@@ -8,7 +8,7 @@ Restrukturalizace, nový proces, změna vedení, sloučení týmů — ať už j
 
 ## Odpor jako signál, ne překážka
 
-Když tým na změnu reaguje odporem, nese to obvykle důležitou informaci — o tom, co je pro lidi nejisté, co jim change bere pocit kontroly, nebo kde postrádají důvěru v to, jak bude změna probíhat. Manažer, který se snaží odpor co nejrychleji potlačit, přichází o tuto informaci. Ten, kdo se ptá, co za odporem stojí, získává cenný podklad pro to, jak změnu vést lépe.
+Když tým na změnu reaguje odporem, nese to obvykle důležitou informaci — o tom, co je pro lidi nejisté, co jim změna bere pocit kontroly, nebo kde postrádají důvěru v to, jak bude změna probíhat. Manažer, který se snaží odpor co nejrychleji potlačit, přichází o tuto informaci. Ten, kdo se ptá, co za odporem stojí, získává cenný podklad pro to, jak změnu vést lépe.
 
 ## Lidé nepotřebují souhlasit, potřebují rozumět
 

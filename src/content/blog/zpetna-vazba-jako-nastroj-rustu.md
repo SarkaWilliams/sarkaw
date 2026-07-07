@@ -4,7 +4,7 @@ date: 2026-04-22
 excerpt: "Zpětná vazba selhává nejčastěji na formě, ne na obsahu. Jak ji formulovat, aby skutečně otevírala prostor ke změně, a jak ji přijímat, aby nezraňovala."
 ---
 
-Zpětná vazba je jeden z nejmocnějších nástrojů, které má manažer nebo kolega k dispozici — a zároveň jeden z nejčastěji špatně použitých. Ve chvíli, kdy je podaná ve špatný čas nebo špatnou formou, nepomáhá k růstu, ale vyvolá obranu. A obrana je přesně ten stav, ve kterém se člověk nejméně učí.
+Zpětná vazba je jeden z nejmocnějších nástrojů, které má manažer nebo kolega k dispozici — a zároveň jeden z nejčastěji špatně použitých. Ve chvíli, kdy je podaná ve špatný čas nebo špatnou formou, nepomáhá k růstu, ale vyvolává obranu. A obrana je přesně ten stav, ve kterém se člověk nejméně učí.
 
 ## Rozdíl mezi hodnocením a pozorováním
 
