@@ -28,4 +28,4 @@ Nejúčinnější prevence není jednorázové vypnutí na dovolené, ale pravid
 
 ## Zodpovědnost, která zahrnuje i sebe sama
 
-Dobrý manažer se učí nést odpovědnost nejen za výsledky týmu, ale i za svou vlastní kapacitu je vést. Předcházení vyhoření tak není otázka slabosti nebo síly, ale otázka dlouhodobé udržitelnosti — vlastní i celého týmu, který se od vás učí, jak se zacházet s vlastními limity.
+Dobrý manažer se učí nést odpovědnost nejen za výsledky týmu, ale i za svou vlastní kapacitu je vést. Předcházení vyhoření tak není otázka slabosti nebo síly, ale otázka dlouhodobé udržitelnosti — vlastní i celého týmu, který se od vás učí, jak zacházet s vlastními limity.
