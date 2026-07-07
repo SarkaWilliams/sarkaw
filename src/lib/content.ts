@@ -5,10 +5,16 @@ export interface Service {
   description: string;
 }
 
+export interface PricingItem {
+  label: string;
+  price: string;
+}
+
 export interface Offering {
   title: string;
   intro: string;
   items: string[];
+  pricing: PricingItem[];
 }
 
 export interface Contact {

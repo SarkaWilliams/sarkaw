@@ -16,6 +16,19 @@ import { home } from "../lib/content";
                 <li>{item}</li>
               ))}
             </ul>
+            <div class="offering__pricing">
+              <p class="offering__pricing-note">
+                Konečná cena se stanovuje individuálně podle rozsahu spolupráce.
+              </p>
+              <ul class="offering__pricing-list">
+                {offering.pricing.map((item) => (
+                  <li>
+                    <span>{item.label}</span>
+                    <span>{item.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </details>
       ))}
@@ -64,5 +77,37 @@ import { home } from "../lib/content";
 
   .offering__content li {
     margin-bottom: 0.4rem;
+  }
+
+  .offering__pricing {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .offering__pricing-note {
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .offering__pricing-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-muted);
+  }
+
+  .offering__pricing-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .offering__pricing-list li span:last-child {
+    font-weight: 600;
+    white-space: nowrap;
   }
 </style>
