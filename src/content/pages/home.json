@@ -82,29 +82,29 @@
   },
   "testimonials": [
     {
-      "quote": "Sem přijde skutečná citace klientky/klienta.",
-      "name": "Jméno Příjmení",
-      "role": "Individuální koučink"
-    },
-    {
-      "quote": "Sem přijde skutečná citace klientky/klienta.",
-      "name": "Jméno Příjmení",
-      "role": "Business koučink"
-    },
-    {
-      "quote": "Sem přijde skutečná citace klientky/klienta.",
-      "name": "Jméno Příjmení",
+      "quote": "Po více než dvou měsících spolupráce odcházím z každého sezení uvolněná, plná síly, mé myšlenky jsou jasné. Dobré otázky tvoří dobré odpovědi, stanovit si cíl a za ním jít.",
+      "name": "Anna Zenkl",
       "role": ""
     },
     {
-      "quote": "Sem přijde skutečná citace klientky/klienta.",
-      "name": "Jméno Příjmení",
-      "role": "Manažerka, Firma s.r.o."
+      "quote": "From our very first session, Šárka helped me see things from a completely different perspective. I left the meeting feeling much lighter, more confident, and with a clearer understanding of challenges I hadn't even realized were affecting me.",
+      "name": "Lenka Filipová",
+      "role": ""
     },
     {
-      "quote": "Sem přijde skutečná citace klientky/klienta.",
-      "name": "Jméno Příjmení",
-      "role": "Individuální koučink"
+      "quote": "Koučink s Šárkou bylo pro mě velmi obohacující. Pomohla mi její schopnost klást asi správné otázky, protože mě nutila podívat se na situaci z jiného úhlu pohledu a dovedla mě k aha momentu, ze kterého čerpám dodnes.",
+      "name": "Eliška Žižková",
+      "role": ""
+    },
+    {
+      "quote": "Šárka je zodpovědný a systematický člověk, který umí držet otěže projektu. Zároveň dokáže vytvářet empatické a bezpečné prostředí.",
+      "name": "Jana Vondrová",
+      "role": ""
+    },
+    {
+      "quote": "Šárka má velkou empatii a skutečně se dokáže vcítit do klienta. Zároveň ale pevně drží koučovací prostor a citlivě mě usměrní, pokud se nechtěně odchýlím od tématu nebo od cíle, který jsem si sama stanovila.",
+      "name": "Hana Vávrová",
+      "role": ""
     }
   ],
   "contact": {
