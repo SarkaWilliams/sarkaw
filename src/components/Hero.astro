@@ -12,6 +12,7 @@ const { ctaHref } = Astro.props;
   <div class="container hero__inner">
     <h1>{home.heroTitle}</h1>
     <p class="hero__subtitle">{home.heroSubtitle}</p>
+    {home.heroQuote && <p class="hero__quote">{home.heroQuote}</p>}
     <a class="button" href={ctaHref}>{home.ctaText}</a>
   </div>
 </section>
@@ -35,6 +36,13 @@ const { ctaHref } = Astro.props;
   .hero__subtitle {
     font-size: 1.15rem;
     color: var(--color-text-muted);
+    margin: 0 0 2rem;
+  }
+
+  .hero__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
     margin: 0 0 2rem;
   }
 </style>

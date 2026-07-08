@@ -10,8 +10,16 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
   <div class="container about__inner">
     <img class="about__photo" src={home.aboutImage} alt="Šárka Williams" />
     <div class="about__content">
-      <h2>O mně</h2>
+      <h2>Kdo stojí za vaším rozvojem?</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
+      {home.aboutCredentials.length > 0 && (
+        <>
+          <p class="about__credentials-heading">Moje odborné zázemí:</p>
+          <ul class="about__credentials">
+            {home.aboutCredentials.map((item) => <li>{item}</li>)}
+          </ul>
+        </>
+      )}
     </div>
   </div>
 </section>
@@ -32,6 +40,22 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
 
   .about p {
     color: var(--color-text-muted);
+  }
+
+  .about__credentials-heading {
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .about__credentials {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .about__credentials li {
+    margin-bottom: 0.4rem;
   }
 
   @media (max-width: 640px) {

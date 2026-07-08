@@ -12,12 +12,29 @@ export interface PricingItem {
 
 export interface Offering {
   title: string;
+  quote?: string;
   intro: string;
+  itemsHeading?: string;
   items: string[];
   pricing: PricingItem[];
 }
 
+export interface ProcessStep {
+  title: string;
+  description: string;
+}
+
+export interface Process {
+  title: string;
+  steps: ProcessStep[];
+  ctaText: string;
+  tagline: string;
+}
+
 export interface Contact {
+  name: string;
+  ico: string;
+  address: string;
   email: string;
   phone: string;
   linkedinUrl: string;
@@ -34,11 +51,14 @@ export interface Testimonial {
 export interface HomeContent {
   heroTitle: string;
   heroSubtitle: string;
+  heroQuote: string;
   heroImage: string;
   aboutImage: string;
   about: string;
+  aboutCredentials: string[];
   services: Service[];
   offerings: Offering[];
+  process: Process;
   testimonials: Testimonial[];
   contact: Contact;
   ctaText: string;

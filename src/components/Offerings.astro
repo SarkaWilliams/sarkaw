@@ -1,16 +1,23 @@
 ---
 import { home } from "../lib/content";
+
+const offerings = home.offerings.map((offering) => ({
+  ...offering,
+  introParagraphs: offering.intro.split(/\n\s*\n/).filter(Boolean),
+}));
 ---
 
 <section class="offerings" id="co-nabizim">
   <div class="container">
     <h2>Co nabízím</h2>
     <div class="offerings__list">
-      {home.offerings.map((offering) => (
+      {offerings.map((offering) => (
         <details class="offering">
           <summary>{offering.title}</summary>
           <div class="offering__content">
-            <p>{offering.intro}</p>
+            {offering.quote && <p class="offering__quote">{offering.quote}</p>}
+            {offering.introParagraphs.map((p) => <p>{p}</p>)}
+            {offering.itemsHeading && <p class="offering__items-heading">{offering.itemsHeading}</p>}
             <ul>
               {offering.items.map((item) => (
                 <li>{item}</li>
@@ -67,6 +74,16 @@ import { home } from "../lib/content";
   .offering__content p {
     color: var(--color-text-muted);
     margin: 0 0 1rem;
+  }
+
+  .offering__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+  }
+
+  .offering__content p.offering__items-heading {
+    font-weight: 600;
+    color: var(--color-text);
   }
 
   .offering__content ul {

@@ -6,6 +6,9 @@ import { home } from "../lib/content";
   <div class="container contact__inner">
     <h2>Kontakt</h2>
     <ul class="contact__list">
+      <li>{home.contact.name}</li>
+      <li>IČO: {home.contact.ico}</li>
+      <li>{home.contact.address}</li>
       <li>
         E-mail: <a href={`mailto:${home.contact.email}`}>{home.contact.email}</a>
       </li>
