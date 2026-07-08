@@ -32,9 +32,14 @@ collections:
         fields:
           - { label: "Hero nadpis", name: heroTitle, widget: string }
           - { label: "Hero podnadpis", name: heroSubtitle, widget: text }
+          - { label: "Hero motto (citát)", name: heroQuote, widget: string, required: false }
           - { label: "Hero obrázek", name: heroImage, widget: image }
           - { label: "Fotka (O mně)", name: aboutImage, widget: image }
           - { label: "O mně", name: about, widget: markdown }
+          - label: "O mně — odborné zázemí (seznam certifikací)"
+            name: aboutCredentials
+            widget: list
+            field: { label: "Položka", name: item, widget: string }
           - label: "Služby"
             name: services
             widget: list
@@ -46,7 +51,9 @@ collections:
             widget: list
             fields:
               - { label: "Název", name: title, widget: string }
+              - { label: "Citát (nepovinné)", name: quote, widget: string, required: false }
               - { label: "Úvodní text", name: intro, widget: text }
+              - { label: "Nadpis nad seznamem bodů (nepovinné)", name: itemsHeading, widget: string, required: false }
               - label: "Body seznamu"
                 name: items
                 widget: list
@@ -57,6 +64,19 @@ collections:
                 fields:
                   - { label: "Služba", name: label, widget: string }
                   - { label: "Cena", name: price, widget: string }
+          - label: "Jak probíhá spolupráce"
+            name: process
+            widget: object
+            fields:
+              - { label: "Nadpis sekce", name: title, widget: string }
+              - label: "Kroky"
+                name: steps
+                widget: list
+                fields:
+                  - { label: "Název kroku", name: title, widget: string }
+                  - { label: "Popis kroku", name: description, widget: text }
+              - { label: "CTA text", name: ctaText, widget: text }
+              - { label: "Tagline", name: tagline, widget: string }
           - label: "Reference"
             name: testimonials
             widget: list
@@ -68,6 +88,9 @@ collections:
             name: contact
             widget: object
             fields:
+              - { label: "Jméno a titul", name: name, widget: string }
+              - { label: "IČO", name: ico, widget: string }
+              - { label: "Adresa", name: address, widget: string }
               - { label: "E-mail", name: email, widget: string }
               - { label: "Telefon", name: phone, widget: string }
               - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }

@@ -1,0 +1,83 @@
+---
+import { home } from "../lib/content";
+
+const { process } = home;
+---
+
+<section class="process" id="spoluprace">
+  <div class="container process__inner">
+    <h2>{process.title}</h2>
+    <ol class="process__steps">
+      {process.steps.map((step, index) => (
+        <li class="process__step">
+          <span class="process__step-number">{index + 1}</span>
+          <div>
+            <p class="process__step-title">{step.title}</p>
+            <p class="process__step-description">{step.description}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+    <p class="process__cta-text">{process.ctaText}</p>
+    <a class="button" href={home.ctaUrl} target="_blank" rel="noopener noreferrer">
+      {home.ctaText}
+    </a>
+    <p class="process__tagline">{process.tagline}</p>
+  </div>
+</section>
+
+<style>
+  .process__inner {
+    max-width: 40rem;
+  }
+
+  .process__steps {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .process__step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .process__step-number {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  .process__step-title {
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+  }
+
+  .process__step-description {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .process__cta-text {
+    color: var(--color-text-muted);
+    margin: 0 0 1.5rem;
+  }
+
+  .process__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    margin: 1.5rem 0 0;
+  }
+</style>

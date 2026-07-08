@@ -1,9 +1,15 @@
 {
-  "heroTitle": "Změna, která vydrží — v práci i v životě",
-  "heroSubtitle": "Koučink pro jednotlivce i firmy. Pomáhám lidem najít vlastní odpovědi a týmům projít změnou bez zbytečných konfliktů.",
+  "heroTitle": "Rozvoj skrze vlastní uvědomění a odpovědnost.",
+  "heroSubtitle": "Pomáhám lidem nacházet vnitřní svobodu a firmám budovat prostředí, kde procesy dávají smysl a lidé v nich chtějí růst, ne jen přežívat.",
+  "heroQuote": "„Odpovědnost za vlastní život je nejvyšší forma svobody.“",
   "heroImage": "/hero2.jpg",
   "aboutImage": "/hero.webp",
-  "about": "Jsem manželka, máma, kamarádka, mentální koučka, projektová manažerka a lektorka skupinových lekcí. Ani jedné role se nechci ve svém životě vzdát.\n\nVe své práci propojuji zkušenosti ze všech oblastí, protože mi to umožňuje dívat se na člověka i změnu v souvislostech a dávat věcem hlubší a dlouhodobě udržitelný smysl. Věřím, že skutečná změna začíná vědomou volbou, převzetím odpovědnosti za vlastní život a odvahou dělat věci v souladu se sebou.\n\nVedle koučovací praxe působím jako projektová manažerka s certifikacemi PRINCE2 a MoP AXELOS v oblasti řízení portfolia. Tato kombinace mi dává hlubší porozumění firemním procesům i výzvám, kterým čelí lidé v organizacích — a vím, že ani ta nejlepší metodika nefunguje bez lidí, kteří ji skutečně přijmou za svou.",
+  "about": "Jsem mentální koučka, projektová manažerka, lektorka skupinových lekcí, ale také manželka, máma a kamarádka. Ani jedné z těchto rolí se ve svém životě nechci vzdát, protože mě každá z nich formuje. Ve své práci přirozeně propojuji zkušenosti ze všech těchto zdánlivě odlišných světů. Proč? Protože věřím, že člověka nelze rozdělit na „profesionála“ a „soukromou osobu“. Vše souvisí se vším.\n\nDíky dlouholeté praxi v projektovém řízení a podpoře managementu (zastřešené certifikacemi PRINCE2 či MoP) rozumím firemním procesům, tlaku na výkon, hrozbě vyhoření i každodenním výzvám, kterým čelí manažeři a jejich týmy. Zároveň však vím, že ani ta nejlepší tabulka nebo směrnice nefunguje, pokud ji lidé nepřijmou za svou.\n\nProto do světa čísel a struktur přináším lidský rozměr. Pomáhám lidem — ať už v kanceláři, v tělocvičně nebo v osobním životě — dívat se na věci v souvislostech, najít odvahu dělat vědomá rozhodnutí a žít i pracovat v souladu se sebou.",
+  "aboutCredentials": [
+    "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)",
+    "Projektový management (PRINCE2 Practitioner)",
+    "Řízení portfolia (MoP Practitioner)"
+  ],
   "services": [
     {
       "title": "Úvodní konzultace",
@@ -20,14 +26,15 @@
   ],
   "offerings": [
     {
-      "title": "Osobnostní koučink",
-      "intro": "Koučování je partnerský rozhovor, ve kterém si hledáte vlastní odpovědi. Nedávám rady ani hotová řešení, ale pomáhám vám objevit to, co už v sobě víte, jen to zatím plně nevyužíváte.",
+      "title": "Pro jednotlivce: Osobní a transformační koučink",
+      "quote": "„Vaše odpovědi už v sobě máte. Pomůžu vám je objevit.“",
+      "intro": "Koučování se mnou je partnerský rozhovor. Nečekejte ode mě univerzální rady ani hotové šablony na štěstí. Jsem tu od toho, abych vám pomohla zvědomit si to, co v sobě už dávno víte, ale z nějakého důvodu to teď nevyužíváte. Společně najdeme konkrétní kroky, které budou vycházet z vás a budou vám dlouhodobě fungovat.",
+      "itemsHeading": "Koučink je pro vás správná cesta, pokud:",
       "items": [
-        "Hledáte rovnováhu mezi pracovním a osobním životem",
-        "Procházíte změnou a nevíte, jak dál",
-        "Chcete posílit sebevědomí nebo se lépe rozhodovat",
-        "Uvažujete o změně kariéry nebo nové životní etapě",
-        "Potřebujete nastavit hranice a řídit svůj čas"
+        "Hledáte rovnováhu mezi prací, rodinou a časem pro sebe.",
+        "Procházíte životní či kariérní změnou a potřebujete si utřídit myšlenky.",
+        "Chcete posílit své sebevědomí, naučit se lépe rozhodovat a říkat „ne“.",
+        "Potřebujete si zdravě nastavit osobní hranice a získat kontrolu nad svým časem."
       ],
       "pricing": [
         { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
@@ -37,14 +44,14 @@
       ]
     },
     {
-      "title": "Business koučink",
-      "intro": "Nepřicházím firmám říkat, jak dělat svůj business. Vytvářím prostor, kde lidé mohou otevřeně mluvit, pojmenují skutečný problém a převezmou odpovědnost za svůj vliv na situaci.",
+      "title": "Pro firmy a týmy: Profesní Solution Focused Coaching",
+      "quote": "„Největší posun ve firmách často nezačíná novým procesem, ale novým porozuměním.“",
+      "intro": "Narážíte ve firmě na tichý odpor vůči změnám? Komunikují spolu týmy jen formálně, roste v nich apatie nebo přetížení? Často to není nedostatkem schopností, ale strachem, tlakem a nepochopením rolí.\n\nNepřicházím k vám jako externí poradce, který vám bude diktovat, jak máte dělat svůj byznys. Nabízím nezaujatý pohled zvenčí a bezpečné, nehodnotící prostředí, kde lidé mohou otevřeně pojmenovat skutečné problémy, začít si znovu rozumět a převzít odpovědnost za svůj vliv na situaci.",
+      "itemsHeading": "S čím vám i vašemu týmu pomohu:",
       "items": [
-        "Týmy spolu formálně komunikují, ale ve skutečnosti nespolupracují",
-        "V týmech roste přetížení, apatie a riziko vyhoření klíčových lidí",
-        "Nové procesy dávají smysl na papíře, ale v praxi narážejí na tichý odpor",
-        "Při restrukturalizaci roste fluktuace a klesá motivace",
-        "Manažeři řeší stále stejné konflikty dokola místo stabilizace týmů"
+        "Hladší zvládání změn: Pomáhám lidem přijmout restrukturalizace a nové procesy za své.",
+        "Zdravá firemní kultura: Nastartujeme upřímnou komunikaci, posílíme vzájemnou důvěru a ochotu spolupracovat.",
+        "Prevence vyhoření: Vrátíme do týmů energii a motivaci, aby lidé nechodili do práce jen „přežít další den“."
       ],
       "pricing": [
         { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
@@ -54,6 +61,25 @@
       ]
     }
   ],
+  "process": {
+    "title": "Jak probíhá naše spolupráce?",
+    "steps": [
+      {
+        "title": "Nezávazný seznamovací hovor (20 min zdarma)",
+        "description": "Potkáme se online. Vy mi řeknete, co řešíte, a zjistíme, zda si lidsky sedíme."
+      },
+      {
+        "title": "Pojmenování cíle a plánu",
+        "description": "Definujeme, kde jste teď, kam se chcete posunout a jak bude naše spolupráce dlouhá (obvykle 5–10 setkání)."
+      },
+      {
+        "title": "Samotný koučink",
+        "description": "Společně pracujeme formou rozhovorů na odkrývání vašich odpovědí a nastavování konkrétních kroků do praxe."
+      }
+    ],
+    "ctaText": "Udělejte první krok ještě dnes. Rezervujte si nezávazný 20minutový online hovor zdarma a pojďme se podívat na to, kam se chcete vy nebo vaše firma posunout.",
+    "tagline": "The best is yet to come."
+  },
   "testimonials": [
     {
       "quote": "Sem přijde skutečná citace klientky/klienta.",
@@ -82,6 +108,9 @@
     }
   ],
   "contact": {
+    "name": "Ing. Šárka Williams",
+    "ico": "19456204",
+    "address": "Janáčkova 943, 667 01 Židlochovice",
     "email": "sarka.williams@gmail.com",
     "phone": "603 443 727",
     "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
