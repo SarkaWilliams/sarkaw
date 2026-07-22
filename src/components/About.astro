@@ -1,5 +1,10 @@
 ---
-import { home } from "../lib/content";
+import { getHomeContent } from "../lib/content";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const home = getHomeContent(locale);
+const t = ui[locale];
 
 // `about` je psáno jako markdown (widget: markdown ve Sveltia).
 // Zatím render jako prostý text s odstavci; při potřebě lze napojit markdown parser.
@@ -8,13 +13,13 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
 
 <section class="about" id="o-mne">
   <div class="container about__inner">
-    <img class="about__photo" src={home.aboutImage} alt="Šárka Williams" />
+    <img class="about__photo" src={home.aboutImage} alt={t.sections.aboutPhotoAlt} />
     <div class="about__content">
-      <h2>Kdo stojí za vaším rozvojem?</h2>
+      <h2>{t.sections.aboutHeading}</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
       {home.aboutCredentials.length > 0 && (
         <>
-          <p class="about__credentials-heading">Moje odborné zázemí:</p>
+          <p class="about__credentials-heading">{t.sections.credentialsHeading}</p>
           <ul class="about__credentials">
             {home.aboutCredentials.map((item) => <li>{item}</li>)}
           </ul>

@@ -1,6 +1,8 @@
 ---
-import { home } from "../lib/content";
+import { getHomeContent } from "../lib/content";
+import { normalizeLocale } from "../lib/i18n";
 
+const home = getHomeContent(normalizeLocale(Astro.currentLocale));
 const { process } = home;
 ---
 

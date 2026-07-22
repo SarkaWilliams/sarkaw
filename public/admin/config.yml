@@ -12,6 +12,11 @@ backend:
 media_folder: public/images
 public_folder: /images
 
+i18n:
+  structure: multiple_files
+  locales: [cs, en]
+  default_locale: cs
+
 collections:
   - name: blog
     label: Blog
@@ -25,30 +30,35 @@ collections:
       - { label: "Obsah článku", name: body, widget: markdown }
   - name: pages
     label: Stránky
+    i18n: true
     files:
       - name: home
         label: Úvodní stránka
-        file: src/content/pages/home.json
+        file: src/content/pages/home.{{locale}}.json
+        i18n: true
         fields:
-          - { label: "Hero nadpis", name: heroTitle, widget: string }
-          - { label: "Hero podnadpis", name: heroSubtitle, widget: text }
-          - { label: "Hero motto (citát)", name: heroQuote, widget: string, required: false }
-          - { label: "Hero obrázek", name: heroImage, widget: image }
-          - { label: "Fotka (O mně)", name: aboutImage, widget: image }
-          - { label: "O mně", name: about, widget: markdown }
+          - { label: "Hero nadpis", name: heroTitle, widget: string, i18n: true }
+          - { label: "Hero podnadpis", name: heroSubtitle, widget: text, i18n: true }
+          - { label: "Hero motto (citát)", name: heroQuote, widget: string, required: false, i18n: true }
+          - { label: "Hero obrázek", name: heroImage, widget: image, i18n: duplicate }
+          - { label: "Fotka (O mně)", name: aboutImage, widget: image, i18n: duplicate }
+          - { label: "O mně", name: about, widget: markdown, i18n: true }
           - label: "O mně — odborné zázemí (seznam certifikací)"
             name: aboutCredentials
             widget: list
+            i18n: true
             field: { label: "Položka", name: item, widget: string }
           - label: "Služby"
             name: services
             widget: list
+            i18n: true
             fields:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: description, widget: text }
           - label: "Co nabízím"
             name: offerings
             widget: list
+            i18n: true
             fields:
               - { label: "Název", name: title, widget: string }
               - { label: "Citát (nepovinné)", name: quote, widget: string, required: false }
@@ -67,6 +77,7 @@ collections:
           - label: "Jak probíhá spolupráce"
             name: process
             widget: object
+            i18n: true
             fields:
               - { label: "Nadpis sekce", name: title, widget: string }
               - label: "Kroky"
@@ -80,6 +91,7 @@ collections:
           - label: "Reference"
             name: testimonials
             widget: list
+            i18n: true
             fields:
               - { label: "Citace", name: quote, widget: text }
               - { label: "Jméno", name: name, widget: string }
@@ -87,6 +99,7 @@ collections:
           - label: "Kontakt"
             name: contact
             widget: object
+            i18n: duplicate
             fields:
               - { label: "Jméno a titul", name: name, widget: string }
               - { label: "IČO", name: ico, widget: string }
@@ -96,5 +109,5 @@ collections:
               - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }
               - { label: "Facebook (odkaz)", name: facebookUrl, widget: string }
               - { label: "Instagram (odkaz)", name: instagramUrl, widget: string }
-          - { label: "Text tlačítka (CTA)", name: ctaText, widget: string }
-          - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string }
+          - { label: "Text tlačítka (CTA)", name: ctaText, widget: string, i18n: true }
+          - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string, i18n: duplicate }

@@ -1,4 +1,6 @@
-import homeData from "../content/pages/home.json";
+import homeCs from "../content/pages/home.cs.json";
+import homeEn from "../content/pages/home.en.json";
+import type { Locale } from "./i18n";
 
 export interface Service {
   title: string;
@@ -65,4 +67,11 @@ export interface HomeContent {
   ctaUrl: string;
 }
 
-export const home = homeData as HomeContent;
+const homeByLocale: Record<Locale, HomeContent> = {
+  cs: homeCs as HomeContent,
+  en: homeEn as HomeContent,
+};
+
+export function getHomeContent(locale: Locale): HomeContent {
+  return homeByLocale[locale];
+}

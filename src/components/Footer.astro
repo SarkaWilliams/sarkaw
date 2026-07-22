@@ -1,10 +1,16 @@
 ---
+import { normalizeLocale, ui } from "../lib/i18n";
+
 const year = new Date().getFullYear();
+const t = ui[normalizeLocale(Astro.currentLocale)];
 ---
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <p>&copy; {year} Koučink. Všechna práva vyhrazena.</p>
+    <p>&copy; {year} {t.footer}</p>
+    <p class="site-footer__credit">
+      Vytvořil <a href="https://cadaweby.cz" target="_blank" rel="noopener noreferrer">Milan Čada - cadaweby.cz</a>
+    </p>
   </div>
 </footer>
 
@@ -18,5 +24,15 @@ const year = new Date().getFullYear();
   .site-footer__inner p {
     margin: 0;
     font-size: 0.9rem;
+  }
+
+  .site-footer__inner p.site-footer__credit {
+    margin-top: 0.4rem;
+    opacity: 0.8;
+    font-size: 0.8rem;
+  }
+
+  .site-footer__credit a {
+    color: inherit;
   }
 </style>

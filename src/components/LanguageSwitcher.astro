@@ -1,0 +1,66 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const labels = ui[locale].languageSwitcher;
+
+// Only the homepage currently has a translated equivalent in both locales,
+// so every other route (e.g. the Czech-only /blog) falls back to the
+// target locale's homepage rather than a matching page.
+const csHref = getRelativeLocaleUrl("cs", "");
+const enHref = getRelativeLocaleUrl("en", "");
+---
+
+<div class="language-switcher">
+  <a href={csHref} class:list={["language-switcher__link", { "is-active": locale === "cs" }]} aria-current={locale === "cs" ? "page" : undefined}>
+    {labels.cs}
+  </a>
+  <span class="language-switcher__divider" aria-hidden="true">/</span>
+  <a href={enHref} class:list={["language-switcher__link", { "is-active": locale === "en" }]} aria-current={locale === "en" ? "page" : undefined}>
+    {labels.en}
+  </a>
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .language-switcher__link {
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .language-switcher__link.is-active {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  .language-switcher__divider {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  @media (min-width: 769px) {
+    .language-switcher__link {
+      font-size: 1rem;
+      color: var(--color-accent-contrast);
+      opacity: 0.75;
+    }
+
+    .language-switcher__link.is-active {
+      opacity: 1;
+    }
+
+    .language-switcher__divider {
+      color: var(--color-accent-contrast);
+      opacity: 0.6;
+    }
+  }
+</style>

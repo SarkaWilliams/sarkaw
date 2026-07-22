@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Offerings from "../../components/Offerings.astro";
+import About from "../../components/About.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import Process from "../../components/Process.astro";
+import Contact from "../../components/Contact.astro";
+import { getHomeContent } from "../../lib/content";
+
+const home = getHomeContent("en");
+---
+
+<Layout title={`${home.heroTitle} | Coaching`} translationPath="">
+  <Hero ctaHref="#kontakt" />
+  <Offerings />
+  <About />
+  <Testimonials />
+  <Process />
+  <Contact />
+</Layout>

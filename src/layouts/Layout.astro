@@ -1,25 +1,45 @@
 ---
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { locales, normalizeLocale, ui } from "../lib/i18n";
 import "../styles/global.css";
 
 interface Props {
   title: string;
   description?: string;
+  /** Relative path (no locale prefix, e.g. "" for the homepage) if this page has a translated
+   * equivalent in every locale — enables hreflang alternate links. Omit for locale-only pages
+   * (e.g. the Czech-only blog), which have no translated counterpart to point to. */
+  translationPath?: string;
 }
 
-const { title, description = "Osobní koučink — individuální sezení a konzultace." } = Astro.props;
+const locale = normalizeLocale(Astro.currentLocale);
+const t = ui[locale];
+const { title, description = t.defaultDescription, translationPath } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="cs">
+<html lang={t.htmlLang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/webp" href="/favicon-32.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {translationPath !== undefined && (
+      <>
+        {locales.map((altLocale) => (
+          <link
+            rel="alternate"
+            hreflang={altLocale}
+            href={getAbsoluteLocaleUrl(altLocale, translationPath)}
+          />
+        ))}
+        <link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl("cs", translationPath)} />
+      </>
+    )}
   </head>
   <body>
     <Header />

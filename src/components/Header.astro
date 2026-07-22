@@ -1,25 +1,33 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = ui[locale];
+const home = getRelativeLocaleUrl(locale, "");
 ---
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="/" class="site-header__brand">SW</a>
+    <a href={home} class="site-header__brand">SW</a>
     <button
       class="site-header__menu-toggle"
-      aria-label="Otevřít menu"
+      aria-label={t.menuToggleLabel}
       aria-expanded="false"
       aria-controls="site-header-nav"
     >
       Menu
     </button>
     <nav class="site-header__nav" id="site-header-nav">
-      <a href="/#hero">Úvodní stránka</a>
-      <a href="/#co-nabizim">Co nabízím</a>
-      <a href="/#o-mne">O mně</a>
-      <a href="/#reference">Reference</a>
-      <a href="/#spoluprace">Spolupráce</a>
-      <a href="/blog">Blog</a>
-      <a href="/#kontakt">Kontakt</a>
+      {locale === "en" && <a href={`${home}#hero`}>{t.nav.home}</a>}
+      <a href={`${home}#co-nabizim`}>{t.nav.services}</a>
+      <a href={`${home}#o-mne`}>{t.nav.about}</a>
+      <a href={`${home}#reference`}>{t.nav.testimonials}</a>
+      <a href={`${home}#spoluprace`}>{t.nav.process}</a>
+      <a href="/blog">{t.nav.blog}</a>
+      <a href={`${home}#kontakt`}>{t.nav.contact}</a>
+      <LanguageSwitcher />
     </nav>
   </div>
 </header>

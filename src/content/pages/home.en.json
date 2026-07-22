@@ -1,0 +1,122 @@
+{
+  "heroTitle": "Growth through self-awareness and responsibility.",
+  "heroSubtitle": "I help individuals find inner freedom, and companies build environments where processes make sense and people want to grow in them — not just get by.",
+  "heroQuote": "\"Taking responsibility for your own life is the highest form of freedom.\"",
+  "heroImage": "/hero2.jpg",
+  "aboutImage": "/hero.webp",
+  "about": "I'm a mental coach, project manager, group class facilitator — but also a wife, a mother, and a friend. I don't want to give up any of these roles, because each of them shapes who I am. In my work, I naturally draw on experience from all of these seemingly different worlds. Why? Because I believe a person can't be split into a \"professional\" and a \"private\" self. Everything is connected to everything else.\n\nThanks to years of experience in project management and supporting leadership teams (backed by PRINCE2 and MoP certifications), I understand corporate processes, performance pressure, the threat of burnout, and the everyday challenges managers and their teams face. At the same time, I know that even the best spreadsheet or policy doesn't work unless people genuinely make it their own.\n\nThat's why I bring a human dimension into the world of numbers and structures. I help people — whether at the office, at the gym, or in their personal life — see things in context, find the courage to make conscious decisions, and live and work in alignment with themselves.",
+  "aboutCredentials": [
+    "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)",
+    "Project Management (PRINCE2 Practitioner)",
+    "Portfolio Management (MoP Practitioner)"
+  ],
+  "services": [
+    {
+      "title": "Initial Consultation",
+      "description": "60 minutes to sit down together and talk about where you are and where you want to go. No commitment."
+    },
+    {
+      "title": "One-on-One Coaching",
+      "description": "Regular sessions focused on a specific topic — career, relationships, or personal growth."
+    },
+    {
+      "title": "Package of 5 Sessions",
+      "description": "For those who are serious about it and want to work on a topic consistently."
+    }
+  ],
+  "offerings": [
+    {
+      "title": "Personal Coaching",
+      "quote": "\"You already have the answers within you. I'll help you discover them.\"",
+      "intro": "Coaching with me is a conversation between partners. Don't expect universal advice or ready-made formulas for happiness. I'm here to help you become aware of what you already know deep down, but for some reason aren't using right now. Together, we'll find concrete steps that come from you and that will actually work for you in the long run.",
+      "itemsHeading": "Coaching is the right path for you if:",
+      "items": [
+        "You're looking for balance between work, family, and time for yourself.",
+        "You're going through a life or career change and need to organize your thoughts.",
+        "You want to build your confidence, make decisions more easily, and learn to say \"no\".",
+        "You need to set healthy personal boundaries and gain control over your time."
+      ],
+      "pricing": [
+        { "label": "Initial consultation (30 min)", "price": "TBD" },
+        { "label": "Single session (60 min)", "price": "TBD" },
+        { "label": "Package of 5 sessions", "price": "TBD" },
+        { "label": "Package of 10 sessions", "price": "TBD" }
+      ]
+    },
+    {
+      "title": "Business Coaching",
+      "quote": "\"The biggest shift in a company often doesn't start with a new process, but with a new understanding.\"",
+      "intro": "Are you running into quiet resistance to change in your company? Do teams only communicate formally, with apathy or overload creeping in? Often, it's not a lack of ability — it's fear, pressure, and a lack of clarity about roles.\n\nI don't come to you as an external consultant here to dictate how you should run your business. I offer an unbiased outside perspective and a safe, non-judgmental space where people can openly name the real problems, start understanding each other again, and take ownership of their impact on the situation.",
+      "itemsHeading": "How I can help you and your team:",
+      "items": [
+        "Smoother change management: I help people take ownership of restructuring and new processes.",
+        "A healthy company culture: We'll kick-start honest communication and strengthen mutual trust and willingness to collaborate.",
+        "Burnout prevention: We'll bring energy and motivation back to the team, so people stop showing up just to \"survive another day\"."
+      ],
+      "pricing": [
+        { "label": "Initial consultation (30 min)", "price": "TBD" },
+        { "label": "Coaching session (60 min)", "price": "TBD" },
+        { "label": "Package of 5 sessions", "price": "TBD" },
+        { "label": "Package of 10 sessions", "price": "TBD" }
+      ]
+    }
+  ],
+  "process": {
+    "title": "How does our work together look?",
+    "steps": [
+      {
+        "title": "No-obligation intro call (20 min, free)",
+        "description": "We'll meet online. You tell me what you're dealing with, and we'll see if we click."
+      },
+      {
+        "title": "Defining the goal and plan",
+        "description": "We define where you are now, where you want to get to, and how long our work together will take (usually 5–10 sessions)."
+      },
+      {
+        "title": "The coaching itself",
+        "description": "We work together through conversation to uncover your own answers and set concrete steps into practice."
+      }
+    ],
+    "ctaText": "Take the first step today. Book a free, no-obligation 20-minute online call, and let's look at where you or your company want to go.",
+    "tagline": "The best is yet to come."
+  },
+  "testimonials": [
+    {
+      "quote": "After more than two months of working together, I leave every session feeling relaxed and full of energy, with clear thoughts. Good questions lead to good answers — set a goal and go after it.",
+      "name": "Anna Zenkl",
+      "role": ""
+    },
+    {
+      "quote": "From our very first session, Šárka helped me see things from a completely different perspective. I left the meeting feeling much lighter, more confident, and with a clearer understanding of challenges I hadn't even realized were affecting me.",
+      "name": "Lenka Filipová",
+      "role": ""
+    },
+    {
+      "quote": "Coaching with Šárka was very enriching for me. Her ability to ask exactly the right questions helped me look at my situation from a different angle, and led me to an \"aha\" moment I still draw on today.",
+      "name": "Eliška Žižková",
+      "role": ""
+    },
+    {
+      "quote": "Šárka is a responsible and systematic person who knows how to keep a project on track. At the same time, she's able to create an empathetic and safe environment.",
+      "name": "Jana Vondrová",
+      "role": ""
+    },
+    {
+      "quote": "Šárka has great empathy and a genuine ability to connect with her clients. At the same time, she holds the coaching space firmly and gently redirects me if I unintentionally stray from the topic or the goal I set for myself.",
+      "name": "Hana Vávrová",
+      "role": ""
+    }
+  ],
+  "contact": {
+    "name": "Ing. Šárka Williams",
+    "ico": "19456204",
+    "address": "Janáčkova 943, 667 01 Židlochovice, Czech Republic",
+    "email": "sarka.williams@gmail.com",
+    "phone": "603 443 727",
+    "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
+    "facebookUrl": "https://www.facebook.com/sarka.mareckova.1",
+    "instagramUrl": "https://www.instagram.com/williamssarka/"
+  },
+  "ctaText": "Book a Session",
+  "ctaUrl": "https://reservio.com/PLACEHOLDER"
+}

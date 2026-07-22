@@ -1,19 +1,24 @@
 ---
-import { home } from "../lib/content";
+import { getHomeContent } from "../lib/content";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const home = getHomeContent(locale);
+const t = ui[locale];
 ---
 
 <section class="contact" id="kontakt">
   <div class="container contact__inner">
-    <h2>Kontakt</h2>
+    <h2>{t.sections.contactHeading}</h2>
     <ul class="contact__list">
       <li>{home.contact.name}</li>
-      <li>IČO: {home.contact.ico}</li>
+      <li>{t.contactLabels.ico}: {home.contact.ico}</li>
       <li>{home.contact.address}</li>
       <li>
-        E-mail: <a href={`mailto:${home.contact.email}`}>{home.contact.email}</a>
+        {t.contactLabels.email}: <a href={`mailto:${home.contact.email}`}>{home.contact.email}</a>
       </li>
       <li>
-        Telefon: <a href={`tel:${home.contact.phone.replace(/\s+/g, "")}`}>{home.contact.phone}</a>
+        {t.contactLabels.phone}: <a href={`tel:${home.contact.phone.replace(/\s+/g, "")}`}>{home.contact.phone}</a>
       </li>
     </ul>
     <div class="contact__socials">
@@ -22,7 +27,7 @@ import { home } from "../lib/content";
         href={home.contact.linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="LinkedIn profil Šárky Williams"
+        aria-label={t.socialAria.linkedin}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -35,7 +40,7 @@ import { home } from "../lib/content";
         href={home.contact.facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Facebook profil Šárky Williams"
+        aria-label={t.socialAria.facebook}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -46,7 +51,7 @@ import { home } from "../lib/content";
         href={home.contact.instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram profil Šárky Williams"
+        aria-label={t.socialAria.instagram}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>

@@ -1,5 +1,10 @@
 ---
-import { home } from "../lib/content";
+import { getHomeContent } from "../lib/content";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const home = getHomeContent(locale);
+const t = ui[locale];
 
 const testimonials = home.testimonials;
 // ~10s na kartu, oříznuto na doporučený rozsah 40–60s na jeden průchod pásem
@@ -8,7 +13,7 @@ const duration = Math.min(60, Math.max(40, testimonials.length * 10));
 
 <section class="testimonials" id="reference">
   <div class="container">
-    <h2>Reference</h2>
+    <h2>{t.sections.testimonialsHeading}</h2>
   </div>
   <div class="testimonials__viewport">
     <div

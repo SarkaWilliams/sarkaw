@@ -1,5 +1,10 @@
 ---
-import { home } from "../lib/content";
+import { getHomeContent } from "../lib/content";
+import { normalizeLocale, ui } from "../lib/i18n";
+
+const locale = normalizeLocale(Astro.currentLocale);
+const home = getHomeContent(locale);
+const t = ui[locale];
 
 const offerings = home.offerings.map((offering) => ({
   ...offering,
@@ -9,7 +14,7 @@ const offerings = home.offerings.map((offering) => ({
 
 <section class="offerings" id="co-nabizim">
   <div class="container">
-    <h2>Co nabízím</h2>
+    <h2>{t.sections.servicesHeading}</h2>
     <div class="offerings__list">
       {offerings.map((offering) => (
         <details class="offering">
@@ -25,7 +30,7 @@ const offerings = home.offerings.map((offering) => ({
             </ul>
             <div class="offering__pricing">
               <p class="offering__pricing-note">
-                Konečná cena se stanovuje individuálně podle rozsahu spolupráce.
+                {t.sections.pricingNote}
               </p>
               <ul class="offering__pricing-list">
                 {offering.pricing.map((item) => (
