@@ -8,7 +8,8 @@
   "aboutCredentials": [
     "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)",
     "Projektový management (PRINCE2 Practitioner)",
-    "Řízení portfolia (MoP Practitioner)"
+    "Řízení portfolia (MoP Practitioner)",
+    "Associate certified coach (ICF)"
   ],
   "services": [
     {
@@ -37,10 +38,22 @@
         "Potřebujete si zdravě nastavit osobní hranice a získat kontrolu nad svým časem."
       ],
       "pricing": [
-        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
-        { "label": "Jednotlivé sezení (60 min)", "price": "0 Kč" },
-        { "label": "Balíček 5 sezení", "price": "0 Kč" },
-        { "label": "Balíček 10 sezení", "price": "0 Kč" }
+        {
+          "label": "Úvodní konzultace (30 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Jednotlivé sezení (60 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 5 sezení",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 10 sezení",
+          "price": "0 Kč"
+        }
       ]
     },
     {
@@ -54,10 +67,22 @@
         "Prevence vyhoření: Vrátíme do týmů energii a motivaci, aby lidé nechodili do práce jen „přežít další den“."
       ],
       "pricing": [
-        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
-        { "label": "Koučovací sezení (60 min)", "price": "0 Kč" },
-        { "label": "Balíček 5 sezení", "price": "0 Kč" },
-        { "label": "Balíček 10 sezení", "price": "0 Kč" }
+        {
+          "label": "Úvodní konzultace (30 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Koučovací sezení (60 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 5 sezení",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 10 sezení",
+          "price": "0 Kč"
+        }
       ]
     }
   ],
