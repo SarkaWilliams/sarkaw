@@ -38,10 +38,22 @@
         "You need to set healthy personal boundaries and gain control over your time."
       ],
       "pricing": [
-        { "label": "Initial consultation (30 min)", "price": "TBD" },
-        { "label": "Single session (60 min)", "price": "TBD" },
-        { "label": "Package of 5 sessions", "price": "TBD" },
-        { "label": "Package of 10 sessions", "price": "TBD" }
+        {
+          "label": "Initial consultation (30 min)",
+          "price": "TBD"
+        },
+        {
+          "label": "Single session (60 min)",
+          "price": "TBD"
+        },
+        {
+          "label": "Package of 5 sessions",
+          "price": "TBD"
+        },
+        {
+          "label": "Package of 10 sessions",
+          "price": "TBD"
+        }
       ]
     },
     {
@@ -55,10 +67,22 @@
         "Burnout prevention: We'll bring energy and motivation back to the team, so people stop showing up just to \"survive another day\"."
       ],
       "pricing": [
-        { "label": "Initial consultation (30 min)", "price": "TBD" },
-        { "label": "Coaching session (60 min)", "price": "TBD" },
-        { "label": "Package of 5 sessions", "price": "TBD" },
-        { "label": "Package of 10 sessions", "price": "TBD" }
+        {
+          "label": "Initial consultation (30 min)",
+          "price": "TBD"
+        },
+        {
+          "label": "Coaching session (60 min)",
+          "price": "TBD"
+        },
+        {
+          "label": "Package of 5 sessions",
+          "price": "TBD"
+        },
+        {
+          "label": "Package of 10 sessions",
+          "price": "TBD"
+        }
       ]
     }
   ],

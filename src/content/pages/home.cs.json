@@ -4,7 +4,7 @@
   "heroQuote": "„Odpovědnost za vlastní život je nejvyšší forma svobody.“",
   "heroImage": "/hero2.jpg",
   "aboutImage": "/hero.webp",
-  "about": "Jsem mentální koučka, projektová manažerka, lektorka skupinových lekcí, ale také manželka, máma a kamarádka. Ani jedné z těchto rolí se ve svém životě nechci vzdát, protože mě každá z nich formuje. Ve své práci přirozeně propojuji zkušenosti ze všech těchto zdánlivě odlišných světů. Proč? Protože věřím, že člověka nelze rozdělit na „profesionála“ a „soukromou osobu“. Vše souvisí se vším.\n\nDíky dlouholeté praxi v projektovém řízení a podpoře managementu (zastřešené certifikacemi PRINCE2 či MoP) rozumím firemním procesům, tlaku na výkon, hrozbě vyhoření i každodenním výzvám, kterým čelí manažeři a jejich týmy. Zároveň však vím, že ani ta nejlepší tabulka nebo směrnice nefunguje, pokud ji lidé nepřijmou za svou.\n\nProto do světa čísel a struktur přináším lidský rozměr. Pomáhám lidem — ať už v kanceláři, v tělocvičně nebo v osobním životě — dívat se na věci v souvislostech, najít odvahu dělat vědomá rozhodnutí a žít i pracovat v souladu se sebou.",
+  "about": "Jsem ACC koučka a a členka International Coaching Federation (ICF), projektová manažerka, lektorka skupinových lekcí, ale také manželka, máma a kamarádka. Ani jedné z těchto rolí se ve svém životě nechci vzdát, protože mě každá z nich formuje. Ve své práci přirozeně propojuji zkušenosti ze všech těchto zdánlivě odlišných světů. Proč? Protože věřím, že člověka nelze rozdělit na „profesionála“ a „soukromou osobu“. Vše souvisí se vším.\n\nDíky dlouholeté praxi v projektovém řízení a podpoře managementu (zastřešené certifikacemi PRINCE2 či MoP) rozumím firemním procesům, tlaku na výkon, hrozbě vyhoření i každodenním výzvám, kterým čelí manažeři a jejich týmy. Zároveň však vím, že ani ta nejlepší tabulka nebo směrnice nefunguje, pokud ji lidé nepřijmou za svou.\n\nProto do světa čísel a struktur přináším lidský rozměr. Pomáhám lidem, ať už v kanceláři, v tělocvičně nebo v osobním životě, dívat se na věci v souvislostech, najít odvahu dělat vědomá rozhodnutí a žít i pracovat v souladu se sebou.",
   "aboutBadges": [
     { "image": "/icf-level-1.png", "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)" },
     { "image": "/prince2-practitioner.png", "alt": "Projektový management (PRINCE2 Practitioner)" },
@@ -14,7 +14,7 @@
   "services": [
     {
       "title": "Úvodní konzultace",
-      "description": "60 minut na to, abychom si sedli a probrali, kde jsi a kam chceš směřovat. Bez závazků."
+      "description": "První úvodní konzultace je zdarma. Během tohoto setkání zjistíme, s čím přicházíte, zda vám můj způsob práce vyhovuje a jestli je naše spolupráce vhodná.\n\nPokud se společně rozhodneme pokračovat, domluvíme si konkrétní formu spolupráce, rozsah podpory i cenu před jejím zahájením."
     },
     {
       "title": "Individuální koučink",
@@ -38,27 +38,51 @@
         "Potřebujete si zdravě nastavit osobní hranice a získat kontrolu nad svým časem."
       ],
       "pricing": [
-        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
-        { "label": "Jednotlivé sezení (60 min)", "price": "0 Kč" },
-        { "label": "Balíček 5 sezení", "price": "0 Kč" },
-        { "label": "Balíček 10 sezení", "price": "0 Kč" }
+        {
+          "label": "Úvodní konzultace (30 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Jednotlivé sezení (60 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 5 sezení",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 10 sezení",
+          "price": "0 Kč"
+        }
       ]
     },
     {
       "title": "Business koučink",
       "quote": "„Největší posun ve firmách často nezačíná novým procesem, ale novým porozuměním.“",
       "intro": "Narážíte ve firmě na tichý odpor vůči změnám? Komunikují spolu týmy jen formálně, roste v nich apatie nebo přetížení? Často to není nedostatkem schopností, ale strachem, tlakem a nepochopením rolí.\n\nNepřicházím k vám jako externí poradce, který vám bude diktovat, jak máte dělat svůj byznys. Nabízím nezaujatý pohled zvenčí a bezpečné, nehodnotící prostředí, kde lidé mohou otevřeně pojmenovat skutečné problémy, začít si znovu rozumět a převzít odpovědnost za svůj vliv na situaci.",
-      "itemsHeading": "S čím vám i vašemu týmu pomohu:",
+      "itemsHeading": "S čím vám i vašemu týmu můžu pomoci:",
       "items": [
         "Hladší zvládání změn: Pomáhám lidem přijmout restrukturalizace a nové procesy za své.",
         "Zdravá firemní kultura: Nastartujeme upřímnou komunikaci, posílíme vzájemnou důvěru a ochotu spolupracovat.",
         "Prevence vyhoření: Vrátíme do týmů energii a motivaci, aby lidé nechodili do práce jen „přežít další den“."
       ],
       "pricing": [
-        { "label": "Úvodní konzultace (30 min)", "price": "0 Kč" },
-        { "label": "Koučovací sezení (60 min)", "price": "0 Kč" },
-        { "label": "Balíček 5 sezení", "price": "0 Kč" },
-        { "label": "Balíček 10 sezení", "price": "0 Kč" }
+        {
+          "label": "První úvodní konzultace je zdarma. Během tohoto setkání zjistíme, s čím přicházíte, zda vám můj způsob práce vyhovuje a jestli je naše spolupráce vhodná.  Pokud se společně rozhodneme pokračovat, domluvíme si konkrétní formu spolupráce, rozsah podpory i cenu před jejím zahájením.",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Koučovací sezení (60 min)",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 5 sezení",
+          "price": "0 Kč"
+        },
+        {
+          "label": "Balíček 10 sezení",
+          "price": "0 Kč"
+        }
       ]
     }
   ],
@@ -66,7 +90,7 @@
     "title": "Jak probíhá naše spolupráce?",
     "steps": [
       {
-        "title": "Nezávazný seznamovací hovor (20 min zdarma)",
+        "title": "Nezávazný seznamovací rozhovor (zdarma)",
         "description": "Potkáme se online. Vy mi řeknete, co řešíte, a zjistíme, zda si lidsky sedíme."
       },
       {
