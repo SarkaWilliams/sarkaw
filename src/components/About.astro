@@ -17,11 +17,15 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     <div class="about__content">
       <h2>{t.sections.aboutHeading}</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
-      {home.aboutCredentials.length > 0 && (
+      {home.aboutBadges.length > 0 && (
         <>
           <p class="about__credentials-heading">{t.sections.credentialsHeading}</p>
-          <ul class="about__credentials">
-            {home.aboutCredentials.map((item) => <li>{item}</li>)}
+          <ul class="about__badges">
+            {home.aboutBadges.map((badge) => (
+              <li class="about__badge">
+                <img src={badge.image} alt={badge.alt} loading="lazy" />
+              </li>
+            ))}
           </ul>
         </>
       )}
@@ -53,14 +57,25 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     margin: 1.5rem 0 0.5rem;
   }
 
-  .about__credentials {
+  .about__badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin: 0;
-    padding-left: 1.25rem;
-    color: var(--color-text-muted);
+    padding: 0;
+    list-style: none;
   }
 
-  .about__credentials li {
-    margin-bottom: 0.4rem;
+  .about__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__badge img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
   }
 
   @media (max-width: 640px) {
@@ -71,6 +86,16 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     .about__photo {
       max-width: 14rem;
       margin: 0 auto;
+    }
+
+    .about__badges {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .about__badge img {
+      width: 80px;
+      height: 80px;
     }
   }
 </style>

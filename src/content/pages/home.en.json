@@ -5,10 +5,11 @@
   "heroImage": "/hero2.jpg",
   "aboutImage": "/hero.webp",
   "about": "I'm a mental coach, project manager, group class facilitator — but also a wife, a mother, and a friend. I don't want to give up any of these roles, because each of them shapes who I am. In my work, I naturally draw on experience from all of these seemingly different worlds. Why? Because I believe a person can't be split into a \"professional\" and a \"private\" self. Everything is connected to everything else.\n\nThanks to years of experience in project management and supporting leadership teams (backed by PRINCE2 and MoP certifications), I understand corporate processes, performance pressure, the threat of burnout, and the everyday challenges managers and their teams face. At the same time, I know that even the best spreadsheet or policy doesn't work unless people genuinely make it their own.\n\nThat's why I bring a human dimension into the world of numbers and structures. I help people — whether at the office, at the gym, or in their personal life — see things in context, find the courage to make conscious decisions, and live and work in alignment with themselves.",
-  "aboutCredentials": [
-    "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)",
-    "Project Management (PRINCE2 Practitioner)",
-    "Portfolio Management (MoP Practitioner)"
+  "aboutBadges": [
+    { "image": "/icf-level-1.png", "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)" },
+    { "image": "/prince2-practitioner.png", "alt": "Project Management (PRINCE2 Practitioner)" },
+    { "image": "/mop-practitioner.jpg", "alt": "Portfolio Management (MoP Practitioner)" },
+    { "image": "/associate-certified-coach-acc.png", "alt": "Associate Certified Coach (ICF)" }
   ],
   "services": [
     {

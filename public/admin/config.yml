@@ -43,11 +43,13 @@ collections:
           - { label: "Hero obrázek", name: heroImage, widget: image, i18n: duplicate }
           - { label: "Fotka (O mně)", name: aboutImage, widget: image, i18n: duplicate }
           - { label: "O mně", name: about, widget: markdown, i18n: true }
-          - label: "O mně — odborné zázemí (seznam certifikací)"
-            name: aboutCredentials
+          - label: "O mně — certifikační odznaky"
+            name: aboutBadges
             widget: list
             i18n: true
-            field: { label: "Položka", name: item, widget: string }
+            fields:
+              - { label: "Odznak (obrázek)", name: image, widget: image, i18n: duplicate }
+              - { label: "Alt text (název certifikace)", name: alt, widget: string, i18n: true }
           - label: "Služby"
             name: services
             widget: list

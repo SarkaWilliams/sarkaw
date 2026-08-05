@@ -50,6 +50,11 @@ export interface Testimonial {
   role: string;
 }
 
+export interface AboutBadge {
+  image: string;
+  alt: string;
+}
+
 export interface HomeContent {
   heroTitle: string;
   heroSubtitle: string;
@@ -57,7 +62,7 @@ export interface HomeContent {
   heroImage: string;
   aboutImage: string;
   about: string;
-  aboutCredentials: string[];
+  aboutBadges: AboutBadge[];
   services: Service[];
   offerings: Offering[];
   process: Process;
