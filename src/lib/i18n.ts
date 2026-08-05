@@ -69,7 +69,7 @@ export const ui: Record<Locale, UiStrings> = {
       servicesHeading: "Co nabízím",
       pricingNote: "Konečná cena se stanovuje individuálně podle rozsahu spolupráce.",
       aboutHeading: "Kdo stojí za vaším rozvojem?",
-      credentialsHeading: "Moje odborné zázemí:",
+      credentialsHeading: "Získané certifikáty:",
       aboutPhotoAlt: "Šárka Williams",
       testimonialsHeading: "Reference",
       contactHeading: "Kontakt",
