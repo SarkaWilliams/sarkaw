@@ -26,7 +26,6 @@ interface UiStrings {
   };
   sections: {
     servicesHeading: string;
-    pricingNote: string;
     aboutHeading: string;
     credentialsHeading: string;
     aboutPhotoAlt: string;
@@ -67,7 +66,6 @@ export const ui: Record<Locale, UiStrings> = {
     },
     sections: {
       servicesHeading: "Co nabízím",
-      pricingNote: "Konečná cena se stanovuje individuálně podle rozsahu spolupráce.",
       aboutHeading: "Kdo stojí za vaším rozvojem?",
       credentialsHeading: "Získané certifikáty:",
       aboutPhotoAlt: "Šárka Williams",
@@ -106,7 +104,6 @@ export const ui: Record<Locale, UiStrings> = {
     },
     sections: {
       servicesHeading: "Services",
-      pricingNote: "The final price is agreed individually based on the scope of our work together.",
       aboutHeading: "Who's behind your growth?",
       credentialsHeading: "My professional background:",
       aboutPhotoAlt: "Šárka Williams",

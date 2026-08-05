@@ -7,18 +7,12 @@ export interface Service {
   description: string;
 }
 
-export interface PricingItem {
-  label: string;
-  price: string;
-}
-
 export interface Offering {
   title: string;
   quote?: string;
   intro: string;
   itemsHeading?: string;
   items: string[];
-  pricing: PricingItem[];
 }
 
 export interface ProcessStep {
