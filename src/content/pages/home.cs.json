@@ -6,10 +6,22 @@
   "aboutImage": "/hero.webp",
   "about": "Jsem ACC koučka a a členka International Coaching Federation (ICF), projektová manažerka, lektorka skupinových lekcí, ale také manželka, máma a kamarádka. Ani jedné z těchto rolí se ve svém životě nechci vzdát, protože mě každá z nich formuje. Ve své práci přirozeně propojuji zkušenosti ze všech těchto zdánlivě odlišných světů. Proč? Protože věřím, že člověka nelze rozdělit na „profesionála“ a „soukromou osobu“. Vše souvisí se vším.\n\nDíky dlouholeté praxi v projektovém řízení a podpoře managementu (zastřešené certifikacemi PRINCE2 či MoP) rozumím firemním procesům, tlaku na výkon, hrozbě vyhoření i každodenním výzvám, kterým čelí manažeři a jejich týmy. Zároveň však vím, že ani ta nejlepší tabulka nebo směrnice nefunguje, pokud ji lidé nepřijmou za svou.\n\nProto do světa čísel a struktur přináším lidský rozměr. Pomáhám lidem, ať už v kanceláři, v tělocvičně nebo v osobním životě, dívat se na věci v souvislostech, najít odvahu dělat vědomá rozhodnutí a žít i pracovat v souladu se sebou.",
   "aboutBadges": [
-    { "image": "/icf-level-1.png", "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)" },
-    { "image": "/prince2-practitioner.png", "alt": "Projektový management (PRINCE2 Practitioner)" },
-    { "image": "/mop-practitioner.jpg", "alt": "Řízení portfolia (MoP Practitioner)" },
-    { "image": "/associate-certified-coach-acc.png", "alt": "Associate Certified Coach (ICF)" }
+    {
+      "image": "/icf-level-1.png",
+      "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)"
+    },
+    {
+      "image": "/prince2-practitioner.png",
+      "alt": "Projektový management (PRINCE2 Practitioner)"
+    },
+    {
+      "image": "/mop-practitioner.jpg",
+      "alt": "Řízení portfolia (MoP Practitioner)"
+    },
+    {
+      "image": "/associate-certified-coach-acc.png",
+      "alt": "Associate Certified Coach (ICF)"
+    }
   ],
   "services": [
     {
@@ -30,7 +42,7 @@
       "title": "Osobní koučink",
       "quote": "„Vaše odpovědi už v sobě máte. Pomůžu vám je objevit.“",
       "intro": "Koučování se mnou je partnerský rozhovor. Nečekejte ode mě univerzální rady ani hotové šablony na štěstí. Jsem tu od toho, abych vám pomohla zvědomit si to, co v sobě už dávno víte, ale z nějakého důvodu to teď nevyužíváte. Společně najdeme konkrétní kroky, které budou vycházet z vás a budou vám dlouhodobě fungovat.",
-      "itemsHeading": "Koučink je pro vás správná cesta, pokud:",
+      "itemsHeading": "Koučink může být pro vás správná cesta, pokud:",
       "items": [
         "Hledáte rovnováhu mezi prací, rodinou a časem pro sebe.",
         "Procházíte životní či kariérní změnou a potřebujete si utřídit myšlenky.",
