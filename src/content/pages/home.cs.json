@@ -31,10 +31,6 @@
     {
       "title": "Individuální koučink",
       "description": "Pravidelná sezení zaměřená na konkrétní téma — kariéru, vztahy, nebo osobní růst."
-    },
-    {
-      "title": "Balíček 5 sezení",
-      "description": "Pro ty, kdo to myslí vážně a chtějí na tématu pracovat soustavně."
     }
   ],
   "offerings": [
@@ -54,11 +50,14 @@
       "title": "Business koučink",
       "quote": "„Největší posun ve firmách často nezačíná novým procesem, ale novým porozuměním.“",
       "intro": "Narážíte ve firmě na tichý odpor vůči změnám? Komunikují spolu týmy jen formálně, roste v nich apatie nebo přetížení? Často to není nedostatkem schopností, ale strachem, tlakem a nepochopením rolí.\n\nNepřicházím k vám jako externí poradce, který vám bude diktovat, jak máte dělat svůj byznys. Nabízím nezaujatý pohled zvenčí a bezpečné, nehodnotící prostředí, kde lidé mohou otevřeně pojmenovat skutečné problémy, začít si znovu rozumět a převzít odpovědnost za svůj vliv na situaci.\n\nPrvní úvodní konzultace je zdarma. Během tohoto setkání zjistíme, s čím přicházíte, zda vám můj způsob práce vyhovuje a jestli je naše spolupráce vhodná. Pokud se společně rozhodneme pokračovat, domluvíme si konkrétní formu spolupráce a rozsah podpory.",
-      "itemsHeading": "S čím vám i vašemu týmu můžu pomoci:",
+      "itemsHeading": "S čím mohu podpořit vás i váš tým:",
       "items": [
-        "Hladší zvládání změn: Pomáhám lidem přijmout restrukturalizace a nové procesy za své.",
-        "Zdravá firemní kultura: Nastartujeme upřímnou komunikaci, posílíme vzájemnou důvěru a ochotu spolupracovat.",
-        "Prevence vyhoření: Vrátíme týmům i jednotlivcům energii a motivaci, aby nechodili do práce jen „přežít další den“."
+        "Zvládání změn s větším klidem a jistotou: Podporuji jednotlivce i týmy při adaptaci na nové role, procesy nebo organizační změny. Společně hledáme způsob, jak změny přijmout, porozumět jim a aktivně se s nimi ztotožnit.",
+        "Rozvoj zdravé firemní kultury: Pomáhám vytvářet prostředí založené na otevřené komunikaci, vzájemném respektu, důvěře a efektivní spolupráci napříč týmy.",
+        "Prevence vyhoření a podpora dlouhodobé motivace: Prostřednictvím koučovacích rozhovorů pomáhám lidem znovu objevit jejich zdroje energie, pracovat s přetížením a nacházet větší smysl i spokojenost v pracovním životě.",
+        "Rozvoj lídrů a manažerů: Podporuji vedoucí pracovníky v rozvoji jejich leadershipu, komunikačních dovedností, rozhodování i schopnosti vést a motivovat své týmy.",
+        "Posílení týmové spolupráce: Pomáhám týmům lépe porozumět vzájemným potřebám, efektivně řešit konflikty a využívat rozdílné pohledy jako příležitost k růstu.",
+        "Podpora talentů a profesního rozvoje: Koučování pomáhá zaměstnancům rozvíjet jejich silné stránky, převzít větší odpovědnost za svůj rozvoj a lépe využívat svůj potenciál."
       ]
     }
   ],
@@ -71,14 +70,14 @@
       },
       {
         "title": "Pojmenování cíle a plánu",
-        "description": "Definujeme, kde jste teď, kam se chcete posunout a jak bude naše spolupráce dlouhá (obvykle 5–10 setkání)."
+        "description": "Definujeme, kde jste teď, kam se chcete posunout a jak bude naše spolupráce probíhat."
       },
       {
         "title": "Samotný koučink",
         "description": "Společně pracujeme formou rozhovorů na odkrývání vašich odpovědí a nastavování konkrétních kroků do praxe."
       }
     ],
-    "ctaText": "Udělejte první krok ještě dnes. Rezervujte si nezávazný 20minutový online hovor zdarma a pojďme se podívat na to, kam se chcete vy nebo vaše firma posunout.",
+    "ctaText": "Udělejte první krok ještě dnes. Rezervujte si nezávazný online hovor zdarma a pojďme se podívat na to, kam se chcete vy nebo vaše firma posunout.",
     "tagline": "The best is yet to come."
   },
   "testimonials": [
