@@ -106,7 +106,7 @@ collections:
           - label: "Kontakt"
             name: contact
             widget: object
-            i18n: duplicate
+            i18n: true
             fields:
               - { label: "Jméno a titul", name: name, widget: string }
               - { label: "IČO", name: ico, widget: string }
