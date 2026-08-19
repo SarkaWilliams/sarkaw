@@ -17,11 +17,24 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     <div class="about__content">
       <h2>{t.sections.aboutHeading}</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
-      {home.aboutBadges.length > 0 && (
+      {home.aboutBadgesCurrent.length > 0 && (
         <>
-          <p class="about__credentials-heading">{t.sections.credentialsHeading}</p>
+          <p class="about__credentials-heading">{t.sections.credentialsCurrentHeading}</p>
           <ul class="about__credentials">
-            {home.aboutBadges.map((badge) => (
+            {home.aboutBadgesCurrent.map((badge) => (
+              <li class="about__credential">
+                <img class="about__credential-badge" src={badge.image} alt={badge.alt} loading="lazy" />
+                <span>{badge.alt}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {home.aboutBadgesPast.length > 0 && (
+        <>
+          <p class="about__credentials-heading">{t.sections.credentialsPastHeading}</p>
+          <ul class="about__credentials">
+            {home.aboutBadgesPast.map((badge) => (
               <li class="about__credential">
                 <img class="about__credential-badge" src={badge.image} alt={badge.alt} loading="lazy" />
                 <span>{badge.alt}</span>

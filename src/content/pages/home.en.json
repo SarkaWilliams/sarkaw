@@ -5,7 +5,7 @@
   "heroImage": "/hero2.jpg",
   "aboutImage": "/hero.webp",
   "about": "I'm a mental coach, project manager, group class instructor, but also a wife, a mother, and a friend. I don't want to give up any of these roles, because each of them shapes who I am. In my work, I naturally draw on experience from all of these seemingly different worlds. Why? Because I believe a person can't be split into a \"professional\" and a \"private\" self. Everything is connected to everything else.\n\nThanks to years of experience in project management and supporting leadership teams, I understand corporate processes, performance pressure, the threat of burnout, and the everyday challenges managers and their teams face. At the same time, I know that even the best spreadsheet or policy doesn't work unless people genuinely make it their own.\n\nThat's why I bring a human dimension into the world of numbers and structures. I help people — whether at the office or in their personal life — see things in context, find the courage to make conscious decisions, and live and work in alignment with themselves.",
-  "aboutBadges": [
+  "aboutBadgesCurrent": [
     {
       "image": "/icf-level-1.png",
       "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)"
@@ -23,6 +23,7 @@
       "alt": "Associate Certified Coach (ICF)"
     }
   ],
+  "aboutBadgesPast": [],
   "services": [
     {
       "title": "One-on-One Coaching",

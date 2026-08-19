@@ -56,7 +56,8 @@ export interface HomeContent {
   heroImage: string;
   aboutImage: string;
   about: string;
-  aboutBadges: AboutBadge[];
+  aboutBadgesCurrent: AboutBadge[];
+  aboutBadgesPast: AboutBadge[];
   services: Service[];
   offerings: Offering[];
   process: Process;

@@ -27,7 +27,8 @@ interface UiStrings {
   sections: {
     servicesHeading: string;
     aboutHeading: string;
-    credentialsHeading: string;
+    credentialsCurrentHeading: string;
+    credentialsPastHeading: string;
     aboutPhotoAlt: string;
     testimonialsHeading: string;
     contactHeading: string;
@@ -67,7 +68,8 @@ export const ui: Record<Locale, UiStrings> = {
     sections: {
       servicesHeading: "Co nabízím",
       aboutHeading: "Kdo stojí za vaším rozvojem?",
-      credentialsHeading: "Získané certifikáty:",
+      credentialsCurrentHeading: "Aktuálně platné:",
+      credentialsPastHeading: "Dříve získané:",
       aboutPhotoAlt: "Šárka Williams",
       testimonialsHeading: "Reference",
       contactHeading: "Kontakt",
@@ -105,7 +107,8 @@ export const ui: Record<Locale, UiStrings> = {
     sections: {
       servicesHeading: "Services",
       aboutHeading: "Who's behind your growth?",
-      credentialsHeading: "My professional background:",
+      credentialsCurrentHeading: "Currently valid:",
+      credentialsPastHeading: "Previously obtained:",
       aboutPhotoAlt: "Šárka Williams",
       testimonialsHeading: "Testimonials",
       contactHeading: "Contact",

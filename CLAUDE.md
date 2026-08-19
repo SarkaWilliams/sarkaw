@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static marketing site for an individual/business coach (Šárka Williams), built with Astro (no UI framework — plain `.astro` components). Single page, all content in Czech.
+Static marketing site for an individual/business coach (Šárka Williams), built with Astro (no UI framework — plain `.astro` components). One-page layout, available in Czech (default) and English.
 
 ## Commands
 
@@ -12,24 +12,32 @@ Static marketing site for an individual/business coach (Šárka Williams), built
 npm install                # install deps
 astro dev --background     # start dev server (localhost:4321) in background
 astro dev stop|status|logs # manage the background dev server
-npm run build              # build static output to ./dist
-npm run preview            # serve the built ./dist locally
-npm run deploy              # build + deploy to Cloudflare Pages (wrangler)
+npm run build               # build static output to ./dist
+npm run preview             # serve the built ./dist locally
+npm run deploy               # build + deploy to Cloudflare Pages (wrangler)
 ```
 
-There is no lint, typecheck, or test script configured — `tsc`/`astro check` are available via `npm run astro -- check` but aren't wired into any script.
+There is no lint or test script configured. `astro check` (type-checking) is available via `npm run astro -- check`, but the required `@astrojs/check`/`typescript` packages aren't installed yet — running it triggers an interactive install prompt.
 
 ## Architecture
 
-**Content/markup split.** All page copy lives in `src/content/pages/home.json`, typed by the `HomeContent` interface in `src/lib/content.ts` and imported everywhere as `home`. Components (`Hero`, `Offerings`, `About`, `Testimonials`, `Contact`) never hardcode copy — they read from `home`. When adding a new piece of content, add the field to `home.json` *and* the `HomeContent` interface, not just one or the other. Note `home.services` is defined in both the JSON and the interface but is currently not rendered by any component.
+**Content/markup split, per locale.** All page copy lives in `src/content/pages/home.cs.json` and `home.en.json`, both typed by the `HomeContent` interface in `src/lib/content.ts`. `getHomeContent(locale)` picks the right file from a `homeByLocale` record. Components (`Hero`, `Offerings`, `About`, `Testimonials`, `Process`, `Contact`) never hardcode copy — they read from `home`. When adding a field, update `home.cs.json`, `home.en.json`, *and* the `HomeContent` interface together. Note `home.services` exists in the data/interface but is not rendered by any component. `about.aboutBadges` is a list of `{ image, alt }` objects (certification badge icon + accessible label), rendered in `About.astro` as one row per badge (icon + text), not a bare text list.
 
-**Page composition.** `src/pages/index.astro` assembles the page as `Layout > Header + [Hero, Offerings, About, Testimonials, Contact] + Footer`. Section components each own an `id` (`#hero`, `#co-nabizim`, `#o-mne`, `#reference`, `#kontakt`) that the nav links in `Header.astro` hash-link to — keep these in sync if a section is renamed or reordered.
+**i18n is two separate systems that must stay in sync:**
+- `src/lib/i18n.ts` holds the `ui` dictionary (nav labels, section headings, aria labels, etc.) per locale, plus `normalizeLocale()` which defaults anything unrecognized to `cs`. This is UI chrome text, distinct from `home.*.json` page copy.
+- `astro.config.mjs` sets `i18n.routing.prefixDefaultLocale: false`, so Czech is served at `/` and English at `/en/`.
+- There are two separate homepage entry points — `src/pages/index.astro` (calls `getHomeContent("cs")`) and `src/pages/en/index.astro` (calls `getHomeContent("en")`) — each hardcoding its own locale and assembling the identical component tree. Adding a third locale means adding both a new `home.<locale>.json` and a new `src/pages/<locale>/index.astro`, not just a config change.
+- The blog (`src/content/blog/*.md`, collection defined in `src/content.config.ts`) is Czech-only with no translated routes; `Layout.astro`'s `translationPath` prop (used for `hreflang` alternates) is passed as `""` on the two homepages but omitted on blog pages since they have no translated counterpart.
 
-**CMS (Sveltia).** `public/admin/` is a git-backed visual editor (Sveltia CMS, GitHub backend) for `src/content/pages/home.json`, served at `/admin`. `public/admin/config.yml` maps CMS fields 1:1 to that JSON's shape — if you rename/add/remove a field in `home.json`/`content.ts`, update `config.yml` too or the CMS and site will drift apart. Auth goes through a separate Cloudflare Worker (`sarkaw-cms-auth`), not through this repo.
+**Page composition.** `index.astro`/`en/index.astro` assemble `Layout > Header + [Hero, Offerings, About, Testimonials, Process, Contact] + Footer`. Each section component owns an `id` (`#hero`, `#co-nabizim`, `#o-mne`, `#reference`, `#spoluprace`, `#kontakt`) that `Header.astro`'s nav hash-links to — keep these in sync if a section is renamed or reordered.
+
+**CMS (Sveltia).** `public/admin/` is a git-backed visual editor (Sveltia CMS, GitHub backend) for `home.cs.json`/`home.en.json`, served at `/admin`. `public/admin/config.yml` maps CMS fields 1:1 to that JSON's shape — if you rename/add/remove a field in `home.*.json`/`content.ts`, update `config.yml` too or the CMS and site will drift apart. Auth goes through a separate Cloudflare Worker (`sarkaw-cms-auth`), not through this repo. The client edits content directly through this CMS, which commits straight to `main` on GitHub — always `git fetch`/`git pull` before assuming local `main` reflects the live content, and expect to resolve merge conflicts in `home.cs.json`/`home.en.json` when local edits and CMS edits touch the same fields.
 
 **Styling.** Design tokens (colors, fonts, radius, max-width) are CSS custom properties in `:root` in `src/styles/global.css` — per the TODO there, current values are placeholders pending the client's real brand colors/fonts; changing the tokens re-themes the whole site. Everything else is component-scoped `<style>` blocks inside each `.astro` file. The decorative background image is set once on `body` in `global.css` (`background-attachment: fixed`, disabled on mobile for perf) and shows through every section by default since sections have no background of their own. The `Hero` section is the one exception: it layers its own portrait photo (`--hero-image`, `background-size: contain`) on top of the same site background image (`background-size: cover`) using multi-layer `background-*` properties — if you touch `Hero.astro`'s background, keep both layers and the mobile override (which drops both and falls back to an inline `<img>`) in sync.
 
-**Deploy.** This project deploys to **Cloudflare Pages via Wrangler direct upload** (`npm run deploy` → `wrangler pages deploy dist --project-name=sarkaw`), not Vercel and not Cloudflare's git integration. See `prompt-claudecode-git-cloudflare.md` for the full setup rationale/history.
+**Deploy.** This project deploys to **Cloudflare Pages via Wrangler direct upload** (`npm run deploy` → `wrangler pages deploy dist --project-name=sarkaw`), not Vercel and not Cloudflare's git integration — there is no `wrangler.toml`/`wrangler.jsonc`, the project name is passed inline. A `wrangler pages deploy` only counts as a Production deployment (updating the live `sarkaw.pages.dev` domain) when run from `main`; deploying from a feature branch creates a Preview deployment on its own `*.pages.dev` alias instead. Verify with `npx wrangler pages deployment list --project-name=sarkaw` if unsure whether the live site actually updated. See `prompt-claudecode-git-cloudflare.md` for the full setup rationale/history.
+
+**Git push caveat.** `git push` to `origin/main` has intermittently failed with a 403 (stored credentials belonging to a GitHub account without write access to `SarkaWilliams/sarkaw`), even though `git fetch`/`pull` and the git author identity work fine. Cloudflare deploy auth (`wrangler`) is entirely separate and unaffected — a failed `git push` does not block `npm run deploy`. If push fails, don't treat it as a code problem; flag it so the user can fix the stored GitHub credential, then retry the push.
 
 ## Development
 
