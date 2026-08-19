@@ -97,7 +97,7 @@ export const ui: Record<Locale, UiStrings> = {
       testimonials: "Testimonials",
       process: "Work With Me",
       blog: "Blog",
-      contact: "Get in Touch",
+      contact: "Contact",
     },
     menuToggleLabel: "Open menu",
     languageSwitcher: {
@@ -111,7 +111,7 @@ export const ui: Record<Locale, UiStrings> = {
       credentialsPastHeading: "Previously obtained:",
       aboutPhotoAlt: "Šárka Williams",
       testimonialsHeading: "Testimonials",
-      contactHeading: "Get in Touch",
+      contactHeading: "Contact",
     },
     contactLabels: {
       ico: "Company ID",
