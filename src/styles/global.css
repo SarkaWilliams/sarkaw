@@ -43,7 +43,22 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll;
+    /* /1.webp nemá bezešvý okraj — při repeat-y je vidět tvrdý řez mezi
+       dlaždicemi. Druhá (gradientová) vrstva stmívá horní/dolní okraj
+       každé dlaždice do --color-bg, takže šev zmizí v hladké ploše. */
+    background-image:
+      linear-gradient(
+        to bottom,
+        var(--color-bg) 0%,
+        transparent 12%,
+        transparent 88%,
+        var(--color-bg) 100%
+      ),
+      url('/1.webp');
+    background-repeat: repeat-y, repeat-y;
+    background-size: 100% 141.5vw, 100% auto;
+    background-position: top center, top center;
+    background-attachment: scroll, scroll;
   }
 }
 
