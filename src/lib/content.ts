@@ -36,6 +36,8 @@ export interface Contact {
   linkedinUrl: string;
   facebookUrl: string;
   instagramUrl: string;
+  formHeading: string;
+  formSuccessMessage: string;
 }
 
 export interface Testimonial {
@@ -64,7 +66,6 @@ export interface HomeContent {
   testimonials: Testimonial[];
   contact: Contact;
   ctaText: string;
-  ctaUrl: string;
 }
 
 const homeByLocale: Record<Locale, HomeContent> = {

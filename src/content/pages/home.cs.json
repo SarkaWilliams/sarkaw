@@ -78,7 +78,7 @@
         "description": "Společně pracujeme formou rozhovorů na odkrývání vašich odpovědí a nastavování konkrétních kroků do praxe."
       }
     ],
-    "ctaText": "Udělejte první krok ještě dnes. Rezervujte si nezávazný online hovor zdarma a pojďme se podívat na to, kam se chcete vy nebo vaše firma posunout.",
+    "ctaText": "Udělejte první krok ještě dnes. Napište mi pár řádků o tom, co řešíte, a pojďme se podívat na to, kam se chcete vy nebo vaše firma posunout.",
     "tagline": "The best is yet to come."
   },
   "testimonials": [
@@ -116,8 +116,9 @@
     "phone": "603 443 727",
     "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
     "facebookUrl": "https://www.facebook.com/sarka.mareckova.1",
-    "instagramUrl": "https://www.instagram.com/williamssarka/"
+    "instagramUrl": "https://www.instagram.com/williamssarka/",
+    "formHeading": "Napište mi",
+    "formSuccessMessage": "Děkuji za zprávu! Ozvu se vám co nejdříve."
   },
-  "ctaText": "Rezervovat termín",
-  "ctaUrl": "https://reservio.com/PLACEHOLDER"
+  "ctaText": "Napište mi"
 }

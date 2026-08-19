@@ -1,6 +1,7 @@
 ---
 import { getHomeContent } from "../lib/content";
 import { normalizeLocale, ui } from "../lib/i18n";
+import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "../lib/web3forms";
 
 const locale = normalizeLocale(Astro.currentLocale);
 const home = getHomeContent(locale);
@@ -60,9 +61,38 @@ const t = ui[locale];
         </svg>
       </a>
     </div>
-    <a class="button" href={home.ctaUrl} target="_blank" rel="noopener noreferrer">
-      {home.ctaText}
-    </a>
+    <div class="contact-form-wrapper">
+      <h3 class="contact__form-heading">{home.contact.formHeading}</h3>
+      <form
+        class="contact-form"
+        data-success-message={home.contact.formSuccessMessage}
+        data-error-message={t.contactForm.errorMessage}
+        data-sending-label={t.contactForm.sendingLabel}
+        data-submit-label={t.contactForm.submitLabel}
+      >
+        <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+        <input type="hidden" name="subject" value="Nová zpráva z webu sarkawilliams" />
+        <input type="checkbox" name="botcheck" class="contact-form__botcheck" tabindex="-1" autocomplete="off" />
+        <div class="contact-form__field">
+          <label for="cf-name">{t.contactForm.nameLabel}</label>
+          <input id="cf-name" name="name" type="text" required />
+        </div>
+        <div class="contact-form__field">
+          <label for="cf-email">{t.contactForm.emailLabel}</label>
+          <input id="cf-email" name="email" type="email" required />
+        </div>
+        <div class="contact-form__field">
+          <label for="cf-phone">{t.contactForm.phoneLabel}</label>
+          <input id="cf-phone" name="phone" type="tel" />
+        </div>
+        <div class="contact-form__field">
+          <label for="cf-message">{t.contactForm.messageLabel}</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="button">{t.contactForm.submitLabel}</button>
+      </form>
+      <p class="contact-form__status" role="status" aria-live="polite"></p>
+    </div>
   </div>
 </section>
 
@@ -118,4 +148,138 @@ const t = ui[locale];
     outline: 3px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  .contact-form-wrapper {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .contact__form-heading {
+    margin: 0 0 1rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form__botcheck {
+    display: none;
+  }
+
+  .contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .contact-form__field label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .contact-form__field input,
+  .contact-form__field textarea {
+    font: inherit;
+    padding: 0.65em 0.85em;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-accent-contrast);
+    color: var(--color-text);
+  }
+
+  .contact-form__field textarea {
+    resize: vertical;
+  }
+
+  .contact-form__field input:focus-visible,
+  .contact-form__field textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 1px;
+  }
+
+  .contact-form .button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contact-form .button:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .contact-form__status {
+    margin: 1rem 0 0;
+    font-weight: 600;
+  }
+
+  .contact-form__status--success {
+    color: var(--color-accent);
+  }
+
+  .contact-form__status--error {
+    color: #b3261e;
+  }
 </style>
+
+<script define:vars={{ endpoint: WEB3FORMS_ENDPOINT }}>
+  document.querySelectorAll(".contact-form").forEach((form) => {
+    const wrapper = form.closest(".contact-form-wrapper");
+    const status = wrapper?.querySelector(".contact-form__status");
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = form.dataset.submitLabel ?? submitBtn?.textContent ?? "";
+    const sendingLabel = form.dataset.sendingLabel ?? submitLabel;
+    const successMessage = form.dataset.successMessage ?? "";
+    const errorMessage = form.dataset.errorMessage ?? "";
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = sendingLabel;
+      }
+      if (status) {
+        status.textContent = "";
+        status.classList.remove("contact-form__status--success", "contact-form__status--error");
+      }
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        });
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "submit failed");
+        }
+
+        form.hidden = true;
+        if (status) {
+          status.textContent = successMessage;
+          status.classList.add("contact-form__status--success");
+        }
+      } catch {
+        if (status) {
+          status.textContent = errorMessage;
+          status.classList.add("contact-form__status--error");
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      }
+    });
+  });
+</script>

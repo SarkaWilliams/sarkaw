@@ -1,43 +1,48 @@
-# Astro Starter Kit: Minimal
+# sarkaw
 
-```sh
-npm create astro@latest -- --template minimal
+Marketing web pro koučku Šárku Williams. Statický Astro web, žádný vlastní server/DB.
+
+## Stack
+
+- **Astro** (bez UI frameworku, `.astro` komponenty)
+- **Cloudflare Pages** — nasazení přes `wrangler pages deploy dist --project-name=sarkaw` (přímý upload, ne git integrace). `git push` na `main` sám o sobě nic nenasadí.
+- **Sveltia CMS** na `/admin` — git-backed editor (GitHub backend), commituje přímo do `main`. Vždy nejdřív `git pull`, ať lokální práce nepřepíše klientčiny úpravy.
+
+## Jazyky (CS/EN)
+
+- CS na `/`, EN na `/en/`.
+- Obsah stránky: `src/content/pages/home.cs.json` a `home.en.json`, typováno `HomeContent` v `src/lib/content.ts`.
+- UI popisky (nav, nadpisy sekcí, aria labely): `src/lib/i18n.ts`, oddělené od obsahu.
+- Blog je jen česky, bez EN protějšku.
+
+## Kontaktní formulář
+
+Sekce Kontakt (`src/components/Contact.astro`) obsahuje formulář napojený na **Web3Forms** (`src/lib/web3forms.ts`) — čistě frontendové řešení, žádný vlastní backend. Access Key je záměrně mimo CMS-spravovaný JSON (Sveltia by ho při uložení mohla smazat, protože není v `config.yml`).
+
+CTA tlačítka ("Napište mi" / "Message Me") v Hero a Spolupráci vedou na `#kontakt`.
+
+## Pozadí webu
+
+`public/1.webp`, nastaveno v `src/styles/global.css` na `body` (`background-attachment: fixed` na desktopu, `scroll` na mobilu).
+
+## Certifikáty (sekce O mně)
+
+Rozdělené na dva seznamy, editovatelné přes CMS, max 5 položek každý:
+- **Aktuálně platné** (`aboutBadgesCurrent`)
+- **Dříve získané** (`aboutBadgesPast`)
+
+## Vývoj
+
+```
+npm install
+astro dev --background     # dev server na localhost:4321, na pozadí
+astro dev stop|status|logs
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Nasazení
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+npm run deploy              # build + wrangler pages deploy (jen z main = produkce)
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Ověření, že šlo o produkční deployment: `npx wrangler pages deployment list --project-name=sarkaw`.

@@ -38,6 +38,15 @@ interface UiStrings {
     email: string;
     phone: string;
   };
+  contactForm: {
+    nameLabel: string;
+    emailLabel: string;
+    phoneLabel: string;
+    messageLabel: string;
+    submitLabel: string;
+    sendingLabel: string;
+    errorMessage: string;
+  };
   socialAria: {
     linkedin: string;
     facebook: string;
@@ -79,6 +88,15 @@ export const ui: Record<Locale, UiStrings> = {
       email: "E-mail",
       phone: "Telefon",
     },
+    contactForm: {
+      nameLabel: "Jméno",
+      emailLabel: "E-mail",
+      phoneLabel: "Telefon (nepovinné)",
+      messageLabel: "Zpráva",
+      submitLabel: "Odeslat zprávu",
+      sendingLabel: "Odesílám…",
+      errorMessage: "Něco se pokazilo. Zkuste to prosím znovu, nebo mi napište přímo na e-mail.",
+    },
     socialAria: {
       linkedin: "LinkedIn profil Šárky Williams",
       facebook: "Facebook profil Šárky Williams",
@@ -117,6 +135,15 @@ export const ui: Record<Locale, UiStrings> = {
       ico: "Company ID",
       email: "Email",
       phone: "Phone",
+    },
+    contactForm: {
+      nameLabel: "Name",
+      emailLabel: "Email",
+      phoneLabel: "Phone (optional)",
+      messageLabel: "Message",
+      submitLabel: "Send Message",
+      sendingLabel: "Sending…",
+      errorMessage: "Something went wrong. Please try again, or email me directly.",
     },
     socialAria: {
       linkedin: "LinkedIn profile of Šárka Williams",

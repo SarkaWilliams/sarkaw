@@ -75,7 +75,7 @@
         "description": "We work together through conversation to uncover your own answers and set concrete steps into practice."
       }
     ],
-    "ctaText": "Take the first step today. Book a free, no-obligation 20-minute online call, and let's look at where you or your company want to go.",
+    "ctaText": "Take the first step today. Send me a few lines about what you're dealing with, and let's look at where you or your company want to go.",
     "tagline": "The best is yet to come."
   },
   "testimonials": [
@@ -113,8 +113,9 @@
     "phone": "603 443 727",
     "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
     "facebookUrl": "https://www.facebook.com/sarka.mareckova.1",
-    "instagramUrl": "https://www.instagram.com/williamssarka/"
+    "instagramUrl": "https://www.instagram.com/williamssarka/",
+    "formHeading": "Message Me",
+    "formSuccessMessage": "Thank you for your message! I'll get back to you as soon as possible."
   },
-  "ctaText": "Book a Session",
-  "ctaUrl": "https://reservio.com/PLACEHOLDER"
+  "ctaText": "Message Me"
 }

@@ -116,5 +116,6 @@ collections:
               - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }
               - { label: "Facebook (odkaz)", name: facebookUrl, widget: string }
               - { label: "Instagram (odkaz)", name: instagramUrl, widget: string }
-          - { label: "Text tlačítka (CTA)", name: ctaText, widget: string, i18n: true }
-          - { label: "Odkaz tlačítka (Reservio)", name: ctaUrl, widget: string, i18n: duplicate }
+              - { label: "Nadpis nad kontaktním formulářem", name: formHeading, widget: string }
+              - { label: "Potvrzovací text po odeslání formuláře", name: formSuccessMessage, widget: text }
+          - { label: "Text tlačítka „Napište mi“", name: ctaText, widget: string, i18n: true }
