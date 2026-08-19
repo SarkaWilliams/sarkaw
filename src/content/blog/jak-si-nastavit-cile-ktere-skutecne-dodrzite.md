@@ -1,10 +1,10 @@
 ---
-title: "Jak si nastavit cíle, které skutečně dodržíte"
+title: Jak si nastavit cíle, které skutečně dodržíte
 date: 2026-06-08
-excerpt: "Většina cílů nekrachuje na nedostatku vůle, ale na tom, jak jsou zformulované. Pár principů, které rozhodují, zda si cíl skutečně udržíte."
+excerpt: Většina cílů nekrachuje na nedostatku vůle, ale na tom, jak jsou zformulované. Pár principů, které rozhodují, zda si cíl skutečně udržíte.
 ---
 
-Na začátku roku, čtvrtletí nebo po každé důležité poradě si lidé dávají předsevzetí. Za pár týdnů na ně většina z nich zapomene — a pak si to vyčítají jako selhání vůle. Z koučovací praxe ale vím, že problém většinou nebývá v disciplíně, nýbrž ve způsobu, jakým je cíl od začátku formulovaný.
+Na začátku roku, čtvrtletí nebo po každé důležité poradě si lidé dávají předsevzetí. Za pár týdnů na ně většina z nich zapomene, a pak si to vyčítají jako selhání vůle. Z koučovací praxe ale vím, že problém většinou nebývá v disciplíně, nýbrž ve způsobu, jakým je cíl od začátku formulovaný.
 
 ## Cíl potřebuje směr, ne jen číslo
 
