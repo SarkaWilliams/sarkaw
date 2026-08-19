@@ -93,11 +93,11 @@ export const ui: Record<Locale, UiStrings> = {
     nav: {
       home: "Home",
       services: "Services",
-      about: "About",
+      about: "About Me",
       testimonials: "Testimonials",
-      process: "Process",
+      process: "Work With Me",
       blog: "Blog",
-      contact: "Contact",
+      contact: "Get in Touch",
     },
     menuToggleLabel: "Open menu",
     languageSwitcher: {
@@ -111,7 +111,7 @@ export const ui: Record<Locale, UiStrings> = {
       credentialsPastHeading: "Previously obtained:",
       aboutPhotoAlt: "Šárka Williams",
       testimonialsHeading: "Testimonials",
-      contactHeading: "Contact",
+      contactHeading: "Get in Touch",
     },
     contactLabels: {
       ico: "Company ID",
