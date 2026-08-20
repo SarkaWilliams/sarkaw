@@ -256,7 +256,6 @@ const t = ui[locale];
         const formData = new FormData(form);
         const response = await fetch(endpoint, {
           method: "POST",
-          headers: { Accept: "application/json" },
           body: formData,
         });
         const result = await response.json();
