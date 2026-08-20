@@ -5,5 +5,5 @@
 // Deliberately kept out of the Sveltia-managed content JSON: Sveltia only
 // round-trips fields declared in config.yml, so an undeclared key here
 // could get silently dropped on the next CMS save.
-export const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_WEB3FORMS_ACCESS_KEY";
+export const WEB3FORMS_ACCESS_KEY = "82afec55-4375-4e47-9e05-a39b22d14fcf";
 export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
