@@ -11,19 +11,20 @@
       "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)"
     },
     {
-      "image": "/prince2-practitioner.png",
-      "alt": "Projektový management (PRINCE2 Practitioner)"
-    },
-    {
-      "image": "/mop-practitioner.jpg",
-      "alt": "Řízení portfolia (MoP Practitioner)"
-    },
-    {
       "image": "/associate-certified-coach-acc.png",
       "alt": "Associate Certified Coach (ICF)"
     }
   ],
-  "aboutBadgesPast": [],
+  "aboutBadgesPast": [
+    {
+      "image": "/images/mop-practitioner.jpg",
+      "alt": "MoP Practitioner - Management řízení portfolia"
+    },
+    {
+      "image": "/images/prince2-practitioner.png",
+      "alt": "PRINCE2 Practiotioner - Projektový management"
+    }
+  ],
   "services": [
     {
       "title": "Úvodní konzultace",

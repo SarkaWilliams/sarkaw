@@ -11,7 +11,7 @@
       "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)"
     },
     {
-      "image": "/prince2-practitioner.png",
+      "image": "/associate-certified-coach-acc.png",
       "alt": "Project Management (PRINCE2 Practitioner)"
     },
     {
@@ -23,7 +23,14 @@
       "alt": "Associate Certified Coach (ICF)"
     }
   ],
-  "aboutBadgesPast": [],
+  "aboutBadgesPast": [
+    {
+      "image": "/images/mop-practitioner.jpg"
+    },
+    {
+      "image": "/images/prince2-practitioner.png"
+    }
+  ],
   "services": [
     {
       "title": "One-on-One Coaching",
