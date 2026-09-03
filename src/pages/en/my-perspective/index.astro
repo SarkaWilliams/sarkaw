@@ -1,0 +1,125 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import { ui } from "../../../lib/i18n";
+
+const t = ui.en;
+
+const posts = (await getCollection("perspectives"))
+  .filter((post) => post.id.endsWith(".en"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+---
+
+<Layout title={`${t.perspectives.heading} | Coaching`} description={t.perspectives.intro}>
+  <section class="perspectives">
+    <div class="container">
+      <h1>{t.perspectives.heading}</h1>
+      <p class="perspectives__intro">{t.perspectives.intro}</p>
+      {posts.length === 0 ? (
+        <p class="perspectives__empty">{t.perspectives.empty}</p>
+      ) : (
+        <div class="perspectives__list">
+          {posts.map((post) => (
+            <article class="perspective-card">
+              {post.data.image && (
+                <img class="perspective-card__image" src={post.data.image} alt="" loading="lazy" />
+              )}
+              <div class="perspective-card__body">
+                <p class="perspective-card__date">{formatDate(post.data.date)}</p>
+                <h2 class="perspective-card__title">{post.data.title}</h2>
+                <p class="perspective-card__excerpt">{post.data.excerpt}</p>
+                <a
+                  class="perspective-card__link"
+                  href={post.data.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.perspectives.readOnLinkedin}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .perspectives__intro {
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .perspectives__empty {
+    color: var(--color-text-muted);
+    margin-top: 2rem;
+  }
+
+  .perspectives__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .perspective-card {
+    display: flex;
+    gap: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    background: color-mix(in srgb, var(--color-bg) 55%, transparent);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .perspective-card__image {
+    flex: 0 0 auto;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  .perspective-card__date {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin: 0 0 0.4rem;
+  }
+
+  .perspective-card__title {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+  }
+
+  .perspective-card__excerpt {
+    color: var(--color-text-muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .perspective-card__link {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .perspective-card__link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .perspective-card {
+      flex-direction: column;
+    }
+
+    .perspective-card__image {
+      width: 100%;
+      height: 160px;
+    }
+  }
+</style>

@@ -111,11 +111,14 @@
     "address": "Janáčkova 943, 667 01 Židlochovice, Czech Republic",
     "email": "sarka.williams@gmail.com",
     "phone": "603 443 727",
-    "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
-    "facebookUrl": "https://www.facebook.com/sarka.mareckova.1",
+    "linkedinUrl": "https://www.linkedin.com/in/sarka-williams-4144b63b0/",
     "instagramUrl": "https://www.instagram.com/williamssarka/",
     "formHeading": "Message Me",
     "formSuccessMessage": "Thank you for your message! I'll get back to you as soon as possible."
+  },
+  "pricing": {
+    "title": "Coaching pricing",
+    "text": "Every collaboration is individual, and its scope and price depend on your needs, goals, and the form of collaboration we choose. I'll share the exact price with you before we start working together, after an initial conversation in which we clarify what you need from coaching and what form of collaboration makes sense for you. You'll always know the exact price before our collaboration begins."
   },
   "ctaText": "Message Me"
 }

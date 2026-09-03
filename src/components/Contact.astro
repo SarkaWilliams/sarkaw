@@ -38,17 +38,6 @@ const t = ui[locale];
       </a>
       <a
         class="social-link"
-        href={home.contact.facebookUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={t.socialAria.facebook}
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-      </a>
-      <a
-        class="social-link"
         href={home.contact.instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -92,6 +81,9 @@ const t = ui[locale];
         <button type="submit" class="button">{t.contactForm.submitLabel}</button>
       </form>
       <p class="contact-form__status" role="status" aria-live="polite"></p>
+      <p class="contact-form__privacy-link">
+        <a href={t.legal.privacyHref}>{t.legal.privacyLinkLabel}</a>
+      </p>
     </div>
   </div>
 </section>
@@ -222,6 +214,16 @@ const t = ui[locale];
 
   .contact-form__status--error {
     color: #b3261e;
+  }
+
+  .contact-form__privacy-link {
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+  }
+
+  .contact-form__privacy-link a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
   }
 </style>
 

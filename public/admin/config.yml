@@ -114,8 +114,41 @@ collections:
               - { label: "E-mail", name: email, widget: string }
               - { label: "Telefon", name: phone, widget: string }
               - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }
-              - { label: "Facebook (odkaz)", name: facebookUrl, widget: string }
               - { label: "Instagram (odkaz)", name: instagramUrl, widget: string }
               - { label: "Nadpis nad kontaktním formulářem", name: formHeading, widget: string }
               - { label: "Potvrzovací text po odeslání formuláře", name: formSuccessMessage, widget: text }
+          - label: "Cena koučování"
+            name: pricing
+            widget: object
+            i18n: true
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
           - { label: "Text tlačítka „Napište mi“", name: ctaText, widget: string, i18n: true }
+      - name: privacy
+        label: "Ochrana osobních údajů"
+        file: src/content/pages/privacy.{{locale}}.json
+        i18n: true
+        fields:
+          - { label: "Nadpis stránky", name: title, widget: string, i18n: true }
+          - { label: "Úvodní text", name: intro, widget: text, i18n: true }
+          - label: "Odstavce"
+            name: sections
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Nadpis odstavce", name: heading, widget: string }
+              - { label: "Text odstavce", name: text, widget: text }
+          - { label: "Text „naposledy aktualizováno“", name: lastUpdated, widget: string, i18n: true }
+  - name: perspectives
+    label: "Můj pohled"
+    folder: src/content/perspectives
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Nadpis", name: title, widget: string, i18n: true }
+      - { label: "Datum", name: date, widget: datetime, i18n: duplicate }
+      - { label: "Anotace / text", name: excerpt, widget: text, i18n: true }
+      - { label: "Odkaz na LinkedIn článek", name: linkedinUrl, widget: string, i18n: duplicate }
+      - { label: "Náhledový obrázek", name: image, widget: image, required: false, i18n: duplicate }

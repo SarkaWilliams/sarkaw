@@ -8,6 +8,9 @@ const t = ui[normalizeLocale(Astro.currentLocale)];
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <p>&copy; {year} {t.footer}</p>
+    <p class="site-footer__legal">
+      <a href={t.legal.privacyHref}>{t.legal.privacyLinkLabel}</a>
+    </p>
     <p class="site-footer__credit">
       Vytvořil <a href="https://cadaweby.cz" target="_blank" rel="noopener noreferrer">Milan Čada - cadaweby.cz</a>
     </p>
@@ -24,6 +27,15 @@ const t = ui[normalizeLocale(Astro.currentLocale)];
   .site-footer__inner p {
     margin: 0;
     font-size: 0.9rem;
+  }
+
+  .site-footer__inner p.site-footer__legal {
+    margin-top: 0.5rem;
+  }
+
+  .site-footer__legal a {
+    color: inherit;
+    text-decoration: underline;
   }
 
   .site-footer__inner p.site-footer__credit {

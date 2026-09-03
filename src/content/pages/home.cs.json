@@ -114,11 +114,14 @@
     "address": "Janáčkova 943, 667 01 Židlochovice",
     "email": "sarka.williams@gmail.com",
     "phone": "603 443 727",
-    "linkedinUrl": "https://www.linkedin.com/in/%C5%A1%C3%A1rka-williams-4144b63b0/",
-    "facebookUrl": "https://www.facebook.com/sarka.mareckova.1",
+    "linkedinUrl": "https://www.linkedin.com/in/sarka-williams-4144b63b0/",
     "instagramUrl": "https://www.instagram.com/williamssarka/",
     "formHeading": "Napište mi",
     "formSuccessMessage": "Děkuji za zprávu! Ozvu se vám co nejdříve."
+  },
+  "pricing": {
+    "title": "Cena koučování",
+    "text": "Každá spolupráce je individuální a její rozsah i cena se odvíjí od vašich potřeb, cílů a formy spolupráce. Konkrétní cenu vám sdělím před zahájením spolupráce, po úvodním rozhovoru, ve kterém společně upřesníme, co od koučování potřebujete a jaká forma spolupráce pro vás dává smysl. Před uzavřením spolupráce vždy znáte její konkrétní cenu."
   },
   "ctaText": "Napište mi"
 }

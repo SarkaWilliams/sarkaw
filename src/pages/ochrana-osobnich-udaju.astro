@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getPrivacyContent } from "../lib/content";
+
+const privacy = getPrivacyContent("cs");
+---
+
+<Layout title={`${privacy.title} | Koučink`} description={privacy.intro}>
+  <section class="privacy">
+    <div class="container privacy__inner">
+      <h1>{privacy.title}</h1>
+      <p class="privacy__intro">{privacy.intro}</p>
+      {privacy.sections.map((section) => (
+        <div class="privacy__section">
+          <h2>{section.heading}</h2>
+          <p>{section.text}</p>
+        </div>
+      ))}
+      <p class="privacy__updated">{privacy.lastUpdated}</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .privacy__inner {
+    max-width: 42rem;
+  }
+
+  .privacy__intro {
+    color: var(--color-text-muted);
+  }
+
+  .privacy__section {
+    margin-top: 2rem;
+  }
+
+  .privacy__section h2 {
+    font-size: 1.15rem;
+  }
+
+  .privacy__section p {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .privacy__updated {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>

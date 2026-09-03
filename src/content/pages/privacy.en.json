@@ -1,0 +1,39 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "This policy was last updated on September 3, 2026.",
+  "intro": "I value your trust, and I process any personal data you share with me in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR) and other applicable laws.",
+  "sections": [
+    {
+      "heading": "Data Controller",
+      "text": "The data controller is Ing. Šárka Williams, ACC, Company ID (IČO) 19456204, registered address Janáčkova 943, 667 01 Židlochovice, Czech Republic, email: sarka.williams@gmail.com (the \"controller\")."
+    },
+    {
+      "heading": "What personal data we process",
+      "text": "Through the contact form on this website, I process personal data you provide yourself: your name, email address, phone number (if provided), and the content of your message."
+    },
+    {
+      "heading": "Purpose of processing",
+      "text": "I process your data in order to respond to your inquiry, communicate with you further, and, where relevant, negotiate a contract for coaching or related services."
+    },
+    {
+      "heading": "Legal basis for processing",
+      "text": "The legal basis for processing is Art. 6(1)(b) GDPR (steps taken at your request prior to entering into a contract) or, where applicable, Art. 6(1)(f) GDPR (my legitimate interest in responding to your inquiry and communicating with you)."
+    },
+    {
+      "heading": "Data retention period",
+      "text": "I keep your personal data only for as long as necessary to fulfil the purpose described above — i.e. for the duration of handling your inquiry and any follow-up communication."
+    },
+    {
+      "heading": "Recipients of personal data",
+      "text": "Your data may be made available to service providers I use to operate this website and handle email communication (e.g. hosting and contact-form delivery tools). These providers process data under contract and only to the extent necessary to provide their service. I do not share your data with any other third parties, nor do I use it for marketing purposes."
+    },
+    {
+      "heading": "Your rights",
+      "text": "In connection with the processing of your personal data, you have the right to access your data, request its correction or deletion, restrict its processing, object to processing, and request data portability. If you believe I am processing your personal data unlawfully, you have the right to file a complaint with the Czech Office for Personal Data Protection (Úřad pro ochranu osobních údajů, www.uoou.cz)."
+    },
+    {
+      "heading": "Cookies",
+      "text": "This website does not use any optional analytics or marketing cookies."
+    }
+  ]
+}

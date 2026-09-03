@@ -17,6 +17,7 @@ interface UiStrings {
     testimonials: string;
     process: string;
     blog: string;
+    perspectives: string;
     contact: string;
   };
   menuToggleLabel: string;
@@ -49,10 +50,19 @@ interface UiStrings {
   };
   socialAria: {
     linkedin: string;
-    facebook: string;
     instagram: string;
   };
   footer: string;
+  legal: {
+    privacyLinkLabel: string;
+    privacyHref: string;
+  };
+  perspectives: {
+    heading: string;
+    intro: string;
+    readOnLinkedin: string;
+    empty: string;
+  };
 }
 
 export const ui: Record<Locale, UiStrings> = {
@@ -66,7 +76,8 @@ export const ui: Record<Locale, UiStrings> = {
       about: "O mně",
       testimonials: "Reference",
       process: "Spolupráce",
-      blog: "Blog",
+      blog: "Praktické tipy",
+      perspectives: "Můj pohled",
       contact: "Kontakt",
     },
     menuToggleLabel: "Otevřít menu",
@@ -99,10 +110,19 @@ export const ui: Record<Locale, UiStrings> = {
     },
     socialAria: {
       linkedin: "LinkedIn profil Šárky Williams",
-      facebook: "Facebook profil Šárky Williams",
       instagram: "Instagram profil Šárky Williams",
     },
     footer: "Koučink. Všechna práva vyhrazena.",
+    legal: {
+      privacyLinkLabel: "Ochrana osobních údajů",
+      privacyHref: "/ochrana-osobnich-udaju",
+    },
+    perspectives: {
+      heading: "Můj pohled",
+      intro: "Články a úvahy, které sdílím na LinkedInu.",
+      readOnLinkedin: "Číst na LinkedIn →",
+      empty: "Zatím tu nejsou žádné příspěvky. Brzy se to změní.",
+    },
   },
   en: {
     htmlLang: "en",
@@ -114,7 +134,8 @@ export const ui: Record<Locale, UiStrings> = {
       about: "About Me",
       testimonials: "Testimonials",
       process: "Work With Me",
-      blog: "Blog",
+      blog: "Practical Tips",
+      perspectives: "My Perspective",
       contact: "Contact",
     },
     menuToggleLabel: "Open menu",
@@ -147,9 +168,18 @@ export const ui: Record<Locale, UiStrings> = {
     },
     socialAria: {
       linkedin: "LinkedIn profile of Šárka Williams",
-      facebook: "Facebook profile of Šárka Williams",
       instagram: "Instagram profile of Šárka Williams",
     },
     footer: "Coaching. All rights reserved.",
+    legal: {
+      privacyLinkLabel: "Privacy Policy",
+      privacyHref: "/en/privacy-policy",
+    },
+    perspectives: {
+      heading: "My Perspective",
+      intro: "Articles and reflections I share on LinkedIn.",
+      readOnLinkedin: "Read on LinkedIn →",
+      empty: "No posts yet — check back soon.",
+    },
   },
 };

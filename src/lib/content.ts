@@ -1,5 +1,7 @@
 import homeCs from "../content/pages/home.cs.json";
 import homeEn from "../content/pages/home.en.json";
+import privacyCs from "../content/pages/privacy.cs.json";
+import privacyEn from "../content/pages/privacy.en.json";
 import type { Locale } from "./i18n";
 
 export interface Service {
@@ -34,10 +36,14 @@ export interface Contact {
   email: string;
   phone: string;
   linkedinUrl: string;
-  facebookUrl: string;
   instagramUrl: string;
   formHeading: string;
   formSuccessMessage: string;
+}
+
+export interface Pricing {
+  title: string;
+  text: string;
 }
 
 export interface Testimonial {
@@ -65,6 +71,7 @@ export interface HomeContent {
   process: Process;
   testimonials: Testimonial[];
   contact: Contact;
+  pricing: Pricing;
   ctaText: string;
 }
 
@@ -75,4 +82,25 @@ const homeByLocale: Record<Locale, HomeContent> = {
 
 export function getHomeContent(locale: Locale): HomeContent {
   return homeByLocale[locale];
+}
+
+export interface PrivacySection {
+  heading: string;
+  text: string;
+}
+
+export interface PrivacyContent {
+  title: string;
+  lastUpdated: string;
+  intro: string;
+  sections: PrivacySection[];
+}
+
+const privacyByLocale: Record<Locale, PrivacyContent> = {
+  cs: privacyCs as PrivacyContent,
+  en: privacyEn as PrivacyContent,
+};
+
+export function getPrivacyContent(locale: Locale): PrivacyContent {
+  return privacyByLocale[locale];
 }
