@@ -25,10 +25,12 @@
   ],
   "aboutBadgesPast": [
     {
-      "image": "/images/mop-practitioner.jpg"
+      "image": "/images/mop-practitioner.jpg",
+      "alt": "MoP practitioner (Management of Portfolio) - AXELOS certifikát"
     },
     {
-      "image": "/images/prince2-practitioner.png"
+      "image": "/images/prince2-practitioner.png",
+      "alt": "PRINCE 2 - Priojektový Management - Tayllorcox Certifikát"
     }
   ],
   "services": [
