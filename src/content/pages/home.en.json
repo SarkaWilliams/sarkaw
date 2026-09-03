@@ -11,19 +11,20 @@
       "alt": "Solution Focused Coaching (ICF Accredited Coach Training, Level 1)"
     },
     {
-      "image": "/prince2-practitioner.png",
-      "alt": "Project Management (PRINCE2 Practitioner)"
-    },
-    {
-      "image": "/mop-practitioner.jpg",
-      "alt": "Portfolio Management (MoP Practitioner)"
-    },
-    {
       "image": "/associate-certified-coach-acc.png",
       "alt": "Associate Certified Coach (ICF)"
     }
   ],
-  "aboutBadgesPast": [],
+  "aboutBadgesPast": [
+    {
+      "image": "/images/mop-practitioner.jpg",
+      "alt": "MoP practitioner (Management of Portfolio) - AXELOS certifikát"
+    },
+    {
+      "image": "/images/prince2-practitioner.png",
+      "alt": "PRINCE 2 - Priojektový Management - Tayllorcox Certifikát"
+    }
+  ],
   "services": [
     {
       "title": "One-on-One Coaching",
@@ -106,12 +107,12 @@
     }
   ],
   "contact": {
-    "name": "Ing. Šárka Williams",
+    "name": "Ing. Šárka Williams, ACC",
     "ico": "19456204",
     "address": "Janáčkova 943, 667 01 Židlochovice, Czech Republic",
     "email": "sarka.williams@gmail.com",
     "phone": "603 443 727",
-    "linkedinUrl": "https://www.linkedin.com/in/sarka-williams-4144b63b0/",
+    "linkedinUrl": "https://www.linkedin.com/in/ing-%C5%A1%C3%A1rka-williams-acc-icf-4144b63b0/",
     "instagramUrl": "https://www.instagram.com/williamssarka/",
     "formHeading": "Message Me",
     "formSuccessMessage": "Thank you for your message! I'll get back to you as soon as possible."
