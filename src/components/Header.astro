@@ -26,7 +26,7 @@ const home = getRelativeLocaleUrl(locale, "");
       <a href={`${home}#reference`}>{t.nav.testimonials}</a>
       <a href={`${home}#spoluprace`}>{t.nav.process}</a>
       <a href="/blog">{t.nav.blog}</a>
-      <a href={locale === "en" ? "/en/my-perspective" : "/muj-pohled"}>{t.nav.perspectives}</a>
+      {/* "Můj pohled" nav link temporarily hidden until content is ready — pages and Sveltia collection stay in place, just unlinked. */}
       <a href={`${home}#kontakt`}>{t.nav.contact}</a>
       <LanguageSwitcher />
     </nav>
