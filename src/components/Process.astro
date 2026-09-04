@@ -29,8 +29,12 @@ const { process } = home;
 </section>
 
 <style>
+  .process {
+    padding-bottom: clamp(1.5rem, 3vw, 3rem);
+  }
+
   .process__inner {
-    max-width: 40rem;
+    max-width: var(--max-width);
   }
 
   .process__steps {

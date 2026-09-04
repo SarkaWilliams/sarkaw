@@ -14,6 +14,12 @@ const privacy = getPrivacyContent("cs");
         <div class="privacy__section">
           <h2>{section.heading}</h2>
           <p>{section.text}</p>
+          {section.items && (
+            <ul class="privacy__list">
+              {section.items.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+          {section.textAfter && <p>{section.textAfter}</p>}
         </div>
       ))}
       <p class="privacy__updated">{privacy.lastUpdated}</p>
@@ -41,6 +47,21 @@ const privacy = getPrivacyContent("cs");
   .privacy__section p {
     color: var(--color-text-muted);
     margin: 0;
+  }
+
+  .privacy__section p + p,
+  .privacy__section .privacy__list + p {
+    margin-top: 0.75rem;
+  }
+
+  .privacy__list {
+    color: var(--color-text-muted);
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .privacy__list li {
+    margin-bottom: 0.3rem;
   }
 
   .privacy__updated {

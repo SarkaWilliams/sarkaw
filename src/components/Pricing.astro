@@ -13,8 +13,12 @@ const home = getHomeContent(normalizeLocale(Astro.currentLocale));
 </section>
 
 <style>
+  .pricing {
+    padding-top: clamp(1.5rem, 3vw, 3rem);
+  }
+
   .pricing__inner {
-    max-width: 40rem;
+    max-width: var(--max-width);
   }
 
   .pricing p {

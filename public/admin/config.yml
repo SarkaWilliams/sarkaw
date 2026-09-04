@@ -139,6 +139,8 @@ collections:
             fields:
               - { label: "Nadpis odstavce", name: heading, widget: string }
               - { label: "Text odstavce", name: text, widget: text }
+              - { label: "Odrážky (nepovinné)", name: items, widget: list, field: { label: "Položka", name: item, widget: string }, required: false }
+              - { label: "Text pod odrážkami (nepovinné)", name: textAfter, widget: text, required: false }
           - { label: "Text „naposledy aktualizováno“", name: lastUpdated, widget: string, i18n: true }
   - name: perspectives
     label: "Můj pohled"

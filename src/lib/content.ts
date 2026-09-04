@@ -87,6 +87,8 @@ export function getHomeContent(locale: Locale): HomeContent {
 export interface PrivacySection {
   heading: string;
   text: string;
+  items?: string[];
+  textAfter?: string;
 }
 
 export interface PrivacyContent {

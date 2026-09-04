@@ -5,7 +5,15 @@
   "sections": [
     {
       "heading": "Správce osobních údajů",
-      "text": "Správcem osobních údajů je Ing. Šárka Williams, ACC, IČO 19456204, se sídlem Janáčkova 943, 667 01 Židlochovice, e-mail: sarka.williams@gmail.com (dále jen „správce“)."
+      "text": "Správcem osobních údajů je:",
+      "items": [
+        "Jméno a titul: Ing. Šárka Williams",
+        "Certifikace: ACC",
+        "IČO: 19456204",
+        "Sídlo: Janáčkova 943, 667 01 Židlochovice",
+        "E-mail: sarka.williams@gmail.com"
+      ],
+      "textAfter": "(dále jen „správce“)."
     },
     {
       "heading": "Jaké osobní údaje zpracováváme",
