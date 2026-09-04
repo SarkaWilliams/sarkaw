@@ -81,7 +81,7 @@ collections:
                 name: items
                 widget: list
                 i18n: true
-                field: { label: "Položka", name: item, widget: string }
+                field: { label: "Položka", name: item, widget: string, i18n: true }
           - label: "Jak probíhá spolupráce"
             name: process
             widget: object
@@ -141,7 +141,7 @@ collections:
             fields:
               - { label: "Nadpis odstavce", name: heading, widget: string, i18n: true }
               - { label: "Text odstavce", name: text, widget: text, i18n: true }
-              - { label: "Odrážky (nepovinné)", name: items, widget: list, i18n: true, field: { label: "Položka", name: item, widget: string }, required: false }
+              - { label: "Odrážky (nepovinné)", name: items, widget: list, i18n: true, field: { label: "Položka", name: item, widget: string, i18n: true }, required: false }
               - { label: "Text pod odrážkami (nepovinné)", name: textAfter, widget: text, required: false, i18n: true }
           - { label: "Text „naposledy aktualizováno“", name: lastUpdated, widget: string, i18n: true }
   - name: perspectives
