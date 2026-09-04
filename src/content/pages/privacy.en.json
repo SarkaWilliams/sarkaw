@@ -5,7 +5,14 @@
   "sections": [
     {
       "heading": "Data Controller",
-      "text": "The data controller is Ing. Šárka Williams, ACC, Company ID (IČO) 19456204, registered address Janáčkova 943, 667 01 Židlochovice, Czech Republic, email: sarka.williams@gmail.com (the \"controller\")."
+      "text": "The data controller is:",
+      "items": [
+        "Name and title: Ing. Šárka Williams",
+        "Certification: ACC",
+        "Company ID (IČO): 19456204",
+        "Registered address: Janáčkova 943, 667 01 Židlochovice, Czech Republic",
+        "Email: sarka.williams@gmail.com"
+      ]
     },
     {
       "heading": "What personal data we process",
