@@ -15,13 +15,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const slug = post.id.replace(/\.en$/, "");
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
 ---
 
-<Layout title={`${post.data.title} | Blog`} description={post.data.excerpt} translationPath={`blog/${slug}`}>
+<Layout title={`${post.data.title} | Blog`} description={post.data.excerpt}>
   <section class="blog-post">
     <div class="container">
       <a class="blog-post__back" href="/en/blog">← {t.blog.back}</a>

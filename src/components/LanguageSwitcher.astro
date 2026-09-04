@@ -5,18 +5,14 @@ import { normalizeLocale, ui } from "../lib/i18n";
 const locale = normalizeLocale(Astro.currentLocale);
 const labels = ui[locale].languageSwitcher;
 
-// Only the homepage and the blog currently have a translated equivalent in
-// both locales (same slug in both, per src/content.config.ts), so blog
-// routes switch to the matching post/listing; every other route falls back
-// to the target locale's homepage rather than a matching page.
-const blogPath = locale === "en"
-  ? Astro.url.pathname.replace(/^\/en\/blog\/?/, "blog/").replace(/\/$/, "")
-  : Astro.url.pathname.replace(/^\/blog\/?/, "blog/").replace(/\/$/, "");
-const isBlogRoute = Astro.url.pathname === "/blog" || Astro.url.pathname.startsWith("/blog/") ||
-  Astro.url.pathname === "/en/blog" || Astro.url.pathname.startsWith("/en/blog/");
-
-const csHref = getRelativeLocaleUrl("cs", isBlogRoute ? blogPath : "");
-const enHref = getRelativeLocaleUrl("en", isBlogRoute ? blogPath : "");
+// Only the homepage currently has a translated equivalent in both locales,
+// so every other route (e.g. /blog — the EN blog is built and kept editable
+// in Sveltia but temporarily unlinked from the live site, see Header.astro)
+// falls back to the target locale's homepage rather than a matching page.
+// The blog has same-slug cs/en files (src/content.config.ts) if this ever
+// needs to switch back to matching-page routing.
+const csHref = getRelativeLocaleUrl("cs", "");
+const enHref = getRelativeLocaleUrl("en", "");
 ---
 
 <div class="language-switcher">

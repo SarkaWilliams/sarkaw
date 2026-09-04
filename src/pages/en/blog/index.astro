@@ -13,7 +13,7 @@ const formatDate = (date: Date) =>
   date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
 ---
 
-<Layout title={`${t.blog.heading} | Coaching`} description={t.blog.intro} translationPath="blog">
+<Layout title={`${t.blog.heading} | Coaching`} description={t.blog.intro}>
   <section class="blog" id="blog">
     <div class="container">
       <h1>{t.blog.heading}</h1>
