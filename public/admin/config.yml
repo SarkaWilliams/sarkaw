@@ -66,64 +66,66 @@ collections:
             widget: list
             i18n: true
             fields:
-              - { label: "Název", name: title, widget: string }
-              - { label: "Popis", name: description, widget: text }
+              - { label: "Název", name: title, widget: string, i18n: true }
+              - { label: "Popis", name: description, widget: text, i18n: true }
           - label: "Co nabízím"
             name: offerings
             widget: list
             i18n: true
             fields:
-              - { label: "Název", name: title, widget: string }
-              - { label: "Citát (nepovinné)", name: quote, widget: string, required: false }
-              - { label: "Úvodní text", name: intro, widget: text }
-              - { label: "Nadpis nad seznamem bodů (nepovinné)", name: itemsHeading, widget: string, required: false }
+              - { label: "Název", name: title, widget: string, i18n: true }
+              - { label: "Citát (nepovinné)", name: quote, widget: string, required: false, i18n: true }
+              - { label: "Úvodní text", name: intro, widget: text, i18n: true }
+              - { label: "Nadpis nad seznamem bodů (nepovinné)", name: itemsHeading, widget: string, required: false, i18n: true }
               - label: "Body seznamu"
                 name: items
                 widget: list
+                i18n: true
                 field: { label: "Položka", name: item, widget: string }
           - label: "Jak probíhá spolupráce"
             name: process
             widget: object
             i18n: true
             fields:
-              - { label: "Nadpis sekce", name: title, widget: string }
+              - { label: "Nadpis sekce", name: title, widget: string, i18n: true }
               - label: "Kroky"
                 name: steps
                 widget: list
+                i18n: true
                 fields:
-                  - { label: "Název kroku", name: title, widget: string }
-                  - { label: "Popis kroku", name: description, widget: text }
-              - { label: "CTA text", name: ctaText, widget: text }
-              - { label: "Tagline", name: tagline, widget: string }
+                  - { label: "Název kroku", name: title, widget: string, i18n: true }
+                  - { label: "Popis kroku", name: description, widget: text, i18n: true }
+              - { label: "CTA text", name: ctaText, widget: text, i18n: true }
+              - { label: "Tagline", name: tagline, widget: string, i18n: true }
           - label: "Reference"
             name: testimonials
             widget: list
             i18n: true
             fields:
-              - { label: "Citace", name: quote, widget: text }
-              - { label: "Jméno", name: name, widget: string }
-              - { label: "Pozice / spolupráce (nepovinné)", name: role, widget: string, required: false }
+              - { label: "Citace", name: quote, widget: text, i18n: true }
+              - { label: "Jméno", name: name, widget: string, i18n: duplicate }
+              - { label: "Pozice / spolupráce (nepovinné)", name: role, widget: string, required: false, i18n: true }
           - label: "Kontakt"
             name: contact
             widget: object
             i18n: true
             fields:
-              - { label: "Jméno a titul", name: name, widget: string }
-              - { label: "IČO", name: ico, widget: string }
-              - { label: "Adresa", name: address, widget: string }
-              - { label: "E-mail", name: email, widget: string }
-              - { label: "Telefon", name: phone, widget: string }
-              - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string }
-              - { label: "Instagram (odkaz)", name: instagramUrl, widget: string }
-              - { label: "Nadpis nad kontaktním formulářem", name: formHeading, widget: string }
-              - { label: "Potvrzovací text po odeslání formuláře", name: formSuccessMessage, widget: text }
+              - { label: "Jméno a titul", name: name, widget: string, i18n: duplicate }
+              - { label: "IČO", name: ico, widget: string, i18n: duplicate }
+              - { label: "Adresa", name: address, widget: string, i18n: true }
+              - { label: "E-mail", name: email, widget: string, i18n: duplicate }
+              - { label: "Telefon", name: phone, widget: string, i18n: duplicate }
+              - { label: "LinkedIn (odkaz)", name: linkedinUrl, widget: string, i18n: duplicate }
+              - { label: "Instagram (odkaz)", name: instagramUrl, widget: string, i18n: duplicate }
+              - { label: "Nadpis nad kontaktním formulářem", name: formHeading, widget: string, i18n: true }
+              - { label: "Potvrzovací text po odeslání formuláře", name: formSuccessMessage, widget: text, i18n: true }
           - label: "Cena koučování"
             name: pricing
             widget: object
             i18n: true
             fields:
-              - { label: "Nadpis", name: title, widget: string }
-              - { label: "Text", name: text, widget: text }
+              - { label: "Nadpis", name: title, widget: string, i18n: true }
+              - { label: "Text", name: text, widget: text, i18n: true }
           - { label: "Text tlačítka „Napište mi“", name: ctaText, widget: string, i18n: true }
       - name: privacy
         label: "Ochrana osobních údajů"
@@ -137,10 +139,10 @@ collections:
             widget: list
             i18n: true
             fields:
-              - { label: "Nadpis odstavce", name: heading, widget: string }
-              - { label: "Text odstavce", name: text, widget: text }
-              - { label: "Odrážky (nepovinné)", name: items, widget: list, field: { label: "Položka", name: item, widget: string }, required: false }
-              - { label: "Text pod odrážkami (nepovinné)", name: textAfter, widget: text, required: false }
+              - { label: "Nadpis odstavce", name: heading, widget: string, i18n: true }
+              - { label: "Text odstavce", name: text, widget: text, i18n: true }
+              - { label: "Odrážky (nepovinné)", name: items, widget: list, i18n: true, field: { label: "Položka", name: item, widget: string }, required: false }
+              - { label: "Text pod odrážkami (nepovinné)", name: textAfter, widget: text, required: false, i18n: true }
           - { label: "Text „naposledy aktualizováno“", name: lastUpdated, widget: string, i18n: true }
   - name: perspectives
     label: "Můj pohled"
