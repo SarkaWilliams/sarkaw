@@ -8,9 +8,10 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
-  /** Relative path (no locale prefix, e.g. "" for the homepage) if this page has a translated
-   * equivalent in every locale — enables hreflang alternate links. Omit for locale-only pages
-   * (e.g. the Czech-only blog), which have no translated counterpart to point to. */
+  /** Relative path (no locale prefix, e.g. "" for the homepage, "blog/<slug>" for a blog post)
+   * if this page has a translated equivalent in every locale — enables hreflang alternate links.
+   * Omit for locale-only pages (e.g. "Můj pohled"/perspectives), which have no translated
+   * counterpart to point to. */
   translationPath?: string;
 }
 

@@ -1,34 +1,34 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import { ui } from "../../lib/i18n";
+import Layout from "../../../layouts/Layout.astro";
+import { ui } from "../../../lib/i18n";
 
-const t = ui.cs;
+const t = ui.en;
 
 const posts = (await getCollection("blog"))
-  .filter((post) => post.id.endsWith(".cs"))
+  .filter((post) => post.id.endsWith(".en"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const formatDate = (date: Date) =>
-  date.toLocaleDateString("cs-CZ", { day: "numeric", month: "long", year: "numeric" });
+  date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
 ---
 
-<Layout title={`${t.blog.heading} | Koučink`} description={t.blog.intro} translationPath="blog">
+<Layout title={`${t.blog.heading} | Coaching`} description={t.blog.intro} translationPath="blog">
   <section class="blog" id="blog">
     <div class="container">
       <h1>{t.blog.heading}</h1>
       <p class="blog__intro">{t.blog.intro}</p>
       <div class="blog__list">
         {posts.map((post) => {
-          const slug = post.id.replace(/\.cs$/, "");
+          const slug = post.id.replace(/\.en$/, "");
           return (
             <article class="blog-card">
               <p class="blog-card__date">{formatDate(post.data.date)}</p>
               <h2 class="blog-card__title">
-                <a href={`/blog/${slug}`}>{post.data.title}</a>
+                <a href={`/en/blog/${slug}`}>{post.data.title}</a>
               </h2>
               <p class="blog-card__excerpt">{post.data.excerpt}</p>
-              <a class="blog-card__link" href={`/blog/${slug}`}>{t.blog.readMore}</a>
+              <a class="blog-card__link" href={`/en/blog/${slug}`}>{t.blog.readMore}</a>
             </article>
           );
         })}

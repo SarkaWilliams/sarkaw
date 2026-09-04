@@ -63,6 +63,12 @@ interface UiStrings {
     readOnLinkedin: string;
     empty: string;
   };
+  blog: {
+    heading: string;
+    intro: string;
+    readMore: string;
+    back: string;
+  };
 }
 
 export const ui: Record<Locale, UiStrings> = {
@@ -123,6 +129,12 @@ export const ui: Record<Locale, UiStrings> = {
       readOnLinkedin: "Číst na LinkedIn →",
       empty: "Zatím tu nejsou žádné příspěvky. Brzy se to změní.",
     },
+    blog: {
+      heading: "Blog",
+      intro: "Články o osobním růstu, koučinku a manažerské praxi.",
+      readMore: "Číst dál →",
+      back: "Zpět na blog",
+    },
   },
   en: {
     htmlLang: "en",
@@ -180,6 +192,12 @@ export const ui: Record<Locale, UiStrings> = {
       intro: "Articles and reflections I share on LinkedIn.",
       readOnLinkedin: "Read on LinkedIn →",
       empty: "No posts yet — check back soon.",
+    },
+    blog: {
+      heading: "Blog",
+      intro: "Articles about personal growth, coaching, and management practice.",
+      readMore: "Read more →",
+      back: "Back to blog",
     },
   },
 };

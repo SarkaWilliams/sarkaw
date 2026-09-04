@@ -23,11 +23,12 @@ collections:
     folder: src/content/blog
     create: true
     slug: "{{slug}}"
+    i18n: true
     fields:
-      - { label: "Název", name: title, widget: string }
-      - { label: "Datum", name: date, widget: datetime }
-      - { label: "Anotace", name: excerpt, widget: text }
-      - { label: "Obsah článku", name: body, widget: markdown }
+      - { label: "Název", name: title, widget: string, i18n: true }
+      - { label: "Datum", name: date, widget: datetime, i18n: duplicate }
+      - { label: "Anotace", name: excerpt, widget: text, i18n: true }
+      - { label: "Obsah článku", name: body, widget: markdown, i18n: true }
   - name: pages
     label: Stránky
     i18n: true
