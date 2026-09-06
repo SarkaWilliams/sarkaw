@@ -12,7 +12,11 @@ import { getHomeContent } from "../lib/content";
 const home = getHomeContent("cs");
 ---
 
-<Layout title={`${home.heroTitle} | Koučink`} translationPath="">
+<Layout
+  title={`${home.heroTitle} | Koučink`}
+  description="Šárka Williams, ACC koučka akreditovaná ICF, nabízí osobní i business koučink. Pomáhám lidem i firmám najít jasnost, sebedůvěru a zdravé pracovní prostředí."
+  translationPath=""
+>
   <Hero ctaHref="#kontakt" />
   <Offerings />
   <About />

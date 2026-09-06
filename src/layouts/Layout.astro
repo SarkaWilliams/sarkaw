@@ -8,6 +8,9 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  /** Path relative to the site root for the social-share preview image (e.g. "/hero.webp").
+   * Defaults to the site's portrait photo when the page has nothing more specific (e.g. a blog post cover). */
+  image?: string;
   /** Relative path (no locale prefix, e.g. "" for the homepage, "blog/<slug>" for a blog post)
    * if this page has a translated equivalent in every locale — enables hreflang alternate links.
    * Omit for locale-only pages (e.g. "Můj pohled"/perspectives), which have no translated
@@ -17,7 +20,9 @@ interface Props {
 
 const locale = normalizeLocale(Astro.currentLocale);
 const t = ui[locale];
-const { title, description = t.defaultDescription, translationPath } = Astro.props;
+const { title, description = t.defaultDescription, image = "/hero.webp", translationPath } = Astro.props;
+const ogImageUrl = new URL(image, Astro.site ?? Astro.url).href;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 ---
 
 <!doctype html>
@@ -29,6 +34,18 @@ const { title, description = t.defaultDescription, translationPath } = Astro.pro
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={`Šárka Williams — ${t.siteTitleSuffix}`} />
+    <meta property="og:locale" content={locale === "cs" ? "cs_CZ" : "en_US"} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     {translationPath !== undefined && (
       <>
         {locales.map((altLocale) => (

@@ -12,7 +12,11 @@ import { getHomeContent } from "../../lib/content";
 const home = getHomeContent("en");
 ---
 
-<Layout title={`${home.heroTitle} | Coaching`} translationPath="">
+<Layout
+  title={`${home.heroTitle} | Coaching`}
+  description="Šárka Williams, an ICF-certified Associate Certified Coach, offers personal and business coaching — helping people and companies find clarity and grow."
+  translationPath=""
+>
   <Hero ctaHref="#kontakt" />
   <Offerings />
   <About />

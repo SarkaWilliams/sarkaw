@@ -13,7 +13,10 @@ const formatDate = (date: Date) =>
   date.toLocaleDateString("cs-CZ", { day: "numeric", month: "long", year: "numeric" });
 ---
 
-<Layout title={`${t.perspectives.heading} | Koučink`} description={t.perspectives.intro}>
+<Layout
+  title="Můj pohled — úvahy o koučinku a růstu | Šárka Williams"
+  description="Krátké úvahy Šárky Williams o koučinku, osobním růstu a manažerské praxi, které sdílí na LinkedInu — postřehy z její koučovací praxe."
+>
   <section class="perspectives">
     <div class="container">
       <h1>{t.perspectives.heading}</h1>

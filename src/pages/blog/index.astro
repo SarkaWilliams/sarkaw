@@ -13,7 +13,10 @@ const formatDate = (date: Date) =>
   date.toLocaleDateString("cs-CZ", { day: "numeric", month: "long", year: "numeric" });
 ---
 
-<Layout title={`${t.blog.heading} | Koučink`} description={t.blog.intro}>
+<Layout
+  title="Praktické tipy pro koučink a osobní růst | Šárka Williams"
+  description="Praktické tipy Šárky Williams, ACC koučky akreditované ICF, o osobním růstu, koučinku a manažerské praxi — krátké články pro váš pracovní i osobní život."
+>
   <section class="blog" id="blog">
     <div class="container">
       <h1>{t.blog.heading}</h1>
