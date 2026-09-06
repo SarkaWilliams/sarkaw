@@ -16,11 +16,13 @@ interface Props {
    * Omit for locale-only pages (e.g. "Můj pohled"/perspectives), which have no translated
    * counterpart to point to. */
   translationPath?: string;
+  /** Set true for pages that exist but shouldn't be indexed yet (e.g. hidden, empty, or pending content). */
+  noindex?: boolean;
 }
 
 const locale = normalizeLocale(Astro.currentLocale);
 const t = ui[locale];
-const { title, description = t.defaultDescription, image = "/hero.webp", translationPath } = Astro.props;
+const { title, description = t.defaultDescription, image = "/hero.webp", translationPath, noindex = false } = Astro.props;
 const ogImageUrl = new URL(image, Astro.site ?? Astro.url).href;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 ---
@@ -34,6 +36,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={`Šárka Williams — ${t.siteTitleSuffix}`} />
