@@ -1,0 +1,17 @@
+# Šárka Williams — koučink
+
+> Web Šárky Williams, ACC koučky (Associate Certified Coach, ICF) a lektorky. Nabízí osobní a business koučink pro jednotlivce, manažery a firemní týmy — pomáhá lidem najít vnitřní svobodu a firmám budovat prostředí, kde procesy dávají smysl a lidé v nich chtějí růst.
+
+## Klíčové stránky
+
+- [Domů](https://sarkaw.pages.dev/): Úvodní stránka se všemi hlavními sekcemi webu.
+- [Co nabízím](https://sarkaw.pages.dev/#co-nabizim): Přehled osobního a business koučinku.
+- [O mně](https://sarkaw.pages.dev/#o-mne): Profil Šárky Williams, praxe a certifikace (ACC ICF, MoP, PRINCE2).
+- [Reference](https://sarkaw.pages.dev/#reference): Zkušenosti klientů se spoluprací.
+- [Jak probíhá spolupráce](https://sarkaw.pages.dev/#spoluprace): Popis průběhu koučovací spolupráce krok za krokem.
+- [Kontakt](https://sarkaw.pages.dev/#kontakt): Kontaktní formulář a údaje.
+- [Blog — Praktické tipy](https://sarkaw.pages.dev/blog): Články s praktickými tipy z koučinku.
+
+## English
+
+- [Home](https://sarkaw.pages.dev/en/): English version of the homepage.

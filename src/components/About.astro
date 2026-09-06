@@ -13,7 +13,13 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
 
 <section class="about" id="o-mne">
   <div class="container about__inner">
-    <img class="about__photo" src={home.aboutImage} alt={t.sections.aboutPhotoAlt} />
+    <img
+      class="about__photo"
+      src={home.aboutImage}
+      alt={t.sections.aboutPhotoAlt}
+      width="224"
+      height="336"
+    />
     <div class="about__content">
       <h2>{t.sections.aboutHeading}</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
@@ -23,7 +29,14 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
           <ul class="about__credentials">
             {home.aboutBadgesCurrent.map((badge) => (
               <li class="about__credential">
-                <img class="about__credential-badge" src={badge.image} alt={badge.alt} loading="lazy" />
+                <img
+                  class="about__credential-badge"
+                  src={badge.image}
+                  alt={badge.alt}
+                  loading="lazy"
+                  width="52"
+                  height="52"
+                />
                 <span>{badge.alt}</span>
               </li>
             ))}
@@ -36,7 +49,14 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
           <ul class="about__credentials">
             {home.aboutBadgesPast.map((badge) => (
               <li class="about__credential">
-                <img class="about__credential-badge" src={badge.image} alt={badge.alt} loading="lazy" />
+                <img
+                  class="about__credential-badge"
+                  src={badge.image}
+                  alt={badge.alt}
+                  loading="lazy"
+                  width="52"
+                  height="52"
+                />
                 <span>{badge.alt}</span>
               </li>
             ))}
