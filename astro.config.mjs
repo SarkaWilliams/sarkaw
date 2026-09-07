@@ -2,8 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// TODO: switch `site` to https://sarkawilliams.cz once that domain is live.
-const site = 'https://sarkaw.pages.dev';
+const site = 'https://sarkawilliams.cz';
 
 // Routes that exist but are intentionally hidden from navigation (empty/pending content) —
 // keep these out of the sitemap alongside their `noindex` meta tag.

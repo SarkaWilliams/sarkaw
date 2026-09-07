@@ -4,14 +4,14 @@
 
 ## Klíčové stránky
 
-- [Domů](https://sarkaw.pages.dev/): Úvodní stránka se všemi hlavními sekcemi webu.
-- [Co nabízím](https://sarkaw.pages.dev/#co-nabizim): Přehled osobního a business koučinku.
-- [O mně](https://sarkaw.pages.dev/#o-mne): Profil Šárky Williams, praxe a certifikace (ACC ICF, MoP, PRINCE2).
-- [Reference](https://sarkaw.pages.dev/#reference): Zkušenosti klientů se spoluprací.
-- [Jak probíhá spolupráce](https://sarkaw.pages.dev/#spoluprace): Popis průběhu koučovací spolupráce krok za krokem.
-- [Kontakt](https://sarkaw.pages.dev/#kontakt): Kontaktní formulář a údaje.
-- [Blog — Praktické tipy](https://sarkaw.pages.dev/blog): Články s praktickými tipy z koučinku.
+- [Domů](https://sarkawilliams.cz/): Úvodní stránka se všemi hlavními sekcemi webu.
+- [Co nabízím](https://sarkawilliams.cz/#co-nabizim): Přehled osobního a business koučinku.
+- [O mně](https://sarkawilliams.cz/#o-mne): Profil Šárky Williams, praxe a certifikace (ACC ICF, MoP, PRINCE2).
+- [Reference](https://sarkawilliams.cz/#reference): Zkušenosti klientů se spoluprací.
+- [Jak probíhá spolupráce](https://sarkawilliams.cz/#spoluprace): Popis průběhu koučovací spolupráce krok za krokem.
+- [Kontakt](https://sarkawilliams.cz/#kontakt): Kontaktní formulář a údaje.
+- [Blog — Praktické tipy](https://sarkawilliams.cz/blog): Články s praktickými tipy z koučinku.
 
 ## English
 
-- [Home](https://sarkaw.pages.dev/en/): English version of the homepage.
+- [Home](https://sarkawilliams.cz/en/): English version of the homepage.
