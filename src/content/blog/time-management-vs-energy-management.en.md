@@ -1,7 +1,7 @@
 ---
-title: "Time Management vs. Energy Management — Why the Latter Works Better"
+title: Time Management vs. Energy Management — Why the Latter Works Better
 date: 2026-03-11
-excerpt: "A perfectly scheduled day doesn't guarantee a productive one. Why it pays to plan around your own energy, not just the hours on your calendar."
+excerpt: A perfectly scheduled day doesn't guarantee a productive one. Why it pays to plan around your own energy, not just the hours on your calendar.
 ---
 
 Many people who feel overworked actually have a perfectly planned calendar. Every hour has its task, every meeting its reason. And yet, by the end of the day, there's still a nagging sense that not enough of what really mattered got done. That's because a schedule only solves one variable — how many hours you have available. It ignores the other, far more important one: how much energy you actually have during that hour.
