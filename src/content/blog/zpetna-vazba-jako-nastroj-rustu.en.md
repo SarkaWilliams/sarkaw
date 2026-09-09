@@ -1,7 +1,7 @@
 ---
-title: "Feedback as a Tool for Growth — How to Give and Receive It"
+title: Feedback as a Tool for Growth — How to Give and Receive It
 date: 2026-04-22
-excerpt: "Feedback most often fails on form, not content. How to phrase it so it truly opens space for change, and how to receive it without it hurting."
+excerpt: Feedback most often fails on form, not content. How to phrase it so it truly opens space for change, and how to receive it without it hurting.
 ---
 
 Feedback is one of the most powerful tools a manager or colleague has at their disposal — and at the same time, one of the most commonly misused. The moment it's delivered at the wrong time or in the wrong way, it doesn't support growth — it triggers defensiveness. And defensiveness is exactly the state in which a person learns the least.
