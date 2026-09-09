@@ -1,7 +1,7 @@
 ---
-title: "Burnout and How to Prevent It in Management Practice"
+title: Burnout and How to Prevent It in Management Practice
 date: 2026-05-18
-excerpt: "Burnout doesn't happen overnight, and it threatens the most responsible managers the most. How to recognize the first signs and act before it's too late."
+excerpt: Burnout doesn't happen overnight, and it threatens the most responsible managers the most. How to recognize the first signs and act before it's too late.
 ---
 
 Burnout rarely shows up in management practice as a sudden break. It arrives gradually, through a series of small concessions — I'll just finish this email over the weekend, I can't afford to cancel this meeting, I'll push my vacation to next time. Each individual decision makes sense in the moment. The problem is what they add up to over a year or two.
