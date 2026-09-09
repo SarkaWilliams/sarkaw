@@ -130,10 +130,10 @@ export const ui: Record<Locale, UiStrings> = {
       empty: "Zatím tu nejsou žádné příspěvky. Brzy se to změní.",
     },
     blog: {
-      heading: "Blog",
+      heading: "Praktické tipy",
       intro: "Články o osobním růstu, koučinku a manažerské praxi.",
       readMore: "Číst dál →",
-      back: "Zpět na blog",
+      back: "Zpět na Praktické tipy",
     },
   },
   en: {
