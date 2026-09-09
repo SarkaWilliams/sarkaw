@@ -1,7 +1,7 @@
 ---
-title: "How to Set Goals You'll Actually Stick To"
+title: How to Set Goals You'll Actually Stick To
 date: 2026-06-08
-excerpt: "Most goals don't fail from a lack of willpower, but from how they're framed. A few principles that determine whether a goal actually sticks."
+excerpt: Most goals don't fail from a lack of willpower, but from how they're framed. A few principles that determine whether a goal actually sticks.
 ---
 
 At the start of the year, a quarter, or after every important meeting, people make resolutions. A few weeks later, most of them have forgotten those resolutions, and then they blame it on a lack of willpower. But from coaching practice, I know the problem is usually not discipline — it's how the goal was framed from the start.

@@ -8,7 +8,7 @@ Na začátku roku, čtvrtletí nebo po každé důležité poradě si lidé dáv
 
 ## Cíl potřebuje směr, ne jen číslo
 
-Konkrétní a měřitelný cíl je užitečný, ale sám o sobě nestačí. Pokud si člověk nevytvoří jasnou souvislost mezi cílem a tím, proč je pro něj skutečně důležitý, motivace se při první potíži rozplyne. V koučování se proto vždy vracíme k otázce „k čemu vám to bude dobré", dokud odpověď není opravdu vaše — ne odvozená od toho, co se od vás očekává.
+Konkrétní a měřitelný cíl je užitečný, ale sám o sobě nestačí. Pokud si člověk nevytvoří jasnou souvislost mezi cílem a tím, proč je pro něj skutečně důležitý, motivace se při první potíži rozplyne. V koučování se proto vždy vracíme k otázce „k čemu vám to bude dobré", dokud odpověď není opravdu vaše a ne odvozená od toho, co se od vás očekává.
 
 ## Menší závazek, který přežije všední den
 
@@ -16,11 +16,11 @@ Velké cíle mají tendenci existovat jen v hlavě jako představa ideálního s
 
 ## Systém místo vůle
 
-Spoléhat na to, že si člověk „prostě vzpomene" a „bude mít chuť", je nejčastější důvod, proč cíle mizí v každodenním provozu. Pomáhá, když se závazek napojí na něco, co už v životě pevně existuje — konkrétní den v týdnu, rutinu, kterou stejně děláte, nebo pravidelnou schůzku sama se sebou v kalendáři. Cíl, který závisí na náladě, prohraje s cílem, který závisí na struktuře.
+Spoléhat na to, že si člověk „prostě vzpomene" a „bude mít chuť", je nejčastější důvod, proč cíle mizí v každodenním provozu. Pomáhá, když se závazek napojí na něco, co už v životě pevně existuje, např. konkrétní den v týdnu, rutinu, kterou stejně děláte, nebo pravidelnou schůzku sama se sebou v kalendáři. Cíl, který závisí na náladě, prohraje s cílem, který závisí na struktuře.
 
 ## Zpětná vazba během cesty, ne až na konci
 
-Když je jediným okamžikem hodnocení až finální výsledek, ztrácí se cenná informace o tom, co po cestě fungovalo a co ne. Krátké, pravidelné ohlédnutí — co se povedlo, co bych příště udělal jinak — umožňuje cíl za pochodu upravit, místo abyste ho na půl cesty úplně opustili, protože už „neodpovídá realitě".
+Když je jediným okamžikem hodnocení až finální výsledek, ztrácí se cenná informace o tom, co po cestě fungovalo a co ne. Krátké, pravidelné ohlédnutí, zpravidla co se povedlo, co bych příště udělal jinak,ů umožňuje cíl za pochodu upravit, místo abyste ho na půl cesty úplně opustili, protože už „neodpovídá realitě".
 
 ## Počítejte s odchylkou
 
@@ -28,6 +28,6 @@ Cíl, který se láme při prvním týdnu, kdy něco nevyjde podle plánu, byl o
 
 ## Cíl jako rozhovor se sebou samým
 
-Nejtrvalejší cíle nakonec nejsou ty nejambicióznější, ale ty, které vzniknou jako upřímný rozhovor o tom, co člověk skutečně chce a co je ochotný pro to udělat. V koučovacích sezeních často zjišťujeme, že samotné vyjasnění tohoto rozhovoru vydá stejně důležitou práci jako plnění cíle samotného — protože ukáže, jestli cíl vůbec patří tomu, kdo si ho dává.
+Nejtrvalejší cíle nakonec nejsou ty nejambicióznější, ale ty, které vzniknou jako upřímný rozhovor o tom, co člověk skutečně chce a co je ochotný pro to udělat. V koučovacích sezeních často zjišťujeme, že samotné vyjasnění tohoto rozhovoru vydá stejně důležitou práci jako plnění cíle samotného, protože ukáže, jestli cíl vůbec patří tomu, kdo si ho dává.
 
 Pokud vás toto téma zajímá hlouběji, ráda se mu budeme věnovat na individuálním koučovacím sezení, kde se dá jít víc do konkrétní situace, ve které se právě nacházíte.
