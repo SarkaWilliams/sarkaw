@@ -1,7 +1,7 @@
 ---
-title: "How to Lead a Team Through a Change They Don't Want"
+title: How to Lead a Team Through a Change They Don't Want
 date: 2026-02-09
-excerpt: "Resistance to change isn't a sign of a bad team — it's a natural reaction to uncertainty. How managers can help their team through change without unnecessary conflict."
+excerpt: Resistance to change isn't a sign of a bad team — it's a natural reaction to uncertainty. How managers can help their team through change without unnecessary conflict.
 ---
 
 Restructuring, a new process, a change in leadership, a team merger — whatever the reason, the reaction tends to be similar: silence first, then quiet resistance, and finally either acceptance or deepening apathy. Managers often interpret this resistance as a sign of people unwilling to cooperate. In reality, it's usually a natural reaction to a loss of certainty, not a personal attack on the project.
