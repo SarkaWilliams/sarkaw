@@ -23,7 +23,7 @@ CTA tlačítka ("Napište mi" / "Message Me") v Hero a Spolupráci vedou na `#ko
 
 ## Pozadí webu
 
-`public/1.webp`, nastaveno v `src/styles/global.css` na `body` (`background-attachment: fixed` na desktopu, `scroll` na mobilu).
+`public/pozadi-v2.webp`, nastaveno v `src/styles/global.css` na `body` (`background-attachment: fixed` na desktopu, `scroll` na mobilu).
 
 ## Certifikáty (sekce O mně)
 
