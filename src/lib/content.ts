@@ -53,8 +53,14 @@ export interface Testimonial {
 }
 
 export interface AboutBadge {
-  image: string;
+  /** Nepovinné — položka může být jen text bez odznaku. */
+  image?: string;
   alt: string;
+}
+
+export interface AboutBadgeGroup {
+  title: string;
+  items: AboutBadge[];
 }
 
 export interface HomeContent {
@@ -64,8 +70,7 @@ export interface HomeContent {
   heroImage: string;
   aboutImage: string;
   about: string;
-  aboutBadgesCurrent: AboutBadge[];
-  aboutBadgesPast: AboutBadge[];
+  aboutBadgeGroups: AboutBadgeGroup[];
   services: Service[];
   offerings: Offering[];
   process: Process;

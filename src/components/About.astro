@@ -23,46 +23,29 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     <div class="about__content">
       <h2>{t.sections.aboutHeading}</h2>
       {paragraphs.map((p) => <p>{p}</p>)}
-      {home.aboutBadgesCurrent.length > 0 && (
+      {home.aboutBadgeGroups.filter((group) => group.items?.length > 0).map((group) => (
         <>
-          <p class="about__credentials-heading">{t.sections.credentialsCurrentHeading}</p>
+          {/* Dvojtečku doplňuje šablona — v CMS se nadpis píše bez ní. */}
+          <p class="about__credentials-heading">{group.title.replace(/:\s*$/, "")}:</p>
           <ul class="about__credentials">
-            {home.aboutBadgesCurrent.map((badge) => (
+            {group.items.map((badge) => (
               <li class="about__credential">
-                <img
-                  class="about__credential-badge"
-                  src={badge.image}
-                  alt={badge.alt}
-                  loading="lazy"
-                  width="52"
-                  height="52"
-                />
+                {badge.image && (
+                  <img
+                    class="about__credential-badge"
+                    src={badge.image}
+                    alt={badge.alt}
+                    loading="lazy"
+                    width="52"
+                    height="52"
+                  />
+                )}
                 <span>{badge.alt}</span>
               </li>
             ))}
           </ul>
         </>
-      )}
-      {home.aboutBadgesPast.length > 0 && (
-        <>
-          <p class="about__credentials-heading">{t.sections.credentialsPastHeading}</p>
-          <ul class="about__credentials">
-            {home.aboutBadgesPast.map((badge) => (
-              <li class="about__credential">
-                <img
-                  class="about__credential-badge"
-                  src={badge.image}
-                  alt={badge.alt}
-                  loading="lazy"
-                  width="52"
-                  height="52"
-                />
-                <span>{badge.alt}</span>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      ))}
     </div>
   </div>
 </section>

@@ -44,24 +44,23 @@ collections:
           - { label: "Hero obrázek", name: heroImage, widget: image, i18n: duplicate }
           - { label: "Fotka (O mně)", name: aboutImage, widget: image, i18n: duplicate }
           - { label: "O mně", name: about, widget: markdown, i18n: true }
-          - label: "O mně — certifikáty (aktuálně platné)"
-            name: aboutBadgesCurrent
+          - label: "Certifikáty — skupiny"
+            name: aboutBadgeGroups
             widget: list
             i18n: true
             min: 0
-            max: 5
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Odznak (obrázek)", name: image, widget: image, i18n: duplicate }
-              - { label: "Alt text (název certifikace)", name: alt, widget: string, i18n: true }
-          - label: "O mně — certifikáty (dříve získané)"
-            name: aboutBadgesPast
-            widget: list
-            i18n: true
-            min: 0
-            max: 5
-            fields:
-              - { label: "Odznak (obrázek)", name: image, widget: image, i18n: duplicate }
-              - { label: "Alt text (název certifikace)", name: alt, widget: string, i18n: true }
+              - { label: "Nadpis skupiny", name: title, widget: string, i18n: true, hint: "Bez dvojtečky na konci — web ji doplní sám." }
+              - label: "Položky"
+                name: items
+                widget: list
+                i18n: true
+                min: 0
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Odznak (obrázek)", name: image, widget: image, required: false, i18n: duplicate }
+                  - { label: "Název certifikace", name: alt, widget: string, i18n: true }
           - label: "Služby"
             name: services
             widget: list
