@@ -1,5 +1,6 @@
 ---
 import { getHomeContent } from "../lib/content";
+import { nbsp } from "../lib/typography";
 import { normalizeLocale } from "../lib/i18n";
 
 interface Props {
@@ -12,9 +13,9 @@ const home = getHomeContent(normalizeLocale(Astro.currentLocale));
 
 <section class="hero" id="hero">
   <div class="container container--content hero__inner">
-    <h1>{home.heroTitle}</h1>
-    <p class="hero__subtitle">{home.heroSubtitle}</p>
-    {home.heroQuote && <p class="hero__quote">{home.heroQuote}</p>}
+    <h1>{nbsp(home.heroTitle)}</h1>
+    <p class="hero__subtitle">{nbsp(home.heroSubtitle)}</p>
+    {home.heroQuote && <p class="hero__quote">{nbsp(home.heroQuote)}</p>}
     <a class="button" href={ctaHref}>{home.ctaText}</a>
   </div>
 </section>
@@ -48,6 +49,7 @@ const home = getHomeContent(normalizeLocale(Astro.currentLocale));
 
   .hero h1 {
     font-size: clamp(2rem, 5vw, 3.25rem);
+    text-wrap: pretty;
   }
 
   .hero__subtitle {

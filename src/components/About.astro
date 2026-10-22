@@ -1,5 +1,6 @@
 ---
 import { getHomeContent } from "../lib/content";
+import { nbsp } from "../lib/typography";
 import { normalizeLocale, ui } from "../lib/i18n";
 
 const locale = normalizeLocale(Astro.currentLocale);
@@ -21,8 +22,8 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
       height="336"
     />
     <div class="about__content">
-      <h2>{t.sections.aboutHeading}</h2>
-      {paragraphs.map((p) => <p>{p}</p>)}
+      <h2>{nbsp(t.sections.aboutHeading)}</h2>
+      {paragraphs.map((p) => <p>{nbsp(p)}</p>)}
       {home.aboutBadgeGroups.filter((group) => group.items?.length > 0).map((group) => (
         <>
           {/* Dvojtečku doplňuje šablona — v CMS se nadpis píše bez ní. */}

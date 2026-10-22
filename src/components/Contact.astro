@@ -1,5 +1,6 @@
 ---
 import { getHomeContent } from "../lib/content";
+import { nbsp } from "../lib/typography";
 import { normalizeLocale, ui } from "../lib/i18n";
 import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "../lib/web3forms";
 
@@ -10,7 +11,7 @@ const t = ui[locale];
 
 <section class="contact" id="kontakt">
   <div class="container container--content contact__inner">
-    <h2>{t.sections.contactHeading}</h2>
+    <h2>{nbsp(t.sections.contactHeading)}</h2>
     <ul class="contact__list">
       <li>{home.contact.name}</li>
       <li>{t.contactLabels.ico}: {home.contact.ico}</li>
@@ -220,6 +221,25 @@ const t = ui[locale];
   .contact-form__privacy-link a {
     color: var(--color-text-muted);
     text-decoration: underline;
+  }
+
+  /* Desktop: kontaktní údaje, ikony, nadpis formuláře, tlačítko a odkaz pod ním na střed;
+     popisky a pole formuláře zůstávají zarovnané vlevo. */
+  @media (min-width: 1024px) {
+    .contact__list,
+    .contact__form-heading,
+    .contact-form__status,
+    .contact-form__privacy-link {
+      text-align: center;
+    }
+
+    .contact__socials {
+      justify-content: center;
+    }
+
+    .contact-form .button {
+      align-self: center;
+    }
   }
 </style>
 

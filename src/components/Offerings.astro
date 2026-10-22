@@ -1,5 +1,6 @@
 ---
 import { getHomeContent } from "../lib/content";
+import { nbsp } from "../lib/typography";
 import { normalizeLocale, ui } from "../lib/i18n";
 
 const locale = normalizeLocale(Astro.currentLocale);
@@ -14,15 +15,15 @@ const offerings = home.offerings.map((offering) => ({
 
 <section class="offerings" id="co-nabizim">
   <div class="container container--content">
-    <h2>{t.sections.servicesHeading}</h2>
+    <h2>{nbsp(t.sections.servicesHeading)}</h2>
     <div class="offerings__list">
       {offerings.map((offering) => (
         <details class="offering">
           <summary>{offering.title}</summary>
           <div class="offering__content">
-            {offering.quote && <p class="offering__quote">{offering.quote}</p>}
-            {offering.introParagraphs.map((p) => <p>{p}</p>)}
-            {offering.itemsHeading && <p class="offering__items-heading">{offering.itemsHeading}</p>}
+            {offering.quote && <p class="offering__quote">{nbsp(offering.quote)}</p>}
+            {offering.introParagraphs.map((p) => <p>{nbsp(p)}</p>)}
+            {offering.itemsHeading && <p class="offering__items-heading">{nbsp(offering.itemsHeading)}</p>}
             <ul>
               {offering.items.map((item) => (
                 <li>{item}</li>
