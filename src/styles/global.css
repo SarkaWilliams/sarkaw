@@ -83,11 +83,18 @@ a {
 @media (min-width: 1024px) {
   :root {
     --max-width: 1280px;
+    /* Šířka společného vycentrovaného sloupce obsahových sekcí (hero, Co nabízím,
+       Reference, Proces, Cena, Kontakt). Sekce O mně zůstává na plné šířce. */
+    --content-width: 64rem;
   }
 
   .container {
     max-width: min(90%, var(--max-width));
     padding: 0 2rem;
+  }
+
+  .container--content {
+    max-width: min(90%, calc(var(--content-width) + 4rem));
   }
 
   .container :is(p, li) {
