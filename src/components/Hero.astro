@@ -37,8 +37,12 @@ const home = getHomeContent(normalizeLocale(Astro.currentLocale));
   }
 
   @media (min-width: 1024px) {
+    .hero__inner {
+      text-align: center;
+    }
+
     .hero__inner .button {
-      align-self: flex-start;
+      align-self: center;
     }
   }
 

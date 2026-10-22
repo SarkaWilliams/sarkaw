@@ -105,6 +105,18 @@ a {
   .container--content :is(p, li) {
     max-width: none;
   }
+
+  /* Nadpisy sekcí na střed sloupce (nadpis O mně je vnořený vedle fotky, zůstává vlevo). */
+  .container--content > h2 {
+    text-align: center;
+  }
+
+  /* Krátký jednoodstavcový úvod pod nadpisem sekce. */
+  .container--content .section-intro {
+    max-width: 48rem;
+    margin-inline: auto;
+    text-align: center;
+  }
 }
 
 h1, h2, h3 {
