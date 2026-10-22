@@ -77,6 +77,24 @@ a {
   padding: 0 1.5rem;
 }
 
+/* Desktop: širší obsahový sloupec (~90 % okna, max. 1280 px) s menšími okraji.
+   Odstavce zůstávají kvůli čitelnosti omezené na ~70ch, boxy a sekce jsou široké.
+   Mobil a tablet (< 1024 px) se nemění. */
+@media (min-width: 1024px) {
+  :root {
+    --max-width: 1280px;
+  }
+
+  .container {
+    max-width: min(90%, var(--max-width));
+    padding: 0 2rem;
+  }
+
+  .container :is(p, li) {
+    max-width: 70ch;
+  }
+}
+
 h1, h2, h3 {
   font-family: var(--font-display);
   line-height: 1.15;

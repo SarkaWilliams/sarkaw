@@ -52,11 +52,23 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
 
 <style>
   .about__inner {
-    max-width: 56rem;
     display: grid;
     grid-template-columns: minmax(0, 16rem) 1fr;
     gap: 2.5rem;
     align-items: start;
+  }
+
+  @media (max-width: 1023px) {
+    .about__inner {
+      max-width: 56rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .about__inner {
+      grid-template-columns: minmax(0, 20rem) 1fr;
+      gap: 3rem;
+    }
   }
 
   .about__photo {

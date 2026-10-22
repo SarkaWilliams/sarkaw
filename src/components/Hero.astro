@@ -26,9 +26,20 @@ const home = getHomeContent(normalizeLocale(Astro.currentLocale));
   }
 
   .hero__inner {
-    max-width: 56rem;
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 1023px) {
+    .hero__inner {
+      max-width: 56rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero__inner .button {
+      align-self: flex-start;
+    }
   }
 
   .hero h1 {
