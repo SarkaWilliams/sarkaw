@@ -83,9 +83,9 @@ a {
 @media (min-width: 1024px) {
   :root {
     --max-width: 1280px;
-    /* Šířka společného vycentrovaného sloupce obsahových sekcí (hero, Co nabízím,
-       Reference, Proces, Cena, Kontakt). Sekce O mně zůstává na plné šířce. */
-    --content-width: 64rem;
+    /* Šířka společného vycentrovaného sloupce všech sekcí homepage
+       (hero, Co nabízím, O mně, Reference, Proces, Cena, Kontakt). */
+    --content-width: 58rem;
   }
 
   .container {
@@ -99,6 +99,11 @@ a {
 
   .container :is(p, li) {
     max-width: 70ch;
+  }
+
+  /* Ve společném sloupci šířku textu řídí jen sloupec. */
+  .container--content :is(p, li) {
+    max-width: none;
   }
 }
 
