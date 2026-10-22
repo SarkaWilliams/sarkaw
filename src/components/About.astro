@@ -64,16 +64,26 @@ const paragraphs = home.about.split(/\n\s*\n/).filter(Boolean);
     }
   }
 
-  @media (min-width: 1024px) {
-    .about__inner {
-      grid-template-columns: minmax(0, 20rem) 1fr;
-      gap: 3rem;
-    }
-  }
-
   .about__photo {
     width: 100%;
     border-radius: var(--radius);
+  }
+
+  /* Desktop: fotka má pevnou šířku 16rem (jako před rozšířením kontejneru),
+     zbytek šířky dostává text. */
+  @media (min-width: 1024px) {
+    .about__inner {
+      grid-template-columns: 16rem minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+
+    .about__photo {
+      width: 16rem;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+    }
   }
 
   .about p {
