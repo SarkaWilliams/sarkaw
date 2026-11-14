@@ -45,12 +45,14 @@ interface UiStrings {
     submitLabel: string;
     sendingLabel: string;
     errorMessage: string;
+    emailSubject: string;
   };
   socialAria: {
     linkedin: string;
     instagram: string;
   };
   footer: string;
+  footerCredit: string;
   legal: {
     privacyLinkLabel: string;
     privacyHref: string;
@@ -109,12 +111,14 @@ export const ui: Record<Locale, UiStrings> = {
       submitLabel: "Odeslat zprávu",
       sendingLabel: "Odesílám…",
       errorMessage: "Něco se pokazilo. Zkuste to prosím znovu, nebo mi napište přímo na e-mail.",
+      emailSubject: "Nová zpráva z webu sarkawilliams",
     },
     socialAria: {
       linkedin: "LinkedIn profil Šárky Williams",
       instagram: "Instagram profil Šárky Williams",
     },
     footer: "Koučink. Všechna práva vyhrazena.",
+    footerCredit: "Vytvořil",
     legal: {
       privacyLinkLabel: "Ochrana osobních údajů",
       privacyHref: "/ochrana-osobnich-udaju",
@@ -171,12 +175,14 @@ export const ui: Record<Locale, UiStrings> = {
       submitLabel: "Send Message",
       sendingLabel: "Sending…",
       errorMessage: "Something went wrong. Please try again, or email me directly.",
+      emailSubject: "New message from sarkawilliams website (EN)",
     },
     socialAria: {
       linkedin: "LinkedIn profile of Šárka Williams",
       instagram: "Instagram profile of Šárka Williams",
     },
     footer: "Coaching. All rights reserved.",
+    footerCredit: "Created by",
     legal: {
       privacyLinkLabel: "Privacy Policy",
       privacyHref: "/en/privacy-policy",
