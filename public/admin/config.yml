@@ -111,7 +111,7 @@ collections:
             i18n: true
             fields:
               - { label: "Jméno a titul", name: name, widget: string, i18n: duplicate }
-              - { label: "IČO", name: ico, widget: string, i18n: duplicate }
+              - { label: "IČO a zápis v rejstříku", name: ico, widget: string, i18n: true }
               - { label: "Adresa", name: address, widget: string, i18n: true }
               - { label: "E-mail", name: email, widget: string, i18n: duplicate }
               - { label: "Telefon", name: phone, widget: string, i18n: duplicate }
